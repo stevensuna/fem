@@ -1,5 +1,17 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap');
+/* Remove Google Fonts import and replace with local font declarations */
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/static/Figtree-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
 
 /* CSS Variables */
 :root {
