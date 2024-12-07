@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/stevensuna/qr-code-component)
-- Live Site URL: [Live Demo](https://your-live-site-url.com)
+- Live Site URL: [Live Demo](https://stevensuna.github.io/fem/qr-code-component-main/index.html)
 
 ## My process
 
