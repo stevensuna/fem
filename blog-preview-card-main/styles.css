@@ -42,12 +42,63 @@ body {
 }
 
 /* Card layout */
-.blog-card {
+.card {
   background-color: var(--color-white);
   padding: 1.5rem;
   border-radius: 1rem;
   max-width: 375px;
   margin: 1rem;
+}
+
+.card__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.card__category {
+  display: inline-block;
+  background-color: var(--color-yellow);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  font-weight: 800;
+}
+
+.card__publish-date {
+  display: block;
+  color: var(--color-gray-500);
+  margin-bottom: 1rem;
+}
+
+.card__title {
+  font-weight: 800;
+  color: var(--color-gray-950);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card__description {
+  color: var(--color-gray-500);
+  margin-bottom: 1.5rem;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card__author-pic {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.card__author-name {
+  font-weight: 800;
+  color: var(--color-gray-950);
 }
 
 /* Typography */
@@ -74,7 +125,7 @@ p {
 
 /* Media Query */
 @media (min-width: 1440px) {
-  .blog-card {
+  .card {
     max-width: 400px;
   }
 }
