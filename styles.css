@@ -1,0 +1,148 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* Root Variables */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+    --font-family: 'Outfit', sans-serif;
+    --font-size: 15px;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 0;
+    background-color: var(--slate-300);
+    color: var(--slate-900);
+}
+
+header, footer {
+    background-color: var(--slate-900);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* Projects Section */
+.projects h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.card {
+    background-color: var(--white);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.card-content p {
+    color: var(--slate-500);
+}
+
+.card-action .btn {
+    margin-right: 0.5rem;
+    background-color: var(--slate-900);
+    color: var(--white);
+}
+
+.card-action .btn:hover {
+    background-color: var(--slate-500);
+}
+
+/* About Section */
+.about h2 {
+    margin-top: 4rem;
+    font-weight: 700;
+}
+
+.skills-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.skills-list li {
+    margin-bottom: 0.5rem;
+    color: var(--slate-500);
+}
+
+/* More specific selector and !important to override framework styles */
+.about .skills-list {
+    list-style-type: disc !important;
+    padding-left: 1.5rem !important;
+    margin: 1rem 0;
+}
+
+/* Reset any potential framework overrides */
+.about .skills-list li {
+    list-style: inherit !important;
+    display: list-item !important;
+    margin-bottom: 0.5rem;
+    color: var(--slate-500);
+}
+
+/* Responsive Design */
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+
+    .projects h2, .about h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 1440px) {
+    .card {
+        margin-bottom: 2rem;
+    }
+
+    .projects .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .projects .col {
+        flex: 1 1 calc(33.333% - 1rem);
+        margin: 0.5rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
