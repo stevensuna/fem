@@ -98,7 +98,7 @@ main {
     list-style: inherit !important;
     display: list-item !important;
     margin-bottom: 0.5rem;
-    color: var(--slate-500);
+    color: var(--slate-900);
 }
 
 /* Responsive Design */
