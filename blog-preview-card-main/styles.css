@@ -162,7 +162,13 @@ main {
   background: var(--color-yellow, #F4D04E);
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-100, 8px); 
+  gap: var(--spacing-100, 8px);
+  color: var(--color-gray-950, #111);
+  font-family: Figtree;
+  font-size: var(--font-size-text-preset-3, 14px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;  
 }
 
 .card__content .date {
@@ -171,7 +177,7 @@ main {
   font-size: var(--font-size-text-preset-3, 14px);
   font-style: normal;
   font-weight: 500;
-  line-height: 150%;  
+  line-height: 150%;
 }
 
 .card h1 {
@@ -185,18 +191,35 @@ main {
 }
 
 .description {
-
+  align-self: stretch;
+  color: var(--color-gray-500, #6B6B6B);
+  font-family: Figtree;
+  font-size: var(--font-size-text-preset-2, 16px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
 }
 
 .author {
- 
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150, 12px); 
 }
 
 .author img {
-  
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;  
 }
 
-.author p {    
+.author p {
+  color: var(--color-gray-950, #111);
+  font-family: Figtree;
+  font-size: var(--font-size-text-preset-3, 14px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;
 }  
 
 /* ==========================================================================
