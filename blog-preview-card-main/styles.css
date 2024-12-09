@@ -121,12 +121,17 @@ main {
 /* Mobile styles */
 @media screen and (max-width: 376px) {
   main {
-    align-items: center;
+    display: flex;
+    width: 327px;
+    padding: var(--spacing-200, 24px);
     flex-direction: column;
-    height: auto;
-    justify-content: center;
-    padding: 156px 24px 155px;
-    width: 100%;
+    align-items: flex-start;
+    gap: var(--spacing-200, 24px);
+    border-radius: 20px;
+    border: 1px solid var(--color-gray-950, #111);
+    background: var(--color-white, #FFF);
+    box-shadow: 8px 8px 0px 0px #000;
+   
   }
 
   .card {
