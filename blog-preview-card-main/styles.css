@@ -168,7 +168,7 @@ main {
   font-size: var(--font-size-text-preset-3, 14px);
   font-style: normal;
   font-weight: 800;
-  line-height: 150%;  
+  line-height: 150%;
 }
 
 .card__content .date {
