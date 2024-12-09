@@ -60,6 +60,12 @@
   
   /* Transitions */
   --transition-base: 0.2s ease-in-out;
+
+  /* Add Component-specific tokens */
+  --layout-width-mobile: 23.4375rem;   /* 375px */
+  --layout-width-desktop: 90rem;       /* 1440px */
+  --layout-height-desktop: 60rem;      /* 960px */
+  --layout-padding-mobile: 9.75rem 1.5rem 9.6875rem; /* 156px 24px 155px */
 }
 
 /* ==========================================================================
@@ -117,7 +123,17 @@ main {
   padding: var(--spacing-200, 24px);
   width: 100%;
 } 
-  
+
+/* Base Mobile Layout */
+.layout-container {
+  display: flex;
+  width: var(--layout-width-mobile);
+  padding: var(--layout-padding-mobile);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Mobile styles */
 @media screen and (max-width: 376px) {
   main {
@@ -137,6 +153,17 @@ main {
   .card {
     max-width: 327px;
     width: 100%;
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 48rem) {
+  .layout-container {
+    width: var(--layout-width-desktop);
+    height: var(--layout-height-desktop);
+    padding: 0;
+    justify-content: center;
+    align-items: center;
   }
 }
 
