@@ -166,11 +166,22 @@ main {
 }
 
 .card__content .date {
-  
+  color: var(--color-gray-950, #111);
+  font-family: Figtree;
+  font-size: var(--font-size-text-preset-3, 14px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;  
 }
 
-.card h2 {
-
+.card h1 {
+  align-self: stretch;
+  color: var(--color-gray-950, #111);
+  font-family: Figtree;
+  font-size: var(--spacing-200, 24px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;
 }
 
 .description {
