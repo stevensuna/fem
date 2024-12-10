@@ -160,14 +160,8 @@ main {
 }
 
 .card h1:hover {
-  align-self: stretch;
   color: var(--color-yellow, #F4D04E);
-  font-family: Figtree;
-  font-size: var(--spacing-200, 24px);
-  font-style: normal;
-  font-weight: 800;
-  line-height: 150%;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .description {
