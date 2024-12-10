@@ -72,30 +72,6 @@
 }
 
 /* ==========================================================================
-   Custom Properties
-   ========================================================================== */
-:root {
-  /* Colors */
-  --color-yellow: hsl(47, 88%, 63%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-gray-500: hsl(0, 0%, 42%);
-  --color-gray-950: hsl(0, 0%, 7%);
-
-  /* Typography */
-  --font-family: 'Figtree', sans-serif;
-  --font-size-base: 16px;
-  --font-weight-medium: 500;
-  --font-weight-bold: 800;
-
-  /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 12px;
-  --spacing-lg: 16px;
-  --spacing-xl: 24px;
-}
-
-/* ==========================================================================
    Reset & Base Styles
    ========================================================================== */
 *,
@@ -104,23 +80,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
-  font-size: 100%;
-}
-
-body {
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
-}
-
-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
 }
 
 /* ==========================================================================
@@ -218,7 +177,7 @@ main {
   gap: var(--spacing-150, 12px);  
 }
 
-.author--name p{
+.author--name {
   color: var(--color-gray-950, #111);
   font-family: Figtree;
   font-size: var(--font-size-text-preset-3, 14px);
@@ -226,7 +185,6 @@ main {
   font-weight: 800;
   line-height: 150%;
 }
-
 /* ==========================================================================
    Accessibility
    ========================================================================== */
