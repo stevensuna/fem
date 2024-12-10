@@ -41,6 +41,11 @@
   --font-size-sm: 14px;                 /* Text Preset 3 */
   --line-height: 150%;
   --letter-spacing: 0px;
+
+  /* Base font sizes using clamp(minimum, preferred, maximum) */
+  --font-size-base: clamp(14px, 1vw + 10px, 16px);
+  --font-size-heading: clamp(18px, 1.5vw + 16px, 24px);
+  --font-size-tag: clamp(12px, 0.8vw + 10px, 14px);
   
   /* Font Weights */
   --font-weight-medium: 500;
@@ -69,6 +74,12 @@
   --layout-width-desktop: 90rem;       /* 1440px */
   --layout-height-desktop: 60rem;      /* 960px */
   --layout-padding-mobile: 9.75rem 1.5rem 9.6875rem; /* 156px 24px 155px */
+
+  /* Fluid Typography using clamp() */
+  --font-size-xs: clamp(12px, 0.8vw + 10px, 14px);    /* For dates, tags */
+  --font-size-sm: clamp(14px, 1vw + 10px, 16px);      /* For descriptions */
+  --font-size-base: clamp(16px, 1.2vw + 12px, 18px);  /* For regular text */
+  --font-size-lg: clamp(20px, 1.5vw + 16px, 24px);    /* For headings */
 }
 
 /* ==========================================================================
@@ -136,7 +147,7 @@ main {
   gap: var(--spacing-100, 8px);
   color: var(--color-gray-950, #111);
   font-family: Figtree;
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 800;
   line-height: 150%;
@@ -145,17 +156,17 @@ main {
 .date {
   color: var(--color-gray-950, #111);
   font-family: Figtree;
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 500;
-  line-height: 150%;  
+  line-height: 150%;    
 }
 
 .card h1 {
   align-self: stretch;
   color: var(--color-gray-950, #111);
   font-family: Figtree;
-  font-size: 20px;
+  font-size: var(--font-size-lg);
   font-style: normal;
   font-weight: 800;
   line-height: 150%;  
@@ -165,7 +176,7 @@ main {
   align-self: stretch;
   color: var(--color-gray-500, #6B6B6B);
   font-family: Figtree;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-style: normal;
   font-weight: 500;
   line-height: 150%;  
@@ -177,14 +188,22 @@ main {
   gap: var(--spacing-150, 12px);  
 }
 
-.author--name {
+.auth__image {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.author__name {
   color: var(--color-gray-950, #111);
   font-family: Figtree;
-  font-size: var(--font-size-text-preset-3, 14px);
+  font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 800;
   line-height: 150%;
 }
+
 /* ==========================================================================
    Accessibility
    ========================================================================== */
