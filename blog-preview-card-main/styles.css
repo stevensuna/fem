@@ -127,7 +127,25 @@ img {
    Layout Components - Mobile First
    ========================================================================== */
 .main {
-  /* Mobile styles here */
+  display: flex;
+  width: 375px;
+  overflow: hidden;
+  padding: 156px 24px 155px 24px;
+  background: var(--color-yellow, #F4D04E);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+main {
+  align-items: center;
+  background: var(--color-yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--spacing-300) var(--spacing-150);
+  width: 100%;
 }
 
 .card {
@@ -165,12 +183,13 @@ img {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-/* Tablet (768px) */
-@media screen and (min-width: 48rem) {
-  /* Tablet styles here */
-}
-
 /* Desktop (1440px) */
 @media screen and (min-width: 90rem) {
   /* Desktop styles here */
+  main {
+    height: 960px;
+    margin: 0 auto;
+    max-width: var(--bp-desktop);
+    padding: 0;
+  }
 }
