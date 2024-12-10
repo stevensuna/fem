@@ -184,19 +184,73 @@ main {
 }
 
 .date {
-  /* Mobile styles here */
+  color: var(--color-gray-950, #111);
+  font-family: Figtree;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;  
 }
 
 .card h1 {
-  /* Mobile styles here */
+  align-self: stretch;
+  color: var(--color-gray-950, #111);
+  font-family: Figtree;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;  
 }
 
 .description {
-  /* Mobile styles here */
+  align-self: stretch;
+  color: var(--color-gray-500, #6B6B6B);
+  font-family: Figtree;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;  
 }
 
 .author {
-  /* Mobile styles here */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150, 12px);  
+}
+
+.author--name p{
+  color: var(--color-gray-950, #111);
+  font-family: Figtree;
+  font-size: var(--font-size-text-preset-3, 14px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Maintain hidden state when focused */
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* ==========================================================================
