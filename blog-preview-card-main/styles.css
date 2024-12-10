@@ -34,11 +34,39 @@
   --color-gray-500: hsl(0, 0%, 42%);    /* #6B6B6B */
   --color-gray-950: hsl(0, 0%, 7%);     /* #111111 */
    
-  /* Add Component-specific tokens */
-  --layout-width-mobile: 23.4375rem;   /* 375px */
-  --layout-width-desktop: 90rem;       /* 1440px */
-  --layout-height-desktop: 60rem;      /* 960px */
-  --layout-padding-mobile: 9.75rem 1.5rem 9.6875rem; /* 156px 24px 155px */  
+  /* Typography */
+  --font-family-primary: 'Figtree', sans-serif;
+  
+  /* Font Sizes */
+  --font-size-base: 1rem;        /* 16px */
+  --font-size-sm: 0.875rem;      /* 14px */
+  --font-size-lg: 1.5rem;        /* 24px */
+  
+  /* Font Weights */
+  --font-weight-medium: 500;
+  --font-weight-extra-bold: 800;
+  
+  /* Line Heights */
+  --line-height-base: 150%;
+  
+  /* Spacing */
+  --space-xs: 0.625rem;          /* 10px */
+  --space-sm: 1rem;              /* 16px */
+  --space-md: 1.5rem;            /* 24px */
+  --space-lg: 9.75rem;           /* 156px */
+  
+  /* Layout */
+  --layout-width-mobile: 23.4375rem;    /* 375px */
+  --layout-width-desktop: 90rem;        /* 1440px */
+  --layout-height-desktop: 60rem;       /* 960px */
+  
+  /* Component: Card */
+  --card-width-mobile: 20.4375rem;      /* 327px */
+  --card-width-desktop: 24rem;          /* 384px */
+  --card-border-radius: 1.25rem;        /* 20px */
+  --card-padding: var(--space-md);
+  --card-gap: var(--space-md);
+  --card-shadow: 0.5rem 0.5rem 0 0 #000;
 }
 
 /* ==========================================================================
@@ -69,14 +97,14 @@ main {
 .card {
   display: flex;
   width: 327px;
-  padding: var(--spacing-200, 24px);
-  border-radius: 20px;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
   border: 1px solid var(--color-gray-950, #111);
-  box-shadow: 8px 8px 0px 0px #000;
+  box-shadow: var(--card-shadow);
   background: var(--color-white, #FFF);
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--spacing-200, 24px);  
+  gap: var(--card-gap);  
 }
 
 .card__image {
@@ -220,14 +248,14 @@ main {
   .card {
     display: flex;
     width: 384px;
-    padding: var(--spacing-200, 24px);
-    border-radius: 20px;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
     border: 1px solid var(--color-gray-950, #111);
-    box-shadow: 8px 8px 0px 0px #000;
+    box-shadow: var(--card-shadow);
     background: var(--color-white, #FFF);
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--spacing-200, 24px);
+    gap: var(--card-gap);
     flex-shrink: 0;    
   }
 
