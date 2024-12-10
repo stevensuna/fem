@@ -172,6 +172,17 @@ main {
   line-height: 150%;  
 }
 
+.card h1:hover {
+  align-self: stretch;
+  color: var(--color-yellow, #F4D04E);
+  font-family: Figtree;
+  font-size: var(--spacing-200, 24px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%;
+  cursor: pointer;
+}
+
 .description {
   align-self: stretch;
   color: var(--color-gray-500, #6B6B6B);
@@ -311,7 +322,7 @@ main {
     font-style: normal;
     font-weight: 800;
     line-height: 150%;    
-  }
+  }  
 
   .description {
     align-self: stretch;
