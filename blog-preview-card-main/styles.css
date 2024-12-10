@@ -69,6 +69,30 @@
 }
 
 /* ==========================================================================
+   Custom Properties
+   ========================================================================== */
+:root {
+  /* Colors */
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
+
+  /* Typography */
+  --font-family: 'Figtree', sans-serif;
+  --font-size-base: 16px;
+  --font-weight-medium: 500;
+  --font-weight-bold: 800;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+}
+
+/* ==========================================================================
    Reset & Base Styles
    ========================================================================== */
 *,
@@ -97,172 +121,53 @@ img {
 }
 
 /* ==========================================================================
-   Layout Components
+   Layout Components - Mobile First
    ========================================================================== */
-main {
-  align-items: center;
-  background: var(--color-yellow, #F4D04E);
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  margin: 0 auto;  
-  width: 100%;
+.main {
+  /* Mobile styles here */
 }
 
 .card {
-  align-items: flex-start;
-  background: var(--color-white);
-  border: 1px solid var(--color-gray-950);
-  border-radius: 20px;
-  box-shadow: 8px 8px 0 0 #000;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-200, 24px);
-  margin: 0 auto;
-  max-width: 384px;
-  padding: var(--spacing-200, 24px);
-  width: 100%;
-} 
-
-/* Base Mobile Layout */
-.layout-container {
-  display: flex;
-  width: var(--layout-width-mobile);
-  padding: var(--layout-padding-mobile);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* Mobile styles here */
 }
 
-/* Mobile styles */
-@media screen and (max-width: 376px) {
-  main {
-    display: flex;
-    width: 327px;
-    padding: var(--spacing-200, 24px);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-200, 24px);
-    border-radius: 20px;
-    border: 1px solid var(--color-gray-950, #111);
-    background: var(--color-white, #FFF);
-    box-shadow: 8px 8px 0px 0px #000;
-   
-  }
-
-  .card {
-    max-width: 327px;
-    width: 100%;
-  }
-}
-
-/* Desktop Layout */
-@media (min-width: 48rem) {
-  .layout-container {
-    width: var(--layout-width-desktop);
-    height: var(--layout-height-desktop);
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-/* ==========================================================================
-   Content Components
-   ========================================================================== */
 .card__image {
-  display: flex;
-  overflow: hidden;
-  border-radius: 10px;
-  background: var(--color-yellow, #F4D04E);
-  align-items: center;
-  align-self: stretch; 
+  /* Mobile styles here */
 }
 
 .card__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-150, 12px);
-  align-self: stretch;
+  /* Mobile styles here */
 }
 
-.card__content .tag {
-  display: flex;
-  padding: var(--spacing-50, 4px) var(--spacing-150, 12px);
-  border-radius: 4px;
-  background: var(--color-yellow, #F4D04E);
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-100, 8px);
-  color: var(--color-gray-950, #111);
-  font-family: Figtree;
-  font-size: var(--font-size-text-preset-3, 14px);
-  font-style: normal;
-  font-weight: 800;
-  line-height: 150%;
+.tag {
+  /* Mobile styles here */
 }
 
-.card__content .date {
-  color: var(--color-gray-950, #111);
-  font-family: Figtree;
-  font-size: var(--font-size-text-preset-3, 14px);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%;
+.date {
+  /* Mobile styles here */
 }
 
 .card h1 {
-  align-self: stretch;
-  color: var(--color-gray-950, #111);
-  font-family: Figtree;
-  font-size: var(--spacing-200, 24px);
-  font-style: normal;
-  font-weight: 800;
-  line-height: 150%;
+  /* Mobile styles here */
 }
 
 .description {
-  align-self: stretch;
-  color: var(--color-gray-500, #6B6B6B);
-  font-family: Figtree;
-  font-size: var(--font-size-text-preset-2, 16px);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%;
+  /* Mobile styles here */
 }
 
 .author {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-150, 12px); 
+  /* Mobile styles here */
 }
-
-.author img {
-  width: 32px;
-  height: 32px;
-  border-radius: 32px;
-  background: url(<path-to-image>) lightgray 50% / cover no-repeat;  
-}
-
-.author p {
-  color: var(--color-gray-950, #111);
-  font-family: Figtree;
-  font-size: var(--font-size-text-preset-3, 14px);
-  font-style: normal;
-  font-weight: 800;
-  line-height: 150%;
-}  
 
 /* ==========================================================================
-   Accessibility
+   Media Queries
    ========================================================================== */
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+/* Tablet (768px) */
+@media screen and (min-width: 48rem) {
+  /* Tablet styles here */
+}
+
+/* Desktop (1440px) */
+@media screen and (min-width: 90rem) {
+  /* Desktop styles here */
 }

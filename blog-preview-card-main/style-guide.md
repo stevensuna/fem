@@ -1,32 +1,84 @@
-# Front-end Style Guide
+#### Colors
+- Brand colors with HSL/RGB values
+  - Yellow:
+    - HEX: #F4D04E
+    - RGB: 244, 208, 78
+    - HSL: 47°, 88%, 63%
 
-## Layout
+- Neutral palette with HSL/RGB values
+  - Gray-950:
+    - HEX: #111111
+    - RGB: 17, 17, 17
+    - HSL: 0°, 0%, 7%
+  - Gray-500:
+    - HEX: #6B6B6B
+    - RGB: 107, 107, 107
+    - HSL: 0°, 0%, 42%
+  - White:
+    - HEX: #FFFFFF
+    - RGB: 255, 255, 255
+    - HSL: 0°, 0%, 100%
 
-The designs were created to the following widths:
+- Semantic colors (success, error, warning, info)
+  - Not specified in the image.
 
-- Mobile: 375px
-- Desktop: 1440px
+- Dark/light mode variations
+  - Not specified in the image, but the provided colors suggest a light mode style guide.
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+#### Typography
+- Font family names (primary, secondary)
+  - Primary: Figtree
 
-## Colors
+- Font size scale (base and modular scale)
+  - Base size: 16px (inferred from "Text Preset 2")
+  - Other sizes: 24px, 14px
 
-- Yellow: hsl(47, 88%, 63%)
+- Font weights used
+  - Extra Bold
+  - Medium
 
-- White: hsl(0, 0%, 100%)
+- Line heights
+  - 150% (for all text presets)
 
-- Gray 500: hsl(0, 0%, 42%)
-- Gray 950: hsl(0, 0%, 7%)
+- Letter spacing values
+  - 0px (for all text presets)
 
-## Typography
+#### Spacing
+- Base unit value
+  - Not explicitly defined, but we can infer it might be 4px or 8px based on the spacing examples.
 
-### Body Copy
+- Spacing scale multipliers
+  - 300: 24px
+  - 150: 12px
+  - 100: 8px
+  - 50: 4px
 
-- Font size (paragraph): 16px
+- Component-specific spacing
+  - Not specified in the image.
 
-### Font
+#### Layout
+- Container max-widths
+  - Not specified in the image.
 
-- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
-- Weights: 500, 800
+- Breakpoint values
+  - Not specified in the image.
 
-> 💎 This is a free+ challenge. So, if you want to see all the design details and practice working with professional tools like Figma, you can download the design file from where you downloaded the starter code.
+- Grid columns/gutters
+  - Not specified in the image.
+
+- Component dimensions
+  - Not specified in the image.
+
+#### Other
+- Border radius values
+  - Not specified in the image.
+
+- Box shadow styles
+  - Not specified in the image.
+
+- Transition durations/easings
+  - Not specified in the image.
+
+- Z-index scale
+  - Not specified in the image.
+
