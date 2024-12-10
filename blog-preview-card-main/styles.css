@@ -335,17 +335,4 @@ main {
     font-weight: 800;
     line-height: 150%;    
   }
-
-  .visually-hidden {
-    /* Desktop accessibility styles*/
-    .visually-hidden {
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
-  }
 }
