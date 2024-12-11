@@ -47,12 +47,39 @@
 /* ==========================================================================
    Reset & Base Styles
    ========================================================================== */
-*,
-*::before,
+/* Modern CSS Reset */
+*, 
+*::before, 
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default button styles */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 body {
@@ -62,10 +89,4 @@ body {
   line-height: 1.5;
   color: var(--color-white);
   background-color: var(--color-grey-900);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
