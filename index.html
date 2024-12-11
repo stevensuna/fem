@@ -12,64 +12,59 @@
 </head>
 <body>
     <header class="header">
-        <h1>Frontend Practice Showcase</h1>
-        <p>A collection of Frontend Mentor challenge solutions</p>
+        <h1 class="header__title">Frontend Practice Showcase</h1>
+        <p class="header__subtitle">A collection of Frontend Mentor challenge solutions</p>
     </header>
 
     <main class="main">
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="row">
-                <article class="col s12 m6 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./qr-code-component-main/screenshot.png" alt="QR Code Component">
-                        </div>
-                        <div class="card-content">
-                            <h3>QR Code Component</h3>
-                            <p>A responsive QR code component built with HTML and CSS</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="https://stevensuna.github.io/fem/qr-code-component-main/index.html" class="btn">Live Demo</a>
-                            <a href="https://github.com/stevensuna/fem/tree/main/qr-code-component-main" class="btn">Code</a>
-                        </div>
+        <section class="projects">
+            <h2 class="projects__title">Projects</h2>
+            <div class="projects__grid">
+                <article class="card">
+                    <div class="card__image">
+                        <img src="./qr-code-component-main/screenshot.png" alt="QR Code Component">
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">QR Code Component</h3>
+                        <p class="card__description">A responsive QR code component built with HTML and CSS</p>
+                    </div>
+                    <div class="card__actions">
+                        <a href="https://stevensuna.github.io/fem/qr-code-component-main/index.html" class="card__button">Live Demo</a>
+                        <a href="https://github.com/stevensuna/fem/tree/main/qr-code-component-main" class="card__button">Code</a>
                     </div>
                 </article>
-                <!-- More project cards here -->
-                <article class="col s12 m6 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./blog-preview-card-main/screenshot.png" alt="Blog Preview Card Component">
-                        </div>
-                        <div class="card-content">
-                            <h3>Blog Preview Card Component</h3>
-                            <p>A responsive blog preview card component built with HTML and CSS</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="https://stevensuna.github.io/fem/blog-preview-card-main/index.html" class="btn">Live Demo</a>
-                            <a href="https://github.com/stevensuna/fem/tree/main/blog-preview-card-main" class="btn">Code</a>
-                        </div>
+
+                <article class="card">
+                    <div class="card__image">
+                        <img src="./blog-preview-card-main/screenshot.png" alt="Blog Preview Card Component">
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">Blog Preview Card Component</h3>
+                        <p class="card__description">A responsive blog preview card component built with HTML and CSS</p>
+                    </div>
+                    <div class="card__actions">
+                        <a href="https://stevensuna.github.io/fem/blog-preview-card-main/index.html" class="card__button">Live Demo</a>
+                        <a href="https://github.com/stevensuna/fem/tree/main/blog-preview-card-main" class="card__button">Code</a>
                     </div>
                 </article>
-                
             </div>
         </section>
 
-        <section id="about" class="about">
-            <h2>About</h2>
-            <p>This showcase features my solutions to Frontend Mentor challenges, demonstrating my skills in:</p>
-            <ul class="skills-list">
-                <li>Semantic HTML5</li>
-                <li>CSS Custom Properties</li>
-                <li>Flexbox</li>
-                <li>Responsive Design</li>
+        <section class="about">
+            <h2 class="about__title">About</h2>
+            <p class="about__text">This showcase features my solutions to Frontend Mentor challenges, demonstrating my skills in:</p>
+            <ul class="about__skills">
+                <li class="about__skill-item">Semantic HTML5</li>
+                <li class="about__skill-item">CSS Custom Properties</li>
+                <li class="about__skill-item">Flexbox</li>
+                <li class="about__skill-item">Responsive Design</li>
             </ul>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Created by <a href="https://github.com/stevensuna">Steven</a></p>
-        <p>Challenge solutions from <a href="https://www.frontendmentor.io">Frontend Mentor</a></p>
+        <p class="footer__text">Created by <a href="https://github.com/stevensuna" class="footer__link">Steven</a></p>
+        <p class="footer__text">Challenge solutions from <a href="https://www.frontendmentor.io" class="footer__link">Frontend Mentor</a></p>
     </footer>
 
     <!-- Include Materialize JS -->

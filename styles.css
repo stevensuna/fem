@@ -101,6 +101,127 @@ main {
     color: var(--slate-900);
 }
 
+/* Block: Header */
+.header {
+    background-color: var(--slate-900);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.header__title,
+.header__subtitle {
+    margin: 0;
+}
+
+/* Block: Projects */
+.projects__title {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.projects__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Block: Card */
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 300px;
+}
+
+.card__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card__content {
+    padding: 1.5rem;
+}
+
+.card__title {
+    margin: 0 0 1rem;
+    font-weight: 700;
+    color: var(--slate-900);
+}
+
+.card__description {
+    color: var(--slate-500);
+    margin: 0;
+}
+
+.card__actions {
+    padding: 1rem 1.5rem;
+}
+
+.card__button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    background-color: var(--slate-900);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+    background-color: var(--slate-500);
+}
+
+/* Block: About */
+.about {
+    margin-top: 4rem;
+}
+
+.about__title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about__skills {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.about__skill-item {
+    position: relative;
+    margin-bottom: 0.5rem;
+    color: var(--slate-900);
+    padding-left: 1.5rem;
+}
+
+.about__skill-item::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: var(--slate-500);
+    font-size: 1.2em;
+}
+
+/* Block: Footer */
+.footer {
+    background-color: var(--slate-900);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer__text {
+    margin: 0.5rem 0;
+}
+
+.footer__link {
+    color: var(--white);
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 375px) {
     header h1 {
@@ -122,6 +243,14 @@ main {
     .projects h2, .about h2 {
         font-size: 1.75rem;
     }
+
+    .header__title {
+        font-size: 1.5rem;
+    }
+    
+    .projects__grid {
+        gap: 1rem;
+    }
 }
 
 @media (min-width: 376px) and (max-width: 1440px) {
@@ -142,6 +271,11 @@ main {
 
 @media (min-width: 1441px) {
     main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main {
         max-width: 1200px;
         margin: 0 auto;
     }
