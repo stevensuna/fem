@@ -9,42 +9,34 @@
   <title>Social links profile</title>  
 </head>
 <body>
-  <!-- Background wrapper -->
-  <div class="background-pattern">
-    <!-- Main content area -->
-    <main>
-      <!-- Profile card component -->
-      <article class="card">
-        <!-- Profile header with avatar -->
-        <header class="card__header">
-          <figure class="card__avatar avatar">
-            <img 
-              src="assets/images/avatar-jessica.jpeg" 
-              alt="Jessica Randall's avatar" 
-              class="avatar__image"
-            >
-          </figure>
-        </header>
+  <!-- Main content area -->
+  <main class="card">
+    <!-- Profile avatar -->
+    <div class="card__avatar-section">
+      <figure class="avatar">
+        <img 
+          src="assets/images/avatar-jessica.jpeg" 
+          alt="Jessica Randall's avatar" 
+          class="avatar__image"
+        >
+      </figure>
+    </div>
 
-        <!-- Profile information section -->
-        <section class="card__profile-info profile-info">
-          <h1 class="profile-info__name">Jessica Randall</h1>
-          <p class="profile-info__location">London, United Kingdom</p>
-          <p class="profile-info__description">"Front-end developer and avid reader."</p>
-        </section>
+    <!-- Profile information section -->
+    <section class="card__profile-info profile-info">
+      <h1 class="profile-info__name">Jessica Randall</h1>
+      <p class="profile-info__location">London, United Kingdom</p>
+      <p class="profile-info__description">"Front-end developer and avid reader."</p>
+    </section>
 
-        <!-- Social links navigation -->
-        <nav class="card__social">
-          <ul class="social__list">
-            <li><a href="#" class="button button--github">GitHub</a></li>
-            <li><a href="#" class="button button--frontend-mentor">Frontend Mentor</a></li>
-            <li><a href="#" class="button button--linkedin">LinkedIn</a></li>
-            <li><a href="#" class="button button--twitter">Twitter</a></li>
-            <li><a href="#" class="button button--instagram">Instagram</a></li>
-          </ul>
-        </nav>
-      </article>
-    </main>
-  </div>  
+    <!-- Social links navigation -->
+    <nav class="card__social">
+        <a href="#" class="card__social-link button button--github">GitHub</a>
+        <a href="#" class="card__social-link button button--frontend-mentor">Frontend Mentor</a>
+        <a href="#" class="card__social-link button button--linkedin">LinkedIn</a>
+        <a href="#" class="card__social-link button button--twitter">Twitter</a>
+        <a href="#" class="card__social-link button button--instagram">Instagram</a>
+    </nav>
+  </main>
 </body>
 </html>
