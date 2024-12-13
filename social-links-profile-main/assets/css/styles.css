@@ -6,7 +6,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400 700;
-  src: url('assets/fonts/Inter-VariableFont_wght.ttf') format('truetype-variations');
+  src: url('/social-links-profile-main/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype-variations');
 }
 
 /* ==========================================================================
@@ -90,3 +90,94 @@ body {
   color: var(--color-white);
   background-color: var(--color-grey-900);
 }
+
+/* ==========================================================================
+   Layout Mobile
+   ========================================================================== */
+main {
+  display: flex;
+  width: 375px;
+  height: 812px;
+  padding: 0px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-grey-900, #141414);
+}
+
+.card {
+  display: flex;
+  padding: var(--spacing-300, 24px);
+  border-radius: 12px;
+  background: var(--color-grey-800, #1F1F1F);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300, 24px);
+  flex: 1 0 0;  
+}
+
+.card__avatar-section {
+  /* styles */
+}
+
+.avatar {
+  /* styles */
+}
+
+.avatar__image {
+  /* styles */
+}
+
+/* Profile Information */
+.card__profile-info {
+  /* styles */
+}
+
+.profile-info__name {
+  /* styles */
+}
+
+.profile-info__location {
+  /* styles */
+}
+
+.profile-info__description {
+  /* styles */
+}
+
+/* Social Links */
+.card__social {
+  /* styles */
+}
+
+.card__social-link {
+  /* styles */
+}
+
+.button {
+  /* styles */
+}
+
+.button--github {
+  /* styles */
+}
+
+.button--frontend-mentor {
+  /* styles */
+}
+
+.button--linkedin {
+  /* styles */
+}
+
+.button--twitter {
+  /* styles */
+}
+
+.button--instagram {
+  /* styles */
+}
+
+
+
+
