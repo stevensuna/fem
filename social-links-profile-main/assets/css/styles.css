@@ -123,56 +123,63 @@ body {
   background: url(/social-links-profile-main/assets/images/avatar-jessica.jpeg) lightgray 50% / cover no-repeat;
 }
 
-/* Profile Information */
-.profile-card__info {
-  /* styles */
+.profile-card__name {
+  align-self: stretch;
+  color: var(--color-white, #FFF);
+  font-family: Inter;
+  font-size: var(--font-size-text-preset-1, 24px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  text-align: center;  
 }
 
-.profile-info__name {
-  /* styles */
+.profile-card__location {
+  align-self: stretch;
+  color: var(--color-green, #C4F82A);
+  font-size: var(--font-size-text-preset-2, 14px);
+  font-weight: 700;
+  font-family: Inter;
+  font-style: normal;
+  line-height: 150%;
+  text-align: center;  
 }
 
-.profile-info__location {
-  /* styles */
+.profile-card__bio {
+  align-self: stretch;
+  color: var(--color-white, #FFF);
+  font-family: Inter;
+  font-size: var(--font-size-text-preset-2, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
 }
 
-.profile-info__description {
-  /* styles */
+.profile-card__social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  align-self: stretch;
 }
 
-/* Social Links */
-.card__social {
-  /* styles */
+.profile-card__link {
+  display: flex;
+  width: 100%;
+  padding: var(--space-sm);
+  border-radius: 8px;
+  background: var(--color-grey-700);
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  transition: all 0.3s ease;
 }
 
-.card__social-link {
-  /* styles */
+.profile-card__link:hover {
+  background: var(--color-green);
+  color: var(--color-grey-900);
 }
-
-.button {
-  /* styles */
-}
-
-.button--github {
-  /* styles */
-}
-
-.button--frontend-mentor {
-  /* styles */
-}
-
-.button--linkedin {
-  /* styles */
-}
-
-.button--twitter {
-  /* styles */
-}
-
-.button--instagram {
-  /* styles */
-}
-
-
-
 
