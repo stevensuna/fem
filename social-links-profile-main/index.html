@@ -9,6 +9,7 @@
   <title>Profile Card</title>
 </head>
 <body>
+  <main>
   <!-- Card Component -->
   <article class="card">
     <!-- Profile Info Component -->
@@ -26,13 +27,16 @@
     </div>
 
     <!-- Links Component -->
-    <div class="card__links">
-      <a href="#" class="btn btn--github">GitHub</a>
-      <a href="#" class="btn btn--frontend">Frontend Mentor</a>
-      <a href="#" class="btn btn--linkedin">LinkedIn</a>
-      <a href="#" class="btn btn--twitter">Twitter</a>
-      <a href="#" class="btn btn--instagram">Instagram</a>
-    </div>
+    <nav class="card__links" aria-label="Social Links">
+      <ul>
+        <li><a href="#" class="btn btn--github">GitHub</a></li>
+        <li><a href="#" class="btn btn--frontend">Frontend Mentor</a></li>
+        <li><a href="#" class="btn btn--linkedin">LinkedIn</a></li>
+        <li><a href="#" class="btn btn--twitter">Twitter</a></li>
+        <li><a href="#" class="btn btn--instagram">Instagram</a></li>
+      </ul>
+    </nav>
   </article>
+</main>
 </body>
 </html>
