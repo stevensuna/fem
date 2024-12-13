@@ -94,18 +94,17 @@ body {
 /* ==========================================================================
    Layout Mobile
    ========================================================================== */
-main {
+body {
   display: flex;
   width: 375px;
   height: 812px;
   padding: 0px 24px;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  background: var(--color-grey-900, #141414);
+  gap: 8px;  
 }
 
-.card {
+.profile-card {
   display: flex;
   padding: var(--spacing-300, 24px);
   border-radius: 12px;
@@ -113,19 +112,15 @@ main {
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-300, 24px);
-  flex: 1 0 0;  
+  flex: 1 0 0;
 }
 
-.card__avatar-section {
-  /* styles */
-}
-
-.avatar {
-  /* styles */
-}
-
-.avatar__image {
-  /* styles */
+.profile-card__avatar {
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: url(/social-links-profile-main/assets/images/avatar-jessica.jpeg) lightgray 50% / cover no-repeat;
 }
 
 /* Profile Information */
