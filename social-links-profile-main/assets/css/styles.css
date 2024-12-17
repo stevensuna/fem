@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/social-links-profile-main/assets/fonts/static/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/social-links-profile-main/assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/social-links-profile-main/assets/fonts/static/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ==========================================================================
    Design Tokens
    ========================================================================== */
@@ -85,9 +109,9 @@ select {
    ========================================================================== */
 main {
   display: flex;
-  width: 375px;
-  height: 812px;
-  padding: 0px 24px;
+  min-height: 100vh; /* Use full viewport height */
+  width: 100%; /* Full width */
+  padding: 24px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -102,7 +126,8 @@ main {
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-300, 24px);
-  flex: 1 0 0;
+  width: 100%;
+  max-width: 375px; /* Constrain card width instead of main */
 }
 
 /* Avatar styles */
@@ -110,16 +135,19 @@ main {
   width: 88px;
   height: 88px;
   overflow: hidden;
-  border-radius: 999px;  
+  border-radius: 999px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 }
 
 /* Profile info */
 .card__title {
-  color: var(--color-white);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-heading);
-  font-weight: var(--font-weight-semibold);
-  line-height: 1.5;
+  align-self: stretch;
+  color: var(--color-white, #FFF);
+  font-family: Inter;
+  font-size: var(--font-size-text-preset-1, 24px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
   text-align: center;
 }
 
