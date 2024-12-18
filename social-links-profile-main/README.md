@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://stevensuna.github.io/fem/social-links-profile-main/]
-- Solution URL: [https://github.com/stevensuna/fem/tree/main/social-links-profile-main]
+- [Live Site URL](https://stevensuna.github.io/fem/social-links-profile-main/)
+- [Solution URL](https://github.com/stevensuna/fem/tree/main/social-links-profile-main)
 
 ## My Process
 
