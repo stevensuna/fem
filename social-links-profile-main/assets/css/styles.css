@@ -1,7 +1,10 @@
 /* --- Fonts --- */
 @font-face {
-  font-family: 'Inter';
-  src: url('/social-links-profile-main/assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('woff2');
+  font-family: 'Inter';  
+  src: url('../fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype'),
+       url('../fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');
+  font-weight: 100 900; /* Variable font weight range */
+  font-display: swap; /* Prevent FOIT */
 }
 /* --- Variables --- */
 :root {
@@ -11,7 +14,8 @@
   --clr-neutral-grey-800: hsl(0, 0%, 12%);
   --clr-neutral-grey-900: hsl(0, 0%, 8%);
 
-  --ff-base: 'Inter', sans-serif;
+  --ff-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --font-size-text-preset-1: 24px;
   --font-size-text-preset-2: 14px;
   
