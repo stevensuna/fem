@@ -24,6 +24,21 @@
     --spacing-lg: 32px;
 }
 
+/* --- Font Face --- */
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Variable font supports all weights */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url('../fonts//young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
 /* --- Reset --- */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -31,6 +46,13 @@
     padding: 0;
 }
 
+/* Remove list styles on ul, ol elements */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
 body {
     font-family: var(--ff-outfit);
     font-size: var(--fs-paragraph);
@@ -38,12 +60,36 @@ body {
     background-color: var(--clr-stone-150);
     color: var(--clr-stone-900);
     min-height: 100vh;
+    text-rendering: optimizeSpeed;
 }
 
-img {
+/* Make images easier to work with */
+img,
+picture,
+svg {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* --- Recipe Component --- */
