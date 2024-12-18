@@ -1,7 +1,7 @@
 /* --- Fonts --- */
 @font-face {
   font-family: 'Inter';
-  src: url('/home/steven/projects/fem/social-links-profile-main/assets/fonts/Inter-VariableFont_slnt,wght.tff') format('woff2');
+  src: url('/social-links-profile-main/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('woff2');
 }
 /* --- Variables --- */
 :root {
