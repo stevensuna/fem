@@ -1,3 +1,8 @@
+/* --- Fonts --- */
+@font-face {
+  font-family: 'Inter';
+  src: url('/social-links-profile-main/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('woff2');  
+}
 /* --- Variables --- */
 :root {
   --clr-primary-green: hsl(75, 94%, 57%);
@@ -7,19 +12,80 @@
   --clr-neutral-grey-900: hsl(0, 0%, 8%);
 
   --ff-base: 'Inter', sans-serif;
+  --font-size-text-preset-1: 24px;
+  --font-size-text-preset-2: 14px;
+  
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 16px;
+  --spacing-500: 12px;  
 
   --fw-regular: 400;
   --fw-semibold: 600;
   --fw-bold: 700;
 }
 
-/* --- Reset --- */
-*, *::before, *::after {
+/* --- Modern Reset --- */
+html {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role='list'], ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;  
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Mobile First */
 /* --- General Styles --- */
 body {
   font-family: var(--ff-base);
@@ -29,7 +95,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 0px 24px;
+  gap: 8px;
 }
 
 img {
@@ -40,20 +107,20 @@ img {
 
 /* --- Profile Card Component --- */
 .profile-card {
-  background-color: var(--clr-neutral-grey-800);
+  background-color: var(--clr-neutral-grey-800, #1F1F1F);
   border-radius: 10px;
-  padding: 24px;
-  max-width: 375px; /* Matches the design width */
+  padding: var(--spacing-300, 24px);
+  max-width: 375px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--spacing-300, 24px);
 }
 
 .profile-card__avatar-section {
   width: 84px;
-  height: 84px;
-  margin-bottom: 24px;
+  height: 84px;  
   border-radius: 50%;
 }
 
@@ -69,51 +136,78 @@ img {
 }
 
 .profile-card__info {
-  text-align: center;
-  margin-bottom: 24px;
+  color: var(--clr-neutral-white);  
+  text-align: center;  
 }
 
 .profile-card__name {
-  font-size: 24px;
+  font-size: var(--font-size-text-preset-1);
   font-weight: var(--fw-semibold);
-  line-height: 1.2;
-  margin-bottom: 8px;
+  line-height: 36px;
 }
 
 .profile-card__location {
   color: var(--clr-primary-green);
-  font-size: 14px;
+  font-size: var(--font-size-text-preset-2);
   font-weight: var(--fw-semibold);
-  line-height: 1.2;
+  line-height: 21px;
   margin-bottom: 16px;
 }
 
 .profile-card__bio {
-  font-size: 14px;
+  font-size: var(--font-size-text-preset-2);  
   font-weight: var(--fw-regular);
-  line-height: 1.5;
+  line-height: 21px;
 }
 
 .profile-card__social-links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  width: 100%;
+  align-items: center;
+  gap: var(--spacing-200);
+  align-self: stretch;
 }
 
-.profile-card__link {
-  background-color: var(--clr-neutral-grey-700);
-  color: var(--clr-neutral-white);
+/* --- Profile Card Links --- */
+.profile-card__link {  
+  display: flex;
+  padding: var(--spacing-150);
+  border-radius: 8px;
+  background: var(--clr-neutral-grey-700);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-100);
+  align-self: stretch;
   text-decoration: none;
-  padding: 12px;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: var(--fw-semibold);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--clr-neutral-white);
+  font-family: Inter;
+  font-size: var(--font-size-text-preset-2);
+  font-style: normal;
+  font-weight: var(--fw-bold);
+  line-height: 21px;
+  cursor: pointer; /* Add cursor pointer */
+  transition: all 0.3s ease; /* Simplified transition */
 }
 
+/* Hover state for all screen sizes */
 .profile-card__link:hover {
   background-color: var(--clr-primary-green);
   color: var(--clr-neutral-grey-900);
+  transform: translateY(-2px); /* Optional: adds subtle lift effect */
+}
+
+/* --- Desktop Styles (Media Query) --- */
+@media (min-width: 1440px) {
+  body {    
+    gap: 8px;
+    padding: 0;
+  }
+}
+
+/* --- Tablet Styles (Media Query) --- */
+@media (min-width: 768px) {
+  body {    
+    gap: 8px; 
+    padding: 0;
+  }
 }
