@@ -1,88 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Practice Showcase</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven's Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__title">Frontend Practice Showcase</h1>
-        <p class="header__subtitle">A collection of Frontend Mentor challenge solutions</p>
-    </header>
+  <main class="profile-card">
+    <section class="profile-card__avatar-section">
+      <figure class="profile-card__avatar">
+        <img
+          src="/392.png"
+          alt="Steven's avatar"
+          class="profile-card__avatar-image"
+        >
+      </figure>
+    </section>
 
-    <main class="main">
-        <section class="projects">
-            <h2 class="projects__title">Projects</h2>
-            <div class="projects__grid">
-                <article class="card">
-                    <div class="card__image">
-                        <img src="./qr-code-component-main/screenshot.png" alt="QR Code Component">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">QR Code Component</h3>
-                        <p class="card__description">A responsive QR code component built with HTML and CSS</p>
-                    </div>
-                    <div class="card__actions">
-                        <div class="card__button-group">
-                            <a href="https://stevensuna.github.io/fem/qr-code-component-main/index.html" class="card__button">Live Demo</a>
-                            <a href="https://github.com/stevensuna/fem/tree/main/qr-code-component-main" class="card__button">View Code</a>
-                        </div>
-                    </div>
-                </article>
+    <section class="profile-card__info">
+      <h1 class="profile-card__name">Steven To</h1>
+      <p class="profile-card__location">Ho Chi Minh, Vietnam</p>
+      <p class="profile-card__bio">"Front-end developer and avid reader."</p>
+    </section>
 
-                <article class="card">
-                    <div class="card__image">
-                        <img src="./blog-preview-card-main/screenshot.png" alt="Blog Preview Card Component">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">Blog Preview Card Component</h3>
-                        <p class="card__description">A responsive blog preview card component built with HTML and CSS</p>
-                    </div>
-                    <div class="card__actions">
-                        <div class="card__button-group">
-                            <a href="https://stevensuna.github.io/fem/blog-preview-card-main/index.html" class="card__button">Live Demo</a>
-                            <a href="https://github.com/stevensuna/fem/tree/main/blog-preview-card-main" class="card__button">View Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card__image">
-                        <img src="./social-links-profile-main/screenshot.png" alt="Profile Card Component Preview">
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">Social Links Profile Card</h3>
-                        <p class="card__description">A responsive profile card component featuring social media links, hover effects, and smooth transitions.</p>
-                    </div>
-                    <div class="card__actions">
-                        <div class="card__button-group">
-                            <a href="https://stevensuna.github.io/fem/social-links-profile-main/" class="card__button">Live Demo</a>
-                            <a href="https://github.com/stevensuna/fem/tree/main/social-links-profile-main" class="card__button">View Code</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="about">
-            <h2 class="about__title">About</h2>
-            <p class="about__text">This showcase features my solutions to Frontend Mentor challenges, demonstrating my skills in:</p>
-            <ul class="about__skills">
-                <li class="about__skill-item">Semantic HTML5</li>
-                <li class="about__skill-item">CSS Custom Properties</li>
-                <li class="about__skill-item">Flexbox</li>
-                <li class="about__skill-item">Responsive Design</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p class="footer__text">Created by <a href="https://github.com/stevensuna" class="footer__link">Steven</a></p>
-        <p class="footer__text">Challenge solutions from <a href="https://www.frontendmentor.io" class="footer__link">Frontend Mentor</a></p>
-    </footer>
+    <nav class="profile-card__social-links">
+      <a href="https://github.com/stevensuna" class="profile-card__link profile-card__link--github">GitHub</a>
+      <a href="https://www.frontendmentor.io/profile/stevensuna" class="profile-card__link profile-card__link--frontend-mentor">Frontend Mentor</a>
+      <a href="https://github.com/stevensuna/fem" class="profile-card__link profile-card__link--linkedin">Show Case</a>
+      <a href="#" class="profile-card__link profile-card__link--twitter">Twitter</a>
+      <a href="#" class="profile-card__link profile-card__link--instagram">Instagram</a>
+    </nav>
+  </main>
 </body>
 </html>
