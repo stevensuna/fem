@@ -14,8 +14,7 @@
   --clr-neutral-grey-800: hsl(0, 0%, 12%);
   --clr-neutral-grey-900: hsl(0, 0%, 8%);
 
-  --ff-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --ff-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --font-size-text-preset-1: 24px;
   --font-size-text-preset-2: 14px;
   
