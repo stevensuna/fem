@@ -19,21 +19,31 @@ body {
     padding: 0;
     background-color: var(--slate-300);
     color: var(--slate-900);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-header, footer {
+header,
+footer {
     background-color: var(--slate-900);
     color: var(--white);
     text-align: center;
     padding: 2rem 0;
+    width: 100%;
 }
 
-header h1, footer p {
+header h1,
+footer p {
     margin: 0;
 }
 
 main {
     padding: 2rem;
+    width: 100%;
+    max-width: 1440px;
 }
 
 /* Projects Section */
@@ -42,71 +52,13 @@ main {
     font-weight: 700;
 }
 
-.card {
-    background-color: var(--white);
-}
-
-.card-image img {
-    width: 100%;
-    height: auto;
-}
-
-.card-content h3 {
-    margin-top: 0;
-    font-weight: 700;
-}
-
-.card-content p {
-    color: var(--slate-500);
-}
-
-.card-action .btn {
-    margin-right: 0.5rem;
-    background-color: var(--slate-900);
-    color: var(--white);
-}
-
-.card-action .btn:hover {
-    background-color: var(--slate-500);
-}
-
-/* About Section */
-.about h2 {
-    margin-top: 4rem;
-    font-weight: 700;
-}
-
-.skills-list {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-}
-
-.skills-list li {
-    margin-bottom: 0.5rem;
-    color: var(--slate-500);
-}
-
-/* More specific selector and !important to override framework styles */
-.about .skills-list {
-    list-style-type: disc !important;
-    padding-left: 1.5rem !important;
-    margin: 1rem 0;
-}
-
-/* Reset any potential framework overrides */
-.about .skills-list li {
-    list-style: inherit !important;
-    display: list-item !important;
-    margin-bottom: 0.5rem;
-    color: var(--slate-900);
-}
-
 /* Block: Header */
 .header {
     background-color: var(--slate-900);
     color: var(--white);
     text-align: center;
     padding: 2rem 0;
+    width: 100%;
 }
 
 .header__title,
@@ -121,8 +73,8 @@ main {
 }
 
 .projects__grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -131,46 +83,77 @@ main {
     background-color: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__image {
+    width: 100%;
+    height: 450px;
+    /* Increased height */
+    overflow: hidden;
 }
 
 .card__image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 
 .card__content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
 }
 
 .card__title {
-    margin: 0 0 1rem;
+    margin: 0;
     font-weight: 700;
     color: var(--slate-900);
+    font-size: 1.25rem;
 }
 
 .card__description {
     color: var(--slate-500);
     margin: 0;
+    font-size: 0.9rem;
+    flex-grow: 1;
 }
 
 .card__actions {
-    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    /* Changed to space-between */
+    align-items: center;
+    padding: 0 1.5rem 1.5rem;
+    /* Added padding to top */
+}
+
+.card__button-group {
+    display: flex;
+    gap: 1rem;
 }
 
 .card__button {
-    display: inline-block;
     padding: 0.5rem 1rem;
-    margin-right: 0.5rem;
     background-color: var(--slate-900);
     color: var(--white);
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
 }
 
-.card__button:hover {
+.card__button:hover,
+.card__button:focus {
     background-color: var(--slate-500);
 }
 
@@ -181,6 +164,10 @@ main {
 
 .about__title {
     font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about__text {
     margin-bottom: 1rem;
 }
 
@@ -211,6 +198,7 @@ main {
     color: var(--white);
     text-align: center;
     padding: 2rem 0;
+    width: 100%;
 }
 
 .footer__text {
@@ -224,11 +212,11 @@ main {
 
 /* Responsive Design */
 @media (max-width: 375px) {
-    header h1 {
+    .header__title {
         font-size: 1.5rem;
     }
 
-    header p {
+    .header__subtitle {
         font-size: 1rem;
     }
 
@@ -236,47 +224,18 @@ main {
         padding: 1rem;
     }
 
-    .card {
-        margin-bottom: 2rem;
-    }
-
-    .projects h2, .about h2 {
+    .projects__title,
+    .about__title {
         font-size: 1.75rem;
     }
 
-    .header__title {
-        font-size: 1.5rem;
-    }
-    
     .projects__grid {
-        gap: 1rem;
+        grid-template-columns: 1fr;
     }
 }
 
-@media (min-width: 376px) and (max-width: 1440px) {
-    .card {
-        margin-bottom: 2rem;
-    }
-
-    .projects .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .projects .col {
-        flex: 1 1 calc(33.333% - 1rem);
-        margin: 0.5rem;
-    }
-}
-
-@media (min-width: 1441px) {
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .main {
-        max-width: 1200px;
-        margin: 0 auto;
+@media (min-width: 376px) and (max-width: 768px) {
+    .projects__grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
