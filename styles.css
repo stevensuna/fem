@@ -27,6 +27,12 @@ body {
 }
 
 header,
+footer, 
+main {
+    display: block;
+}
+
+header,
 footer {
     background-color: var(--slate-900);
     color: var(--white);
@@ -89,14 +95,12 @@ main {
 
 .card__image {
     width: 100%;
-    height: 450px;
-    /* Increased height */
-    overflow: hidden;
+    height: auto;
 }
 
 .card__image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
     display: block;
@@ -125,12 +129,11 @@ main {
 }
 
 .card__actions {
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
-    /* Changed to space-between */
     align-items: center;
-    padding: 0 1.5rem 1.5rem;
-    /* Added padding to top */
+    margin-top: auto;
 }
 
 .card__button-group {
@@ -211,7 +214,7 @@ main {
 }
 
 /* Responsive Design */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .header__title {
         font-size: 1.5rem;
     }
@@ -232,10 +235,13 @@ main {
     .projects__grid {
         grid-template-columns: 1fr;
     }
+     .card__actions {
+        flex-direction: column;
+    }
 }
 
-@media (min-width: 376px) and (max-width: 768px) {
+@media (min-width: 769px) {
     .projects__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
