@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Omelette Recipe</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> </head>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
 <body>
     <main class="recipe">
-        <div class="recipe__image-container">
-            <img src="./assets/images/image-omelette.jpeg" alt="Simple Omelette" class="recipe__image">
-        </div>
+        <figure class="recipe__image-container">
+            <img src="./assets/images/image-omelette.jpeg" 
+                 alt="A perfectly cooked golden omelette on a plate" 
+                 class="recipe__image">
+        </figure>
 
-        <section class="recipe__summary">
+        <article class="recipe__summary">
             <h1 class="recipe__title">Simple Omelette Recipe</h1>
             <p class="recipe__description">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
-        </section>
+        </article>
 
         <section class="recipe__prep-time">
             <h2 class="recipe__prep-time-title">Preparation time</h2>
-            <ul class="recipe__prep-time-list">
+            <ul class="recipe__prep-time-list" role="list">
                 <li class="recipe__prep-time-item"><strong>Total:</strong> Approximately 10 minutes</li>
                 <li class="recipe__prep-time-item"><strong>Preparation:</strong> 5 minutes</li>
                 <li class="recipe__prep-time-item"><strong>Cooking:</strong> 5 minutes</li>

@@ -1,5 +1,8 @@
-/* --- Variables --- */
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
 :root {
+    /* Colors */
     --clr-white: hsl(0, 0%, 100%);
     --clr-stone-100: hsl(30, 54%, 90%);
     --clr-stone-150: hsl(30, 18%, 87%);
@@ -9,22 +12,24 @@
     --clr-rose-800: hsl(332, 51%, 32%);
     --clr-rose-50: hsl(330, 100%, 98%);
 
+    /* Typography */
     --ff-young-serif: 'Young Serif', serif;
     --ff-outfit: 'Outfit', sans-serif;
-
     --fw-regular: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
-
     --fs-paragraph: 16px;
 
+    /* Spacing */
     --spacing-xs: 8px;
     --spacing-sm: 16px;
     --spacing-md: 24px;
     --spacing-lg: 32px;
 }
 
-/* --- Font Face --- */
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
 @font-face {
     font-family: 'Outfit';
     src: url('../fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
@@ -39,7 +44,9 @@
     font-display: swap;
 }
 
-/* --- Reset --- */
+/*------------------------------------*\
+  #RESET
+\*------------------------------------*/
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -80,19 +87,10 @@ select {
     font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* --- Recipe Component --- */
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+/* Recipe Card */
 .recipe {
     background-color: var(--clr-white);
     padding: var(--spacing-md);
@@ -101,6 +99,7 @@ select {
     max-width: 700px;
 }
 
+/* Recipe Image */
 .recipe__image-container {
     margin-bottom: var(--spacing-md);
 }
@@ -111,6 +110,7 @@ select {
     border-radius: var(--spacing-xs);
 }
 
+/* Recipe Content */
 .recipe__title {
     font-family: var(--ff-young-serif);
     font-weight: var(--fw-regular);
@@ -122,6 +122,7 @@ select {
     margin-bottom: var(--spacing-md);
 }
 
+/* Preparation Time Section */
 .recipe__prep-time {
     background-color: var(--clr-rose-50);
     padding: var(--spacing-md);
@@ -150,6 +151,7 @@ select {
     font-weight: var(--fw-bold);
 }
 
+/* Recipe Sections */
 .recipe__section-title {
     font-family: var(--ff-young-serif);
     font-weight: var(--fw-regular);
@@ -157,6 +159,7 @@ select {
     margin-bottom: var(--spacing-xs);
 }
 
+/* Lists */
 .recipe__ingredients-list,
 .recipe__instructions-list {
     list-style-position: inside;
@@ -176,12 +179,14 @@ select {
     font-weight: var(--fw-bold);
 }
 
+/* Dividers */
 .recipe__divider {
     border: none;
     border-top: 1px solid var(--clr-stone-100);
     margin-bottom: var(--spacing-md);
 }
 
+/* Nutrition Table */
 .recipe__nutrition-description {
     margin-bottom: var(--spacing-md);
 }
@@ -211,7 +216,23 @@ select {
     font-weight: var(--fw-bold);
 }
 
-/* --- Media Queries --- */
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
 @media (min-width: 700px) {
     .recipe {
         padding: var(--spacing-lg);
