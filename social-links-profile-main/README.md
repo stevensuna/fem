@@ -13,12 +13,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Profile Card Screenshot](./screenshot.jpg)
+![Profile Card Screenshot](./screenshot.pngscreenshot.png)
 
 ### Links
 
-- Live Site URL: [Add your live site URL here]
-- Solution URL: [Add your solution URL here]
+- Live Site URL: [https://stevensuna.github.io/fem/social-links-profile-main/]
+- Solution URL: [https://github.com/stevensuna/fem/tree/main/social-links-profile-main]
 
 ## My Process
 
