@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Profile Card Screenshot](./screenshot.pngscreenshot.png)
+![Profile Card Screenshot](../social-links-profile-main/screenshot.png)
 
 ### Links
 
