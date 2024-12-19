@@ -4,8 +4,31 @@
 
 The designs were created to the following widths:
 
-- Mobile: 375px
-- Desktop: 1440px
+Mobile
+display: flex;
+width: 375px;
+flex-direction: column;
+align-items: flex-start;
+background: var(--color-white, #FFF);
+
+Tablet
+display: flex;
+width: 768px;
+padding: var(--spacing-1600, 128px) var(--spacing-600, 48px);
+justify-content: center;
+align-items: center;
+gap: var(--spacing-100, 8px);
+background: var(--color-stone-100, #F3E5D7);
+
+Desktop
+display: flex;
+width: 1440px;
+padding: var(--spacing-1600, 128px) var(--spacing-600, 48px);
+justify-content: center;
+align-items: center;
+gap: var(--spacing-100, 8px);
+background: var(--color-stone-100, #F3E5D7);
+
 
 > 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
 
@@ -25,6 +48,7 @@ The designs were created to the following widths:
 
 ## Typography
 
+
 ### Body Copy
 
 - Font size (paragraph): 16px
@@ -36,5 +60,3 @@ The designs were created to the following widths:
 
 - Family: [Outfit](https://fonts.google.com/specimen/Outfit)
 - Weights: 400, 600, 700
-
-> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma. The design file for this challenge also includes a design system and tablet layout to help you build a more accurate solution faster.

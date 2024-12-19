@@ -1,4 +1,21 @@
 /*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url('../fonts//young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+/*------------------------------------*\
   #SETTINGS
 \*------------------------------------*/
 :root {
@@ -25,49 +42,242 @@
     --spacing-sm: 16px;
     --spacing-md: 24px;
     --spacing-lg: 32px;
-}
-
-/*------------------------------------*\
-  #FONTS
-\*------------------------------------*/
-@font-face {
-    font-family: 'Outfit';
-    src: url('../fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900; /* Variable font supports all weights */
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Young Serif';
-    src: url('../fonts//young-serif/YoungSerif-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-display: swap;
+    --spacing-xl: 48px;
+    --spacing-xxl: 128px;
 }
 
 /*------------------------------------*\
   #RESET
 \*------------------------------------*/
-/* Keep these even with Normalize.css */
+/* Normalize.css */
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace;
+    font-size: 1em;
+}
+
+a {
+    background-color: transparent;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace;
+    font-size: 1em;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+/* Example of a basic reset */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Your body styles are still useful for project-specific defaults */
 body {
-    font-family: var(--ff-outfit);
-    font-size: var(--fs-paragraph);
-    line-height: 1.5;
-    background-color: var(--clr-stone-150);
-    color: var(--clr-stone-900);
     min-height: 100vh;
+    line-height: 1.5;
     text-rendering: optimizeSpeed;
 }
 
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
 /*------------------------------------*\
-  #COMPONENTS
+  #MOBILE FIRST
 \*------------------------------------*/
+/* General Styles */
+body {
+    font-family: var(--ff-outfit);
+    font-size: var(--fs-paragraph);
+    background-color: var(--clr-stone-150);
+    color: var(--clr-stone-900);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header,
+footer,
+main {
+    display: block;
+    width: 100%;
+}
+
 /* Recipe Card */
 .recipe {
     background-color: var(--clr-white);
@@ -77,7 +287,6 @@ body {
     max-width: 700px;
 }
 
-/* Recipe Image */
 .recipe__image-container {
     margin-bottom: var(--spacing-md);
 }
@@ -88,7 +297,6 @@ body {
     border-radius: var(--spacing-xs);
 }
 
-/* Recipe Content */
 .recipe__title {
     font-family: var(--ff-young-serif);
     font-weight: var(--fw-regular);
@@ -100,7 +308,6 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
-/* Preparation Time Section */
 .recipe__prep-time {
     background-color: var(--clr-rose-50);
     padding: var(--spacing-md);
@@ -125,11 +332,6 @@ body {
     margin-bottom: var(--spacing-xs);
 }
 
-.recipe__prep-time-item strong {
-    font-weight: var(--fw-bold);
-}
-
-/* Recipe Sections */
 .recipe__section-title {
     font-family: var(--ff-young-serif);
     font-weight: var(--fw-regular);
@@ -137,7 +339,6 @@ body {
     margin-bottom: var(--spacing-xs);
 }
 
-/* Lists */
 .recipe__ingredients-list,
 .recipe__instructions-list {
     list-style-position: inside;
@@ -149,22 +350,17 @@ body {
     padding-left: var(--spacing-md);
     margin-bottom: var(--spacing-xs);
 }
+
 .recipe__instructions-list {
     list-style-type: decimal;
 }
 
-.recipe__instructions-list strong {
-    font-weight: var(--fw-bold);
-}
-
-/* Dividers */
 .recipe__divider {
     border: none;
     border-top: 1px solid var(--clr-stone-100);
     margin-bottom: var(--spacing-md);
 }
 
-/* Nutrition Table */
 .recipe__nutrition-description {
     margin-bottom: var(--spacing-md);
 }
@@ -195,54 +391,32 @@ body {
 }
 
 /*------------------------------------*\
-  #UTILITIES
-\*------------------------------------*/
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/*------------------------------------*\
   #MEDIA QUERIES
 \*------------------------------------*/
-@media (min-width: 700px) {
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    body{
+        padding: var(--spacing-xl);
+        align-items: center;
+        justify-content: center;
+    }
     .recipe {
         padding: var(--spacing-lg);
         margin: var(--spacing-lg) auto;
     }
+}
 
-    .recipe__image-container {
-        margin-bottom: var(--spacing-lg);
+/* Desktop Styles */
+@media (min-width: 1440px) {
+    body {
+        padding: var(--spacing-xxl) var(--spacing-xl);
+        justify-content: center;
     }
 
-    .recipe__title {
-        margin-bottom: var(--spacing-md);
-    }
-
-    .recipe__description {
-        margin-bottom: var(--spacing-lg);
-    }
-
-    .recipe__prep-time {
-        margin-bottom: var(--spacing-lg);
-    }
-
-    .recipe__prep-time-title {
-        margin-bottom: var(--spacing-sm);
-    }
-
-    .recipe__ingredients-list,
-    .recipe__instructions-list {
-        margin-bottom: var(--spacing-lg);
-    }
-
-    .recipe__divider {
-        margin-bottom: var(--spacing-lg);
+    .recipe {
+        padding: var(--spacing-lg);
+        margin: var(--spacing-lg) auto;
+        max-width: 736px; /* Adjust as needed */
     }
 }
