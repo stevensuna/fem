@@ -80,18 +80,19 @@ h1, h2, h3 {
 
 /* Recipe Container */
 .recipe {
-    background-color: var(--color-white);
-    max-width: 736px; /* Max width for larger screens */
-    margin: var(--spacing-600) auto; /* Centering on larger screens */
-    padding: var(--spacing-200);
-    border-radius: var(--spacing-200);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 375px; /* Mobile width */    
+    background-color: var(--color-white);    
 }
+
 
 /* Hero Section */
 .recipe__hero-image {
     width: 100%;
-    height: auto;
-    border-radius: var(--spacing-200);
+    height: 171px;    
 }
 
 /* Content */
@@ -257,7 +258,6 @@ h1, h2, h3 {
     font-weight: var(--text-preset-4-bold-font-weight);
     text-align: right;
 }
-
 /* Breakpoint: 768px (Tablet) */
 @media (min-width: 768px) {
     .recipe {
