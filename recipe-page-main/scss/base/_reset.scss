@@ -29,14 +29,3 @@ img {
   max-width: 100%;
   display: block;
 }
-
-// layout/_article.scss
-article {
-    background-color: $white;
-    padding: spacing(400);
-    border-radius: spacing(200);
-    @include media-breakpoint-up(desktop){
-        max-width: 736px;
-        padding: spacing(600);
-    }
-}
