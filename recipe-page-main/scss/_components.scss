@@ -1,0 +1,49 @@
+// _components.scss
+.recipe {
+  &__image {
+    border-radius: map-get($spacing, '200');
+    margin-bottom: map-get($spacing, '300');
+  }
+
+  &__title {
+    @include text-preset-3;
+    margin-bottom: map-get($spacing, '200');
+  }
+
+  &__description {
+    @include text-preset-4;
+    margin-bottom: map-get($spacing, '400');
+  }
+
+  ul, ol {
+    li {
+      @include text-preset-4;
+      margin-bottom: map-get($spacing, '150');
+
+      strong {
+        @include text-preset-4-bold;
+      }
+    }
+  }
+
+  table {
+    caption {
+      @include text-preset-4;
+      text-align: left;
+      margin-bottom: map-get($spacing, '200');
+    }
+
+    th, td {
+      padding: map-get($spacing, '150');
+      text-align: center;
+    }
+
+    th {
+      @include text-preset-4-bold;
+    }
+
+    td {
+      @include text-preset-4;
+    }
+  }
+}

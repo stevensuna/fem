@@ -1,0 +1,35 @@
+// _typography.scss
+@mixin text-preset-1 {
+  font-family: 'Young Serif', serif;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: 'Young Serif', serif;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4-bold {
+  @include text-preset-4;
+  font-weight: 700;
+}

@@ -1,0 +1,22 @@
+// _mixins.scss
+@mixin breakpoint($point) {
+  @if map-has-key($breakpoints, $point) {
+    @media (min-width: map-get($breakpoints, $point)) {
+      @content;
+    }
+  }
+}
+
+@mixin spacing($key) {
+  margin-bottom: map-get($spacing, $key);
+}
+
+@mixin container {
+  max-width: map-get($breakpoints, 'desktop');
+  margin: 0 auto;
+  padding: map-get($spacing, '400');
+  
+  @include breakpoint('mobile') {
+    padding: map-get($spacing, '200');
+  }
+}

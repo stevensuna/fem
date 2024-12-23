@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #FFFFFF;
+  color: #312E2C;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style-position: inside;
+  padding-left: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recipe__image {
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.recipe__title {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
+.recipe__description {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  margin-bottom: 32px;
+}
+.recipe ul li, .recipe ol li {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+}
+.recipe ul li strong, .recipe ol li strong {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+.recipe table caption {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.recipe table th, .recipe table td {
+  padding: 12px;
+  text-align: center;
+}
+.recipe table th {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+.recipe table td {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px;
+}
+@media (min-width: 375px) {
+  .container {
+    padding: 16px;
+  }
+}
+
+.recipe__header, .recipe__prep-time, .recipe__ingredients, .recipe__instructions, .recipe__nutrition {
+  margin-bottom: 32px;
+}
+.recipe__header h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}/*# sourceMappingURL=style.css.map */

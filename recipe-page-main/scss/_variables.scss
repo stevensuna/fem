@@ -1,0 +1,28 @@
+// _variables.scss
+$colors: (
+  'rose-800': #7A284E,
+  'rose-50': #FFF7FB,
+  'stone-900': #312E2C,
+  'stone-600': #5F564D,
+  'stone-150': #E3DDD7,
+  'stone-100': #F3EED7,
+  'brown-800': #854A32,
+  'white': #FFFFFF
+);
+
+$breakpoints: (
+  'mobile': 375px,
+  'tablet': 768px,
+  'desktop': 1440px
+);
+
+$spacing: (
+  '1600': 128px,
+  '600': 48px,
+  '500': 40px,
+  '400': 32px,
+  '300': 24px,
+  '200': 16px,
+  '150': 12px,
+  '100': 8px
+);

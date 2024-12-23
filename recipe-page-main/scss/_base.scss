@@ -1,0 +1,31 @@
+// _base.scss
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: map-get($colors, 'white');
+  color: map-get($colors, 'stone-900');
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style-position: inside;
+  padding-left: map-get($spacing, '200');
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
