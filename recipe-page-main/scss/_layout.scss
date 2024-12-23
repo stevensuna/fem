@@ -1,21 +1,5 @@
-// _layout.scss
 .container {
-  @include container;
-}
-
-.recipe {
-  &__header,
-  &__prep-time,
-  &__ingredients,
-  &__instructions,
-  &__nutrition {
-    margin-bottom: map-get($spacing, '400');
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
-
-  &__header {
-    h2 {
-      @include text-preset-3;
-      margin-bottom: map-get($spacing, '200');
-    }
-  }
-}

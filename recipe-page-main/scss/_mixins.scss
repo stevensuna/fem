@@ -1,22 +1,19 @@
-// _mixins.scss
-@mixin breakpoint($point) {
-  @if map-has-key($breakpoints, $point) {
-    @media (min-width: map-get($breakpoints, $point)) {
-      @content;
+// Spacing Mixins
+@mixin spacing($size) {
+    @if map-has-key($spacing-map, $size) {
+      margin-bottom: map-get($spacing-map, $size);
+    } @else {
+      @error "Invalid spacing size: #{$size}.";
     }
   }
-}
-
-@mixin spacing($key) {
-  margin-bottom: map-get($spacing, $key);
-}
-
-@mixin container {
-  max-width: map-get($breakpoints, 'desktop');
-  margin: 0 auto;
-  padding: map-get($spacing, '400');
   
-  @include breakpoint('mobile') {
-    padding: map-get($spacing, '200');
+  // Breakpoint Mixins
+  @mixin breakpoint($size) {
+    @if $size == large {
+      @media (min-width: 1024px) { @content; }
+    } @else if $size == medium {
+      @media (min-width: 768px) { @content; }
+    } @else if $size == small {
+      @media (min-width: 320px) { @content; }
+    }
   }
-}

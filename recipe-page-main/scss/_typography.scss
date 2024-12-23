@@ -1,35 +1,36 @@
-// _typography.scss
-@mixin text-preset-1 {
-  font-family: 'Young Serif', serif;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-
-@mixin text-preset-2 {
-  font-family: 'Young Serif', serif;
-  font-size: 28px;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-
-@mixin text-preset-3 {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-
-@mixin text-preset-4 {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0;
-}
-
-@mixin text-preset-4-bold {
-  @include text-preset-4;
-  font-weight: 700;
-}
+body {
+    font-family: $font-family-sans;
+    color: $color-stone-900;
+    font-size: $font-size-body;
+    line-height: 150%;
+  }
+  
+  h1 {
+    font-family: $font-family-serif;
+    font-size: $font-size-h1;
+    line-height: 100%;
+    letter-spacing: 0px;
+    font-weight: $font-weight-regular;
+    color: $color-stone-900;
+  }
+  
+  h2 {
+    font-family: $font-family-sans;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-semibold;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: $color-brown-800;
+  }
+  
+  p {
+      line-height: 150%;
+      letter-spacing: 0px;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-body;
+      color: $color-stone-900;
+  }
+  
+  strong {
+      font-weight: $font-weight-bold;
+  }
