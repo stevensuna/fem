@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    line-height: $line-height-body;
+    font-family: $font-family-sans;
+    font-size: $font-size-body;
+    color: $stone-900;
+    background-color: $stone-100;
+    padding: spacing(400) spacing(100);
+    @include media-breakpoint-up(tablet) {
+        padding: spacing(600);
+    }
+
+    @include media-breakpoint-up(desktop){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// layout/_article.scss
+article {
+    background-color: $white;
+    padding: spacing(400);
+    border-radius: spacing(200);
+    @include media-breakpoint-up(desktop){
+        max-width: 736px;
+        padding: spacing(600);
+    }
+}

@@ -1,32 +1,7 @@
-## Layout
-
-The designs were created to the following widths:
-
-Mobile
-display: flex;
-width: 375px;
-flex-direction: column;
-align-items: flex-start;
-background: var(--color-white, #FFF);
-
-Tablet
-display: flex;
-width: 768px;
-padding: var(--spacing-1600, 128px) var(--spacing-600, 48px);
-justify-content: center;
-align-items: center;
-gap: var(--spacing-100, 8px);
-background: var(--color-stone-100, #F3E5D7);
-
-Desktop
-display: flex;
-width: 1440px;
-padding: var(--spacing-1600, 128px) var(--spacing-600, 48px);
-justify-content: center;
-align-items: center;
-gap: var(--spacing-100, 8px);
-background: var(--color-stone-100, #F3E5D7);
-
+## Breakpoint
+Mobile 375px
+Tablet 768px
+Desktop 1440px
 
 ## Style Guide
 
