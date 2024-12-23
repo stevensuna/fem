@@ -9,11 +9,17 @@
   
   // Breakpoint Mixins
   @mixin breakpoint($size) {
-    @if $size == large {
-      @media (min-width: 1024px) { @content; }
-    } @else if $size == medium {
-      @media (min-width: 768px) { @content; }
-    } @else if $size == small {
-      @media (min-width: 320px) { @content; }
+    @if $size == mobile {
+      @media (min-width: $breakpoint-mobile) { @content; }
+    } @else if $size == tablet {
+      @media (min-width: $breakpoint-tablet) {
+        background: var(--color-stone-100, #F3E5D7);
+        @content;
+      }
+    } @else if $size == desktop {
+      @media (min-width: $breakpoint-desktop) {
+        background: var(--color-stone-100, #F3E5D7);
+        @content;
+      }
     }
   }

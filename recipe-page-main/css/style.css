@@ -50,23 +50,57 @@ strong {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: var(--spacing-300);
+}
+@media (min-width: 768px) {
+  .container {
+    background: var(--color-stone-100, #F3E5D7);
+    padding: var(--spacing-1600) var(--spacing-600);
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    background: var(--color-stone-100, #F3E5D7);
+    padding: var(--spacing-1600) var(--spacing-600);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  align-items: flex-start;
+  background: var(--color-white, #FFF);
+}
+@media (min-width: 768px) {
+  body {
+    background: var(--color-stone-100, #F3E5D7);
+    display: flex;
+    width: 768px;
+    padding: var(--spacing-1600, 128px) var(--spacing-600, 48px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-100, 8px);
+    background: var(--color-stone-100, #F3E5D7);
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    background: var(--color-stone-100, #F3E5D7);
+    align-items: center;
+    display: flex;
+    width: 1440px;
+    padding: var(--spacing-1600, 128px) var(--spacing-600, 48px);
+    justify-content: center;
+    gap: var(--spacing-100, 8px);
+    background: var(--color-stone-100, #F3E5D7);
+  }
 }
 
 .recipe__header {
   margin-bottom: 128px;
-}
-@media (min-width: 768px) {
-  .recipe__header {
-    margin-bottom: 48px;
-  }
-}
-@media (min-width: 320px) {
-  .recipe__header {
-    margin-bottom: 24px;
-  }
 }
 .recipe__image {
   max-width: 100%;
@@ -74,59 +108,19 @@ strong {
   display: block;
   margin-bottom: 48px;
 }
-@media (min-width: 768px) {
-  .recipe__image {
-    margin-bottom: 24px;
-  }
-}
-@media (min-width: 320px) {
-  .recipe__image {
-    margin-bottom: 12px;
-  }
-}
 .recipe__title {
   margin-bottom: 24px;
 }
-@media (min-width: 320px) {
-  .recipe__title {
-    margin-bottom: 12px;
-  }
-}
 .recipe__description {
   margin-bottom: 48px;
-}
-@media (min-width: 768px) {
-  .recipe__description {
-    margin-bottom: 24px;
-  }
-}
-@media (min-width: 320px) {
-  .recipe__description {
-    margin-bottom: 12px;
-  }
 }
 .recipe__prep-time {
   background-color: #FFF7FB;
   padding: 20px;
   margin-bottom: 128px;
 }
-@media (min-width: 768px) {
-  .recipe__prep-time {
-    margin-bottom: 48px;
-  }
-}
-@media (min-width: 320px) {
-  .recipe__prep-time {
-    margin-bottom: 24px;
-  }
-}
 .recipe__prep-time h2 {
   margin-bottom: 24px;
-}
-@media (min-width: 320px) {
-  .recipe__prep-time h2 {
-    margin-bottom: 12px;
-  }
 }
 .recipe__prep-time ul {
   list-style: disc;
@@ -134,19 +128,9 @@ strong {
   padding-left: 0;
   margin-bottom: 24px;
 }
-@media (min-width: 320px) {
-  .recipe__prep-time ul {
-    margin-bottom: 12px;
-  }
-}
 .recipe__prep-time li {
   margin-bottom: 12px;
   font-size: 16px;
-}
-@media (min-width: 320px) {
-  .recipe__prep-time li {
-    margin-bottom: 8px;
-  }
 }
 .recipe__ingredients, .recipe__instructions, .recipe__nutrition {
   margin-bottom: 128px;
@@ -154,40 +138,15 @@ strong {
 .recipe__ingredients h2, .recipe__instructions h2, .recipe__nutrition h2 {
   margin-bottom: 24px;
 }
-@media (min-width: 320px) {
-  .recipe__ingredients h2, .recipe__instructions h2, .recipe__nutrition h2 {
-    margin-bottom: 12px;
-  }
-}
-@media (min-width: 768px) {
-  .recipe__ingredients, .recipe__instructions, .recipe__nutrition {
-    margin-bottom: 48px;
-  }
-}
-@media (min-width: 320px) {
-  .recipe__ingredients, .recipe__instructions, .recipe__nutrition {
-    margin-bottom: 24px;
-  }
-}
 .recipe__ingredients ul, .recipe__instructions ol {
   list-style: disc;
   margin-left: 40px;
   padding-left: 0;
   margin-bottom: 24px;
 }
-@media (min-width: 320px) {
-  .recipe__ingredients ul, .recipe__instructions ol {
-    margin-bottom: 12px;
-  }
-}
 .recipe__ingredients ul li, .recipe__instructions ol li {
   margin-bottom: 12px;
   font-size: 16px;
-}
-@media (min-width: 320px) {
-  .recipe__ingredients ul li, .recipe__instructions ol li {
-    margin-bottom: 8px;
-  }
 }
 .recipe__instructions ol {
   list-style: decimal;
@@ -200,11 +159,6 @@ strong {
   margin-bottom: 24px;
   text-align: left;
   font-size: 16px;
-}
-@media (min-width: 320px) {
-  .recipe__nutrition table caption {
-    margin-bottom: 12px;
-  }
 }
 .recipe__nutrition th, .recipe__nutrition td {
   text-align: left;
