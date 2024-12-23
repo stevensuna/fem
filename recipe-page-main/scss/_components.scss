@@ -1,19 +1,37 @@
+// scss/_components.scss
+
 .recipe {
-    &__header {
-      @include spacing(1600);
-  
-      @include breakpoint(medium) {
-          @include spacing(600);
-      }
-       @include breakpoint(small) {
-          @include spacing(300);
-      }
+  &__header {
+    @include spacing(1600);
+
+    @include breakpoint(medium) {
+        @include spacing(600);
     }
-  
-    &__image {
-      max-width: 100%;
-      height: auto;
-      display: block;
+     @include breakpoint(small) {
+        @include spacing(300);
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    @include spacing(600);
+    @include breakpoint(medium) {
+        @include spacing(300);
+    }
+    @include breakpoint(small) {
+        @include spacing(150);
+    }
+  }
+
+  &__title {
+    @include spacing(300);
+    @include breakpoint(small) {
+        @include spacing(150);
+    }
+  }
+  &__description {
       @include spacing(600);
       @include breakpoint(medium) {
           @include spacing(300);
@@ -21,76 +39,24 @@
       @include breakpoint(small) {
           @include spacing(150);
       }
+  }
+  &__prep-time {
+    background-color: $color-rose-50;
+    padding: 20px;
+    @include spacing(1600);
+    @include breakpoint(medium) {
+        @include spacing(600);
     }
-  
-    &__title {
+     @include breakpoint(small) {
+        @include spacing(300);
+    }
+    h2 {
       @include spacing(300);
       @include breakpoint(small) {
           @include spacing(150);
       }
     }
-    &__description {
-        @include spacing(600);
-        @include breakpoint(medium) {
-            @include spacing(300);
-        }
-        @include breakpoint(small) {
-            @include spacing(150);
-        }
-    }
-    &__prep-time {
-      background-color: $color-rose-50;
-      padding: 20px;
-      @include spacing(1600);
-      @include breakpoint(medium) {
-          @include spacing(600);
-      }
-       @include breakpoint(small) {
-          @include spacing(300);
-      }
-      h2 {
-        @include spacing(300);
-        @include breakpoint(small) {
-            @include spacing(150);
-        }
-      }
-      ul {
-        list-style: disc;
-        margin-left: 40px;
-        padding-left: 0;
-        @include spacing(300);
-         @include breakpoint(small) {
-            @include spacing(150);
-        }
-      }
-      li {
-          @include spacing(150);
-          @include breakpoint(small) {
-            @include spacing(100);
-          }
-          font-size: $font-size-body;
-      }
-    }
-  
-    &__ingredients,
-    &__instructions,
-    &__nutrition {
-        @include spacing(1600);
-        h2 {
-            @include spacing(300);
-            @include breakpoint(small) {
-                @include spacing(150);
-            }
-          }
-        @include breakpoint(medium) {
-            @include spacing(600);
-        }
-        @include breakpoint(small) {
-            @include spacing(300);
-        }
-    }
-    &__ingredients ul,
-    &__instructions ol {
+    ul {
       list-style: disc;
       margin-left: 40px;
       padding-left: 0;
@@ -98,41 +64,77 @@
        @include breakpoint(small) {
           @include spacing(150);
       }
-      li {
+    }
+    li {
         @include spacing(150);
         @include breakpoint(small) {
           @include spacing(100);
         }
         font-size: $font-size-body;
     }
-    }
-  
-    &__instructions ol {
-      list-style: decimal;
-    }
-    &__nutrition table {
-        width: 100%;
-        border-collapse: collapse;
-        caption {
-            @include spacing(300);
-            text-align: left;
-            font-size: $font-size-body;
-             @include breakpoint(small) {
+  }
+
+  &__ingredients,
+  &__instructions,
+  &__nutrition {
+      @include spacing(1600);
+      h2 {
+          @include spacing(300);
+          @include breakpoint(small) {
               @include spacing(150);
-            }
+          }
         }
+      @include breakpoint(medium) {
+          @include spacing(600);
+      }
+      @include breakpoint(small) {
+          @include spacing(300);
+      }
+  }
+  &__ingredients ul,
+  &__instructions ol {
+    list-style: disc;
+    margin-left: 40px;
+    padding-left: 0;
+    @include spacing(300);
+     @include breakpoint(small) {
+        @include spacing(150);
     }
-  
-    &__nutrition th,
-    &__nutrition td {
-        text-align: left;
-        padding: 12px;
-        border-bottom: 1px solid $color-stone-150;
-        font-size: $font-size-table-td;
-    }
-  
-    &__nutrition th {
-        color: $color-stone-600;
-        font-size: $font-size-table-th;
-    }
+    li {
+      @include spacing(150);
+      @include breakpoint(small) {
+        @include spacing(100);
+      }
+      font-size: $font-size-body;
+  }
+  }
+
+  &__instructions ol {
+    list-style: decimal;
+  }
+  &__nutrition table {
+      width: 100%;
+      border-collapse: collapse;
+      caption {
+          @include spacing(300);
+          text-align: left;
+          font-size: $font-size-body;
+           @include breakpoint(small) {
+            @include spacing(150);
+          }
+      }
+  }
+
+  &__nutrition th,
+  &__nutrition td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid $color-stone-150;
+      font-size: $font-size-table-td;
+  }
+
+  &__nutrition th {
+      color: $color-stone-600;
+      font-size: $font-size-table-th;
+  }
 }

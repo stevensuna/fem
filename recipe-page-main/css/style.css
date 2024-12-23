@@ -1,4 +1,18 @@
 @import "/css/normalize.css";
+@font-face {
+  font-family: "Young Serif";
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -21,11 +35,18 @@ body {
 
 h1 {
   font-family: "Young Serif", serif;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 100%;
   letter-spacing: 0px;
   font-weight: 400;
   color: #312E2C;
+  line-height: 100%;
+}
+@media (min-width: 768px) {
+  h1 {
+    background: var(--color-stone-100, #F3E5D7);
+    font-size: 40px;
+  }
 }
 
 h2 {

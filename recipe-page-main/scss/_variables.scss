@@ -18,7 +18,8 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
 // Font Sizes
-$font-size-h1: 40px;
+$font-size-h1-mobile: 36px; // New variable for mobile h1 font size
+$font-size-h1: 40px; // Existing variable (for larger screens, potentially)
 $font-size-h2: 28px;
 $font-size-body: 16px;
 $font-size-list-bold: 18px;
