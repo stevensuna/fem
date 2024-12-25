@@ -213,7 +213,7 @@ article {
   display: flex;
   padding-left: var(--space-3xs);
   align-items: center;
-  align-self: stretch;
+  align-self: stretch; 
   gap: var(--space-xs);
   color: var(--stone-600);
   font-family: var(--ff-outfit);
