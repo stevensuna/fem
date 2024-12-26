@@ -3,122 +3,101 @@ Mobile 375px
 Tablet 768px
 Desktop 1440px
 
-## Style Guide
+# Style Guide
 
-Colors
+## Colors
 
-Rose
+### Rose
 
-rose-800
+*   **rose-800**
+    *   HEX: `#7A284E`
+    *   RGB: `122, 40, 78`
+    *   HSL: `332°, 51%, 32%`
+*   **rose-50**
+    *   HEX: `#FFF7FB`
+    *   RGB: `255, 247, 251`
+    *   HSL: `330°, 100%, 98%`
 
-HEX: #7A284E
+### Stone
 
-RGB: 122, 40, 78
+*   **stone-900**
+    *   HEX: `#312E2C`
+    *   RGB: `49, 46, 44`
+    *   HSL: `24°, 5%, 18%`
+*   **stone-600**
+    *   HEX: `#5F564D`
+    *   RGB: `95, 86, 77`
+    *   HSL: `30°, 10%, 34%`
+*   **stone-150**
+    *   HEX: `#E3DDD7`
+    *   RGB: `227, 221, 215`
+    *   HSL: `30°, 18%, 87%`
+*   **stone-100**
+    *   HEX: `#F3E5D7`
+    *   RGB: `243, 229, 215`
+    *   HSL: `30°, 54%, 90%`
 
-HSL: 332°, 51%, 32%
+### Brown
 
-rose-50
+*   **brown-800**
+    *   HEX: `#854632`
+    *   RGB: `133, 70, 50`
+    *   HSL: `14°, 45%, 36%`
 
-HEX: #FFF7FB
+### White
 
-RGB: 255, 247, 251
+*   **White**
+    *   HEX: `#FFFFFF`
+    *   RGB: `255, 255, 255`
+    *   HSL: `0°, 0%, 100%`
 
-HSL: 330°, 100%, 98%
+## Typography
 
-Stone
+### Text Preset 1
 
-stone-900
+*   **Font Family:** Young Serif Regular
+*   **Font Size:** 40px
+*   **Line Height:** 100%
+*   **Letter Spacing:** 0px
 
-HEX: #312E2C
+### Text Preset 2
 
-RGB: 49, 46, 44
+*   **Font Family:** Young Serif Regular
+*   **Font Size:** 28px
+*   **Line Height:** 100%
+*   **Letter Spacing:** 0px
 
-HSL: 24°, 5%, 18%
+### Text Preset 3
 
-stone-600
+*   **Font Family:** Outfit Semibold
+*   **Font Size:** 20px
+*   **Line Height:** 100%
+*   **Letter Spacing:** 0px
 
-HEX: #5F564D
 
-RGB: 95, 86, 77
+### Text Preset 4
 
-HSL: 30°, 10%, 34%
+*   **Font Family:** Outfit Regular
+*   **Font Size:** 16px
+*   **Line Height:** 150%
+*   **Letter Spacing:** 0px
 
-stone-150
 
-HEX: #E3DDD7
+### Text Preset 4 Bold
 
-RGB: 227, 221, 215
+*   **Font Family:** Outfit Bold
+*   **Font Size:** 16px
+*   **Line Height:** 150%
+*   **Letter Spacing:** 0px
 
-HSL: 30°, 18%, 87%
 
-stone-100
+## Spacing
 
-HEX: #F3EED7
-
-RGB: 243, 229, 215
-
-HSL: 30°, 54%, 90%
-
-Brown
-
-brown-800
-
-HEX: #854A32
-
-RGB: 133, 70, 50
-
-HSL: 14°, 45%, 36%
-
-White
-
-white
-
-HEX: #FFFFFF
-
-RGB: 255, 255, 255
-
-HSL: 0°, 0%, 100%
-
-Typography
-
-Text Preset 1: Young Serif Regular
-
-40px 100% Line Height 0px Letter Spacing
-
-Example: "Lorem ipsum dolor sit amet consectetuer"
-
-Text Preset 2: Young Serif Regular
-
-28px 100% Line Height 0px Letter Spacing
-
-Example: "Lorem ipsum dolor sit amet consectetuer"
-
-Text Preset 3: Outfit Semibold
-
-20px 100% Line Height 0px Letter Spacing
-
-Example: "Lorem ipsum dolor sit amet consectetuer adipiscing"
-
-Text Preset 4: Outfit Regular
-
-16px 150% Line Height 0px Letter Spacing
-
-Example: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-
-Text Preset 4 Bold: Outfit Bold
-
-16px 150% Line Height 0px Letter Spacing
-
-Example: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-
-Spacing
-
-Breakpoint	Spacing
-1600	128px
-600	48px
-500	40px
-400	32px
-300	24px
-200	16px
-150	12px
-100	8px
+*   1600 (128px)
+*   600 (48px)
+*   500 (40px)
+*   400 (32px)
+*   300 (24px)
+*   200 (16px)
+*   150 (12px)
+*   100 (8px)
