@@ -67,47 +67,13 @@
   --spacing-200: 16px;
   --spacing-150: 12px;
   --spacing-100: 8px;
-}
 
-/* Typography Presets */
-.font-size-desktop-text-preset-1 {
-  font-family: 'Young Serif', serif;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: 0;
+  /* Font Sizes */
+  --font-size-desktop-text-preset-1: 40px;
+  --font-size-desktop-text-preset-2: 28px;
+  --font-size-desktop-text-preset-3: 20px;
+  --font-size-desktop-text-preset-4: 16px;
 }
-
-.font-size-desktop-text-preset-2 {
-  font-family: 'Young Serif', serif;
-  font-size: 28px;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-
-.font-size-desktop-text-preset-3 {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-
-.font-size-desktop-text-preset-4 {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0;
-}
-
-.font-size-desktop-text-preset-4-bold {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0;
-}
-
 /* Reset & Base Styles */
 *,
 *::before,
@@ -130,8 +96,8 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: 'Outfit', sans-serif;
-  background-color: var(--white);
-  color: var(--stone-900);
+  background-color: var(--color-white);
+  color: var(--color-stone-900);
 }
 
 /* Make images easier to work with */
@@ -179,38 +145,79 @@ textarea {
 }
 
 /* Global Styles */
-.recipe {
+.container {
   display: flex;
   width: 1440px;
-  padding: var(--spacing-1600, 128px) var(--spacing-600, 48px);
+  padding: var(--spacing-1600) var(--spacing-600);
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-100, 8px);
-  background: var(--color-stone-100, #F3E5D7);
+  gap: var(--spacing-100);
+  background: var(--color-stone-100);
 }
 
-.recipe__content {
+.card__recipe {
   display: flex;
   width: 736px;
-  padding: var(--spacing-500, 40px);
+  padding: var(--spacing-500);
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--spacing-500, 40px);
+  gap: var(--spacing-500);
   flex-shrink: 0;
-  border-radius: var(--spacing-300, 24px);
-  background: var(--color-white, #FFF);
+  border-radius: var(--spacing-300);
+  background: var(--color-white);
 }
 
 .recipe__image {
   height: 300px;
   align-self: stretch;
-  border-radius: var(--spacing-150, 12px);
+  border-radius: var(--spacing-150);
 }
 
+.recipe__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-400);
+  align-self: stretch;  
+}
 
-.recipe__image-container {  
-  height: 300px;
+.recipe__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-300);
+  align-self: stretch;  
+}
+
+.recipe__title h1 {
   align-self: stretch;
+  color: var(--color-stone-900);
+  /* Desktop/text-preset-1 */
+  font-family: "Young Serif";
+  font-size: var(--font-size-desktop-text-preset-1);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 40px */
+}
+
+.recipe__title p {
+  align-self: stretch;
+  color: var(--color-stone-600);
+  /* Desktop/text-preset-4 */
+  font-family: "Outfit";
+  font-size: var(--font-size-desktop-text-preset-4);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.recipe__prep-time {
+  display: flex;
+  padding: var(--spacing-300);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-200);
+  align-self: stretch;  
 }
 
 /* Media Queries */
