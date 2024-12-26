@@ -43,48 +43,48 @@
 /* Custom Properties - Colors */
 :root {
   /* Rose Colors */
-  --rose-800: #7A284E;
-  --rose-50: #FFF7FB;
+  --color-rose-800: #7A284E;
+  --color-rose-50: #FFF7FB;
   
   /* Stone Colors */
-  --stone-900: #312E2C;
-  --stone-600: #5F564D;
-  --stone-150: #E3DDD7;
-  --stone-100: #F3E5D7;
+  --color-stone-900: #312E2C;
+  --color-stone-600: #5F564D;
+  --color-stone-150: #E3DDD7;
+  --color-stone-100: #F3E5D7;
   
   /* Brown Colors */
-  --brown-800: #854632;
+  --color-brown-800: #854632;
   
   /* White */
-  --white: #FFFFFF;
+  --color-white: #FFFFFF;
 
   /* Spacing */
-  --space-1600: 128px;
-  --space-600: 48px;
-  --space-500: 40px;
-  --space-400: 32px;
-  --space-300: 24px;
-  --space-200: 16px;
-  --space-150: 12px;
-  --space-100: 8px;
+  --spacing-1600: 128px;
+  --spacing-600: 48px;
+  --spacing-500: 40px;
+  --spacing-400: 32px;
+  --spacing-300: 24px;
+  --spacing-200: 16px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
 }
 
 /* Typography Presets */
-.text-preset-1 {
+.font-size-desktop-text-preset-1 {
   font-family: 'Young Serif', serif;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0;
 }
 
-.text-preset-2 {
+.font-size-desktop-text-preset-2 {
   font-family: 'Young Serif', serif;
   font-size: 28px;
   line-height: 100%;
   letter-spacing: 0;
 }
 
-.text-preset-3 {
+.font-size-desktop-text-preset-3 {
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -92,7 +92,7 @@
   letter-spacing: 0;
 }
 
-.text-preset-4 {
+.font-size-desktop-text-preset-4 {
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -100,7 +100,7 @@
   letter-spacing: 0;
 }
 
-.text-preset-4-bold {
+.font-size-desktop-text-preset-4-bold {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -178,6 +178,41 @@ textarea {
   }
 }
 
+/* Global Styles */
+.recipe {
+  display: flex;
+  width: 1440px;
+  padding: var(--spacing-1600, 128px) var(--spacing-600, 48px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-100, 8px);
+  background: var(--color-stone-100, #F3E5D7);
+}
+
+.recipe__content {
+  display: flex;
+  width: 736px;
+  padding: var(--spacing-500, 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-500, 40px);
+  flex-shrink: 0;
+  border-radius: var(--spacing-300, 24px);
+  background: var(--color-white, #FFF);
+}
+
+.recipe__image {
+  height: 300px;
+  align-self: stretch;
+  border-radius: var(--spacing-150, 12px);
+}
+
+
+.recipe__image-container {  
+  height: 300px;
+  align-self: stretch;
+}
+
 /* Media Queries */
 @media screen and (min-width: 375px) {
   /* Mobile styles */
@@ -185,8 +220,4 @@ textarea {
 
 @media screen and (min-width: 768px) {
   /* Tablet styles */
-}
-
-@media screen and (min-width: 1440px) {
-  /* Desktop styles */
 }
