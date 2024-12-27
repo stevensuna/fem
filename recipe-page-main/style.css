@@ -130,22 +130,32 @@ textarea {
 }
 
 /* Recipe Styles */
-.recipe {
+.body {
   display: flex;
-  flex-direction: column;
+  width: 1440px;
+  padding: var(--spacing-4xl) var(--spacing-3xl);
+  justify-content: center;
   align-items: center;
-  padding: var(--spacing-xl);
-  gap: var(--spacing-xl);
+  gap: var(--spacing-xs);
+  background: var(--color-stone-100);  
 }
 
-.recipe__card {
+.recipe {
   display: flex;
+  width: 736px;
+  padding: var(--spacing-xxl);  
   flex-direction: column;
-  gap: var(--spacing-xl);
-  border-radius: var(--spacing-md);
+  align-items: flex-start;
+  gap: var(--spacing-xxl);
+  flex-shrink: 0;
+  border-radius: var(--spacing-lg);
   background: var(--color-white);
-  padding: var(--spacing-xxl);
-  max-width: var(--breakpoint-md);
+}
+
+.recipe__image {  
+  height: 300px;
+  align-self: stretch;
+  border-radius: var(--spacing-sm);
 }
 
 @media (min-width: 1440px) {
