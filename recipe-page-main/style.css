@@ -190,9 +190,52 @@ textarea {
     color: var(--color-stone-900);
     /* Desktop/text-preset-1 */
     font-family: var(--font-family-primary);
-    font-size: var(--font-size-h1, 40px);
-    font-style: normal;
-    font-weight: 400;
+    font-size: var(--font-size-h1);    
     line-height: 100%; /* 40px */
   }
-}
+
+  .recipe__intro p {
+    color: var(--color-stone-600);
+    /* Desktop/text-preset-2 */
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-body);    
+    line-height: 150%; /* 24px */
+  }
+
+  .recipe__prep-time {
+    display: flex;
+    padding: var(--spacing-300);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-200);
+    align-self: stretch;
+    border-radius: var(--spacing-150);
+    background: var(--color-rose-50);
+  }
+
+  .recipe__prep-time h2 {    
+    color: var(--color-rose-800);
+    /* Desktop/text-preset-3 */
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-h3);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+  }  
+
+  .recipe__prep-time ul {        
+    display: flex;    
+    flex-direction: column;    
+    gap: var(--spacing-100);    
+    padding-left: var(--spacing-100);            
+  }
+
+  .recipe__prep-time ul li {    
+    padding-left: var(--spacing-400);            
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4' fill='none'%3E%3Ccircle cx='2' cy='2' r='2' fill='%237A284E'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 4px;
+  }
+
+  
