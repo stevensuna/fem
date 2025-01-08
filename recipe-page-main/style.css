@@ -27,16 +27,15 @@
   --color-brown-800: #854632;
   --color-white: #FFFFFF;
 
-  /* Spacing */
-  --spacing-xxs: 4px;
-  --spacing-xs: 8px;
-  --spacing-sm: 12px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 40px;
-  --spacing-3xl: 48px;
-  --spacing-4xl: 128px;
+  /* Spacing */  
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-1600: 128px;
 
   /* Typography */
   --font-family-primary: 'Young Serif', serif;
@@ -135,10 +134,10 @@ textarea {
 .recipe__card {
   display: flex;
   width: 100%;
-  padding: var(--spacing-xxl) var(--spacing-xl);
+  padding: var(--spacing-500) var(--spacing-400);
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-400);
   align-self: stretch;
   background: var(--color-white);
 }
@@ -153,21 +152,21 @@ textarea {
   body {
    display: flex;
    width: 100%;
-   padding: var(--spacing-4xl) var(--spacing-3xl);
+   padding: var(--spacing-1600) var(--spacing-600);
    justify-content: center;
    align-items: center;
-   gap: var(--spacing-xs);
+   gap: var(--spacing-100);
    background: var(--color-stone-100);
   }
   
   .recipe__card {
     display: flex;    
-    padding: var(--spacing-xxl);
+    padding: var(--spacing-500);
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--spacing-xxl);
+    gap: var(--spacing-500);
     flex: 1 0 0;
-    border-radius: var(--spacing-lg);
+    border-radius: var(--spacing-300);
     background: var(--color-white);
   }
 }
@@ -176,17 +175,34 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-4xl) var(--spacing-3xl);
-    background: var(--color-stone-100);
+    padding: var(--spacing-1600) var(--spacing-600);
+    gap: var(--spacing-100);
+    background: var(--color-stone-100);    
+  }
+
+  .recipe {
+    display: flex;
+    width: 736px;
+    padding: var(--spacing-500);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-500);
+    flex-shrink: 0;
+    border-radius: var(--spacing-300);
+    background: var(--color-white);
+  }  
+
+  .recipe__image {        
+    height: 300px;
+    align-self: stretch;    
+    border-radius: var(--spacing-150);       
   }
 
   .recipe__card {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
-    background-color: var(--color-white);
-    border-radius: var(--spacing-sm);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: var(--spacing-xl);
+    align-items: flex-start;
+    gap: var(--spacing-400);
+    align-self: stretch;
   }
 }
