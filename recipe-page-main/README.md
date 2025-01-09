@@ -8,8 +8,8 @@ A responsive recipe page that displays cooking instructions, ingredients, and nu
 
 ### Screenshot
 
-![Desktop View](./screenshots/desktop.png)
-![Mobile View](./screenshots/mobile.png)
+![Desktop View](/Desktop.png)
+![Mobile View](/Mobile.png)
 
 ### Links
 
