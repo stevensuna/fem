@@ -8,12 +8,12 @@ A responsive recipe page that displays cooking instructions, ingredients, and nu
 
 ### Screenshot
 
-![Desktop View](/Desktop.png)
-![Mobile View](/Mobile.png)
+![Desktop View](./Desktop.png)
+![Mobile View](./Mobile.png)
 
 ### Links
 
-- Live Site URL: [Recipe Page](your-live-site-url.com)
+- Live Site URL: [Recipe Page](https://stevensuna.github.io/fem/recipe-page-main/)
 
 ## Built with
 
