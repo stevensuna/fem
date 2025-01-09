@@ -1,7 +1,7 @@
 /* Font Face Declarations */
 @font-face {
   font-family: 'Young Serif';
-  src: url('../recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+  src: url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Outfit';
-  src: url('../recipe-page-main/assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype-variations');
+  src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
