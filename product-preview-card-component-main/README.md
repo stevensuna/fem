@@ -23,13 +23,13 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop View](./screenshots/desktop.png)
-![Mobile View](./screenshots/mobile.png)
+![Desktop View](./images/screenshot-desktop.png)
+![Mobile View](./images/screenshot-mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here]
-- Live Site URL: [Add live site URL here]
+- Solution URL: 
+- Live Site URL:  
 
 ## My process
 
