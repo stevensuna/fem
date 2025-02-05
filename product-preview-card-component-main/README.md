@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
-- Live Site URL:  
+- [Solution URL](https://github.com/stevensuna/fem/tree/main/product-preview-card-component-main)
+- [Live Site URL](https://stevensuna.github.io/fem/product-preview-card-component-main/index.html)
 
 ## My process
 
