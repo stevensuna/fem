@@ -40,6 +40,13 @@ body {
   padding: 1rem;
 }
 
+main {
+  width: 100%;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 10.9375rem 26.25rem;
+}
+
 /* Product Card - Desktop First */
 .product-card {
   background-color: var(--clr-neutral-100);
@@ -155,11 +162,23 @@ body {
   .product-card__image-container {
     height: 240px;
   }
+
+  main {
+    padding: 0 1rem;
+  }
+  
+  .product-card {
+    margin: 1rem auto;
+  }
 }
 
 /* For larger screens */
 @media screen and (min-width: 1440px) {
   .product-card {
     max-width: 600px;
+  }
+
+  main {
+    padding: 0 2rem;
   }
 }
