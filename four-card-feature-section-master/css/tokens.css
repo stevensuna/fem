@@ -1,0 +1,53 @@
+/* Design Tokens */
+:root {
+    /* Colors - Primary */
+    --clr-primary-red: hsl(0, 78%, 62%);
+    --clr-primary-cyan: hsl(180, 62%, 55%);
+    --clr-primary-orange: hsl(34, 97%, 64%);
+    --clr-primary-blue: hsl(212, 86%, 64%);
+
+    /* Colors - Neutral */
+    --clr-neutral-900: hsl(234, 12%, 34%); /* Very Dark Blue */
+    --clr-neutral-600: hsl(229, 6%, 66%);  /* Grayish Blue */
+    --clr-neutral-100: hsl(0, 0%, 98%);    /* Very Light Gray */
+
+    /* Typography */
+    --ff-primary: 'Poppins', sans-serif;
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fs-body: 0.9375rem;      /* 15px */
+    --line-height-body: 1.5;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;      /* 8px */
+    --spacing-sm: 1rem;        /* 16px */
+    --spacing-md: 1.5rem;      /* 24px */
+    --spacing-lg: 2rem;        /* 32px */
+    --spacing-xl: 3rem;        /* 48px */
+
+    /* Layout */
+    --bp-mobile: 23.4375rem;   /* 375px */
+    --bp-desktop: 90rem;       /* 1440px */
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;      /* 4px */
+    --radius-md: 0.5rem;       /* 8px */
+    
+    /* Box Shadow */
+    --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Utility classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
