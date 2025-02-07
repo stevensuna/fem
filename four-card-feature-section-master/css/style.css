@@ -1,0 +1,132 @@
+/* Layout */
+body {
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: var(--line-height-body);
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-600);
+}
+
+.main-content {
+    max-width: min(100% - 2rem, var(--bp-desktop));
+    margin-inline: auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    max-width: 540px;
+    margin-inline: auto;
+    margin-bottom: var(--spacing-xl);
+}
+
+.hero__title {
+    color: var(--clr-neutral-900);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero__title--light {
+    display: block;
+    font-weight: var(--fw-light);
+}
+
+.hero__description {
+    max-width: 50ch;
+    margin-inline: auto;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.feature-card--cyan::before { background-color: var(--clr-primary-cyan); }
+.feature-card--red::before { background-color: var(--clr-primary-red); }
+.feature-card--orange::before { background-color: var(--clr-primary-orange); }
+.feature-card--blue::before { background-color: var(--clr-primary-blue); }
+
+.feature-card__title {
+    color: var(--clr-neutral-900);
+    font-size: 1.25rem;
+    font-weight: var(--fw-semi-bold);
+    margin-bottom: var(--spacing-xs);
+}
+
+.feature-card__description {
+    margin-bottom: var(--spacing-lg);
+}
+
+.feature-card__icon {
+    margin-left: auto;
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: var(--spacing-xl);
+    }
+
+    .feature-card {
+        margin: 0;
+    }
+
+    /* Card Positioning */
+    .feature-card--cyan {
+        grid-row: 2 / 4;
+        grid-column: 1;
+    }
+
+    .feature-card--red {
+        grid-row: 1 / 3;
+        grid-column: 2;
+    }
+
+    .feature-card--orange {
+        grid-row: 3 / 5;
+        grid-column: 2;
+    }
+
+    .feature-card--blue {
+        grid-row: 2 / 4;
+        grid-column: 3;
+    }
+}
+
+/* Utility Classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
