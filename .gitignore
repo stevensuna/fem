@@ -20,5 +20,3 @@
 node_modules/
 .sass-cache/
 .devcontainer/
-package-lock.json
-package.json
