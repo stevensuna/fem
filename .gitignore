@@ -19,3 +19,4 @@
 .github/
 node_modules/
 .sass-cache/
+.devcontainer/
