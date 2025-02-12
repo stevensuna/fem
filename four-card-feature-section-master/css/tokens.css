@@ -27,6 +27,7 @@
     --spacing-xl: 3rem;        /* 48px */
     --spacing-xxl: 4rem;       /* 64px */
     --spacing-xxxl: 5rem;      /* 80px */
+    --spacing-fixed: 165px;    /* 165px */
 
     /* Layout */
     --bp-mobile: 23.4375rem;   /* 375px */
