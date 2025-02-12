@@ -25,6 +25,8 @@
     --spacing-md: 1.5rem;      /* 24px */
     --spacing-lg: 2rem;        /* 32px */
     --spacing-xl: 3rem;        /* 48px */
+    --spacing-xxl: 4rem;       /* 64px */
+    --spacing-xxxl: 5rem;      /* 80px */
 
     /* Layout */
     --bp-mobile: 23.4375rem;   /* 375px */
@@ -37,6 +39,7 @@
     /* Box Shadow */
     --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0px 15px 30px -11px rgba(131, 166, 210, 0.50); 
 }
 
 /* Utility classes */
