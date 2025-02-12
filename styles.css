@@ -1,11 +1,3 @@
-/* --- Fonts --- */
-@font-face {
-    font-family: 'Inter';  
-    src: url('../fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype'),
-         url('../fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');
-    font-weight: 100 900; /* Variable font weight range */
-    font-display: swap; /* Prevent FOIT */
-  }
   /* --- Variables --- */
   :root {
     --clr-primary-green: hsl(75, 94%, 57%);
