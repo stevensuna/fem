@@ -29,7 +29,7 @@ body {
 
 .hero__title {
     color: var(--clr-neutral-900);
-    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem); /* Changed from 1.25rem to 1.5rem (24px) */
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
     line-height: 1.2;
     margin-bottom: var(--spacing-sm);
 }
