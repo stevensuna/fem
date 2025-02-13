@@ -38,9 +38,8 @@ body {
 }
 
 .hero__description {
-    max-width: 50ch;
-    margin-inline: auto;
     line-height: 1.6;
+    text-align: center;
 }
 
 /* Features Section */
