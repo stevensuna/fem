@@ -22,7 +22,7 @@ body {
 .hero {
     text-align: center;
     width: min(100%, 540px);    
-    margin: 80px auto 48px;
+    margin: 80px auto 64px;
 }
 
 .hero__title {
@@ -47,7 +47,7 @@ body {
 .features {
     display: grid;
     gap: 30px;
-    margin-top: 24px;
+    margin-top: 0;
     padding-inline: 8px;
 }
 
@@ -102,7 +102,7 @@ body {
     }
 
     .hero {
-        margin: 80px auto 48px;
+        margin: 80px auto 64px;
         padding: 0;
     }
 
