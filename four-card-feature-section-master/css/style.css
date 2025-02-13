@@ -11,19 +11,19 @@ body {
 .main-content {
     max-width: 1110px;
     margin: 0 auto;
-    padding: 32px 16px;
+    padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    width: 100%;    
+    width: min(100%, 540px);    
     margin-bottom: 48px;
     margin-inline: auto;
-    padding-inline: 8px;    
 }
 
 .hero__title {
