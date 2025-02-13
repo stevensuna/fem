@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- **Solution URL:** [https://your-solution-url.com](https://your-solution-url.com)
-- **Live Site URL:** [https://your-live-site-url.com](https://your-live-site-url.com)
+- [Solution URL](https://github.com/stevensuna/fem/tree/main/four-card-feature-section-master)
+- [Live Site URL](https://stevensuna.github.io/fem/four-card-feature-section-master/)
 
 ## My Process
 
@@ -55,7 +55,7 @@ Users should be able to:
   - `/index.html` for the main document
   - `/css` for stylesheets
   - `/js` for JavaScript files
-  - `/assets` for images and media
+  - `/images` for images and media
   - `/pages` for additional HTML pages
 
 ### What I Learned
@@ -65,23 +65,7 @@ Users should be able to:
 - **Effective Use of CSS Custom Properties:** The adoption of HSL for colors and custom properties for design tokens improved maintainability.
 - **Responsive Design:** The mobile-first approach was essential. I ensured the design scales properly by using responsive breakpoints and semantic class names (following BEM).
 
-### Commit Message History
 
-I maintained a detailed commit history to capture my process:
-- **Initial Commit:** Set up project structure and basic HTML/CSS.
-- **Mobile-First Styling:** Implemented a mobile-first approach with responsive breakpoints.
-- **CSS Adjustments:** Updated typography to use rem and box model properties to use pixels based on accessibility and intuitive design guidelines.
-- **Feature Enhancements:** Added BEM class structure and updated the color palette to use HSL.
-- **Bug Fixes & Refactoring:** Improved browser compatibility and optimized file organization.
-- **Final Touches:** Updated README and polished remaining styles.
-
-### Continued Development
-
-Future improvements may include:
-- Enhancing interactivity with more advanced JavaScript.
-- Further optimizations for performance and file size.
-- Experimenting with CSS Grid for more complex layouts.
-- Improving accessibility features based on audit feedback.
 
 ### Useful Resources
 
@@ -89,12 +73,6 @@ Future improvements may include:
 - [MDN Web Docs on CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-
-## Author
-
-- **Website:** [Your Name](https://www.your-site.com)
-- **Frontend Mentor:** [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- **Twitter:** [@yourusername](https://www.twitter.com/yourusername)
 
 ## Acknowledgments
 
