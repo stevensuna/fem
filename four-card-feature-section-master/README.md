@@ -27,8 +27,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/desktop-screenshot.pngscreenshot.jpg)
-
+<div align="center">
+  <strong>Desktop View</strong>
+  <p>A clean design showcasing the desktop layout with distinct feature cards.</p>
+  <img src="./images/desktop-screenshot.png" alt="Desktop Screenshot" width="80%">
+</div>
+<div align="center">
+  <strong>Mobile View</strong>
+  <p>Responsive layout optimized for mobile devices.</p>
+  <img src="./images/mobile-screenshot.png" alt="Mobile Screenshot" width="40%">
+</div>
 
 ### Links
 
