@@ -33,6 +33,7 @@ body {
     display: grid;
     place-items: center;
     padding: var(--space-md);
+    margin: 0;
 }
 
 .header {
@@ -47,6 +48,7 @@ body {
 
 .main {
     width: 100%;
+    min-height: 100vh;
     display: grid;
     place-items: center;
     padding: var(--space-md);
@@ -59,6 +61,7 @@ body {
     max-width: 1110px;
     margin: 0 auto;
     align-items: start;
+    place-content: center;
 }
 
 .testimonial {
@@ -292,17 +295,22 @@ body {
 @media (max-width: 39.9375em) {
     .testimonials {
         grid-template-columns: 1fr;
-        gap: 24px;
-        max-width: 327px;
-        margin: 0 auto;
+        gap: min(24px, calc((24/375) * 100vw));
+        width: min(327px, 100%);
+        margin-inline: auto;
+        justify-items: center;
     }
 
     .testimonial {
         height: auto;
-        width: auto;
+        width: min(327px, 100%);
     }
 
     .main {
-        padding: var(--space-md);
+        padding: 71px 24px;
+        width: 100%;
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
     }
 }
