@@ -140,7 +140,7 @@ body {
 @media (min-width: 40em) {
     .testimonials {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-lg);
+        gap: var(--space-md);
     }
 }
 
@@ -157,6 +157,22 @@ body {
     .testimonial--col-1 {
         grid-column: span 1;
         width: 255px;
+    }
+
+    .testimonial--primary {
+        height: 282px;
+    }
+
+    .testimonial--secondary {
+        height: 282px;
+    }
+
+    .testimonial--neutral.testimonial--col-1 {
+        height: 266px;
+    }
+
+    .testimonial--dark.testimonial--col-2 {
+        height: 266px;
     }
 
     .testimonial--sidebar {
