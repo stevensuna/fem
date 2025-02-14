@@ -133,7 +133,7 @@ body {
     color: var(--color-white);
     background-image: url('../images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
-    background-position: top right 24px;
+    background-position: top right 24px;    
 }
 
 .testimonial--secondary {
@@ -242,6 +242,10 @@ body {
 
     .main {
         padding: var(--space-xxl) var(--space-md);
+    }
+
+    .testimonial--primary {
+        background-position: top right 80px;
     }
 }
 
