@@ -293,24 +293,33 @@ body {
 }
 
 @media (max-width: 39.9375em) {
-    .testimonials {
-        grid-template-columns: 1fr;
-        gap: min(24px, calc((24/375) * 100vw));
-        width: min(327px, 100%);
-        margin-inline: auto;
-        justify-items: center;
-    }
-
-    .testimonial {
-        height: auto;
-        width: min(327px, 100%);
+    body {
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
     }
 
     .main {
-        padding: 71px 24px;
+        padding: 71px 0;
         width: 100%;
         display: grid;
-        place-content: center;
-        margin: 0 auto;
+        place-items: center;
+    }
+
+    .testimonials {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: 327px;
+        margin-inline: auto;
+    }
+
+    .testimonial {
+        width: 327px;
+        height: auto;
+        padding: 32px;
+        box-sizing: border-box;
     }
 }
