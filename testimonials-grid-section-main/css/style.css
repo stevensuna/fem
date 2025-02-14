@@ -65,6 +65,7 @@ body {
     padding: 32px;
     border-radius: 8px;
     background-color: var(--color-white);
+    box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
 }
 
 .testimonial__header {
