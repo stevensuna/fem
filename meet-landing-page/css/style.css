@@ -48,7 +48,7 @@ body {
 }
 
 /* Layout & Components */
-header {
+nav {
   text-align: center;
   margin: 0 auto;
   padding: var(--space-500) 0;
@@ -58,8 +58,8 @@ header {
   max-width: 1110px;
 }
 
-header img {
-  width: 119px;
+nav img {
+  width: 118px;
   height: auto;
   display: block;
 }
@@ -216,7 +216,7 @@ section > p {
     --fs-800: 2.25rem;   /* 36px */
   }
 
-  header {
+  nav {
     padding: var(--space-300) 0;
   }
 
@@ -301,7 +301,7 @@ section > p {
     --fs-800: 2.5rem;    /* 40px */
   }
 
-  header {
+  nav {
     margin: 0 auto;
     padding: var(--space-800) 0;
   }
