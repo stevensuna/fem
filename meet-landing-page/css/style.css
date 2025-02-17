@@ -56,8 +56,7 @@ body {
 
 /* Layout & Components */
 header {
-  text-align: center;
-  padding: var(--space-1000) 0 var(--space-800);
+  text-align: center;  
   max-width: 1110px;
   margin: 0 auto;
   display: flex;
@@ -66,7 +65,7 @@ header {
 }
 
 header img {
-  width: 119px;
+  width: 118px;
   height: auto;
   display: block;
 }
