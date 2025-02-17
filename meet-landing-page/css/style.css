@@ -57,7 +57,7 @@ body {
 /* Layout & Components */
 header {
   text-align: center;
-  padding: var(--space-400) 0;  /* Reduced padding */
+  padding: var(--space-1000) 0 var(--space-800);
   max-width: 1110px;
   margin: 0 auto;
   display: flex;
