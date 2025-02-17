@@ -49,12 +49,13 @@ body {
 
 /* Layout & Components */
 header {
-  text-align: center;  
-  max-width: 1110px;
-  margin: var(--space-1000) auto var(--space-800);
+  text-align: center;
+  margin: 0 auto;
+  padding: var(--space-500) 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1110px;
 }
 
 header img {
@@ -67,30 +68,34 @@ header img {
   text-align: center;
   padding: 0 var(--space-200);
   margin-bottom: var(--space-1000);
-  margin-top: calc(var(--space-100) * -1); /* Finer adjustment */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-200);
 }
 
 .hero__content {
+  width: 100%;
   max-width: 540px;
   margin: 0 auto;
   padding: var(--space-500) 0;
-}
-
-.hero__content h1 {
-  font-size: var(--fs-900);
-  font-weight: 900;
-  line-height: var(--lh-tight);
-  color: var(--clr-slate-900);
-  margin-bottom: var(--space-300);
-}
-
-.hero__content p {
-  margin-bottom: var(--space-400);
+  order: 2;
 }
 
 .hero__image-left,
 .hero__image-right {
-  display: none;
+  display: block;
+  width: 45%;
+  max-width: 250px;
+  object-fit: contain;
+}
+
+.hero__image-left {
+  order: 0;
+}
+
+.hero__image-right {
+  order: 1;
 }
 
 .button-group {
@@ -216,8 +221,7 @@ section > p {
   }
 
   .hero {
-    display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: var(--space-300);
     padding: 0;
     overflow: hidden;
@@ -226,9 +230,8 @@ section > p {
 
   .hero__image-left,
   .hero__image-right {
-    display: block;
-    max-width: 30%;
-    object-fit: contain;
+    width: 45%;
+    max-width: 280px;
   }
 
   .button-group {
@@ -262,6 +265,25 @@ section > p {
     --fs-800: 2.5rem;    /* 40px */
   }
 
+  .hero {
+    flex-wrap: nowrap;
+  }
+
+  .hero__content {
+    order: 0;
+    padding: var(--space-700) 0;
+  }
+
+  .hero__image-left {
+    order: 0;
+    max-width: 32%;
+  }
+
+  .hero__image-right {
+    order: 2;
+    max-width: 32%;
+  }
+
   .hero__content {
     padding: var(--space-700) 0;
   }
@@ -280,7 +302,8 @@ section > p {
   }
 
   header {
-    margin: var(--space-1000) var(--space-1000) var(--space-800);
+    margin: 0 auto;
+    padding: var(--space-800) 0;
   }
 
   .hero__content {
@@ -379,7 +402,7 @@ section > p {
 }
 
 .footer .button-group button span {
-  color: var(--clr-purple-300);
+  color: var (--clr-purple-300);
 }
 
 @media (min-width: 768px) {
