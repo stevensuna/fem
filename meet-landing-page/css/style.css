@@ -39,13 +39,6 @@
 }
 
 /* Base Styles */
-@font-face {
-  font-family: 'Red Hat Display';
-  src: url('../assets/fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
 body {
   font-family: 'Red Hat Display', sans-serif;
   font-size: var(--fs-600);
@@ -257,7 +250,7 @@ section > p {
   .footer__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-400);
+    gap: var (--space-400);
     align-items: center;
     text-align: left;
     padding: 0 var(--space-400);
