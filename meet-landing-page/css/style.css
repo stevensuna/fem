@@ -38,7 +38,7 @@
   --ls-wide: 0.25em;     /* 4px */
 }
 
-/* Base Styles */
+/* Base mobile styles first (below 640px) */
 body {
   font-family: 'Red Hat Display', sans-serif;
   font-size: var(--fs-600);
@@ -51,14 +51,14 @@ body {
 header {
   text-align: center;  
   max-width: 1110px;
-  margin: 0 auto;
+  margin: var(--space-1000) auto var(--space-800);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 header img {
-  width: 118px;
+  width: 119px;
   height: auto;
   display: block;
 }
@@ -186,33 +186,31 @@ section > p {
   Mobile: 375px
 */
 
-@media (max-width: 1440px) {
+/* Small tablets and large phones */
+@media (min-width: 640px) {
   :root {
-    --fs-900: 3.5rem;    /* 56px */
-    --fs-800: 2.25rem;   /* 36px */
+    --fs-900: 2.75rem;    /* 44px */
+    --fs-800: 2rem;       /* 32px */
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-400);
   }
 }
 
-@media (max-width: 768px) {
+/* Tablets and small laptops */
+@media (min-width: 768px) {
   :root {
     --fs-900: 3rem;      /* 48px */
-    --fs-800: 2rem;      /* 32px */
-    --space-1400: 5rem;  /* Reduced spacing for tablet */
-    --space-1000: 4rem;
+    --fs-800: 2.25rem;   /* 36px */
   }
-}
 
-@media (max-width: 375px) {
-  :root {
-    --fs-900: 2.5rem;    /* 40px */
-    --fs-800: 1.75rem;   /* 28px */
-    --space-1400: 4rem;  /* Further reduced spacing for mobile */
-    --space-1000: 3rem;
-  }
-}
-
-/* Tablet Styles */
-@media (min-width: 768px) {
   header {
     padding: var(--space-300) 0;
   }
@@ -250,29 +248,39 @@ section > p {
   .footer__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var (--space-400);
+    gap: var(--space-400);
     align-items: center;
     text-align: left;
     padding: 0 var(--space-400);
   }
-  
-  .footer h2 {
-    margin-bottom: var(--space-500);
+}
+
+/* Desktop and larger tablets */
+@media (min-width: 1024px) {
+  :root {
+    --fs-900: 3.5rem;    /* 56px */
+    --fs-800: 2.5rem;    /* 40px */
   }
-  
-  .footer .button-group {
-    justify-content: flex-end;
+
+  .hero__content {
+    padding: var(--space-700) 0;
+  }
+
+  .hero__image-left,
+  .hero__image-right {
+    max-width: 32%;
   }
 }
 
-/* Desktop Styles */
-@media (min-width: 1440px) {
-  header {
-    padding: var(--space-400) 0;
+/* Large desktop */
+@media (min-width: 1280px) {
+  :root {
+    --fs-900: 4rem;      /* 64px */
+    --fs-800: 2.5rem;    /* 40px */
   }
 
-  .hero {
-    margin-top: calc(var(--space-100) * -1);
+  header {
+    margin: var(--space-1000) var(--space-1000) var(--space-800);
   }
 
   .hero__content {
@@ -287,6 +295,18 @@ section > p {
 
   .images-grid {
     padding: 0 var(--space-800);
+  }
+
+  .footer {
+    background-image: url('../assets/desktop/image-footer.jpg');
+  }
+  
+  .footer__content {
+    gap: var(--space-800);
+  }
+
+  .footer__content h3 {
+    max-width: 350px;
   }
 }
 
