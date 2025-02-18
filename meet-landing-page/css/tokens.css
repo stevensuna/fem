@@ -33,7 +33,7 @@
   --space-1400: clamp(4rem, 8vw, 7rem);    /* 64px - 112px */
   --space-1000: clamp(3rem, 6vw, 5rem);    /* 48px - 80px */
   --space-900: clamp(2.5rem, 5vw, 4.5rem); /* 40px - 72px */
-  --space-800: clamp(2rem, 4vw, 4rem);     /* 32px - 64px */
+  --space-800: clamp(2rem, 4.444vw, 4rem); /* 32px - 64px */ /* Adjusted to exactly 64px at 1440px */
   --space-700: clamp(2rem, 4vw, 3.5rem);   /* 32px - 56px */
   --space-500: clamp(1.5rem, 3vw, 2.5rem); /* 24px - 40px */
   --space-400: clamp(1.25rem, 2.5vw, 2rem);/* 20px - 32px */
