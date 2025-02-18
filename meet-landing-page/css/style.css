@@ -23,11 +23,11 @@
   --fw-medium: 500;
   --fw-black: 900;
 
-  /* Font Sizes - Converting px to rem (1rem = 16px) */
-  --fs-900: 4rem;      /* 64px */
-  --fs-800: 2.5rem;    /* 40px */
-  --fs-700: 1.125rem;  /* 18px */
-  --fs-600: 1rem;      /* 16px */
+  /* Fluid Typography - Using clamp for responsive scaling */
+  --fs-900: clamp(2.5rem, 5vw + 1rem, 4rem);        /* 40px to 64px */
+  --fs-800: clamp(2rem, 3vw + 1rem, 2.5rem);        /* 32px to 40px */
+  --fs-700: clamp(1rem, 1vw + 0.85rem, 1.125rem);   /* 16px to 18px */
+  --fs-600: clamp(0.875rem, 0.5vw + 0.85rem, 1rem); /* 14px to 16px */
 
   /* Line Heights */
   --lh-tight: 1.1;    /* 110% */
@@ -66,6 +66,7 @@ h1, h2, h3 {
   font-weight: var(--fw-black);
   line-height: var(--lh-tight);
   color: var(--clr-slate-900);
+  transition: font-size 0.3s ease;
 }
 
 h1 {
@@ -90,6 +91,12 @@ button {
   padding: var(--space-200) var(--space-400);
   cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+button span {
+  font-size: max(0.875rem, calc(var(--fs-600) * 0.9));
 }
 
 button:first-child {
@@ -151,6 +158,7 @@ nav img {
 
 .hero__content p {
   margin: var(--space-400) 0;
+  font-size: 16px;
 }
 
 .hero__image-left,
@@ -161,7 +169,6 @@ nav img {
 /* Images Grid */
 .images-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-300);
   margin-bottom: var(--space-800);
 }
@@ -268,5 +275,9 @@ nav img {
   .footer__content .button-group {
     flex: 1;
     justify-content: flex-end;
+  }
+
+  .hero__content p {
+    font-size: 18px;
   }
 }
