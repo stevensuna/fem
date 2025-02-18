@@ -1,75 +1,68 @@
-/* Design Tokens */
-
-/* Colors */
 :root {
-  /* Cyan */
+  /* Colors */
   --clr-cyan-600: hsl(192, 37%, 48%);
   --clr-cyan-300: hsl(192, 90%, 77%);
-
-  /* Purple */
   --clr-purple-600: hsl(268, 34%, 53%);
   --clr-purple-300: hsl(268, 100%, 86%);
-
-  /* Slate */
   --clr-slate-900: hsl(240, 21%, 20%);
   --clr-slate-600: hsl(240, 10%, 57%);
   --clr-slate-300: hsl(240, 18%, 85%);
-
-  /* White */
   --clr-white: hsl(0, 0%, 98%);
 
-  /* Typography */
-  --ff-primary: 'Red Hat Display', sans-serif;
-  --fw-medium: 500;
-  --fw-black: 900;
+  /* Fluid Space Scale - Using a fluid calculator between 375px and 1440px viewport */
+  --space-50: clamp(0.25rem, 0.2vw + 0.2rem, 0.5rem);
+  --space-100: clamp(0.5rem, 0.5vw + 0.4rem, 1rem);
+  --space-200: clamp(1rem, 1vw + 0.75rem, 1.5rem);
+  --space-300: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+  --space-400: clamp(2rem, 2.5vw + 1.5rem, 3rem);
+  --space-500: clamp(2.5rem, 3vw + 2rem, 4rem);
+  --space-700: clamp(3.5rem, 4vw + 2.5rem, 5rem);
+  --space-900: clamp(4.5rem, 5vw + 3rem, 7rem);
 
-  /* Font Sizes */
-  --fs-h1: clamp(48px, 4vw + 32px, 64px);  /* 48px to 64px */
-  --fs-800: clamp(2rem, 3vw + 1rem, 2.5rem);        /* 32px to 40px */
-  --fs-hero-p: clamp(16px, 1vw + 14px, 18px);       /* 16px to 18px */
-  --fs-700: clamp(1rem, 1vw + 0.85rem, 1.125rem);   /* 16px to 18px */
-  --fs-600: clamp(0.875rem, 0.5vw + 0.85rem, 1rem); /* 14px to 16px */
-
-  /* Line Heights */
-  --lh-tight: 1.1;    /* 110% */
-  --lh-base: 1.5;     /* 150% */
-  --lh-relaxed: 1.7;  /* 170% */
-
-  /* Letter Spacing */
-  --ls-wide: 0.25rem;  /* 4px */
-  --ls-normal: 0;
-
-  /* Spacing */
-  --space-1400: 7rem;    /* 112px */
-  --space-1000: 5rem;    /* 80px */
-  --space-900: 4.5rem;   /* 72px */
-  --space-800: 4rem;     /* 64px */
-  --space-700: 3.5rem;   /* 56px */
-  --space-500: 2.5rem;   /* 40px */
-  --space-400: 2rem;     /* 32px */
-  --space-300: 1.5rem;   /* 24px */
-  --space-200: 1rem;     /* 16px */
-  --space-100: 0.5rem;   /* 8px */
-  --space-50: 0.25rem;   /* 4px */
+  /* Fluid Typography */
+  --fs-900: clamp(2.5rem, 5vw + 1rem, 4rem);  /* h1 */
+  --fs-800: clamp(2rem, 3vw + 1rem, 2.5rem);  /* h2 */
+  --fs-700: clamp(1.5rem, 2vw + 1rem, 2rem);  /* h3 */
+  --fs-600: clamp(1.25rem, 1.5vw + 1rem, 1.5rem);
+  --fs-500: clamp(1.125rem, 1vw + 1rem, 1.25rem);
+  --fs-400: 1rem;
 }
 
-/* Base styles */
+/* Base Styles */
 body {
-  font-family: var(--ff-primary);
-  font-weight: var(--fw-medium);
-  line-height: var(--lh-relaxed);
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
   color: var(--clr-slate-600);
   background-color: var(--clr-white);
 }
 
+/* Layout */
+main {
+  max-width: min(100% - 2rem, 1440px);
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+
+nav {
+  padding: var(--space-400) var(--space-200);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
 /* Typography */
 h1, h2, h3 {
-  font-weight: var(--fw-black);
-  line-height: var(--lh-tight);
+  font-weight: 900;
+  line-height: 1.1;
   color: var(--clr-slate-900);
 }
 
-/* Remove generic h1 style since we handle it specifically in hero */
+h1 {
+  font-size: var(--fs-900);
+  margin-bottom: var(--space-300);
+}
+
 h2 {
   font-size: var(--fs-800);
 }
@@ -78,89 +71,16 @@ h3 {
   font-size: var(--fs-700);
 }
 
-/* Buttons */
-button {
-  font-family: inherit;
-  font-weight: var(--fw-black);
-  font-size: var(--fs-600);
-  border: none;
-  border-radius: 999px;
-  padding: var(--space-200) var(--space-400);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-  line-height: 1.2;
-}
-
-button span {
-  font-size: max(0.875rem, calc(var(--fs-600) * 0.9));
-}
-
-button:first-child {
-  background-color: var(--clr-cyan-600);
-  color: var(--clr-white);
-}
-
-button:first-child:hover {
-  background-color: var(--clr-cyan-300);
-}
-
-button:last-child {
-  background-color: var(--clr-purple-600);
-  color: var(--clr-white);
-}
-
-button:last-child:hover {
-  background-color: var(--clr-purple-300);
-}
-
-/* Layout utilities */
-.button-group {
-  display: flex;
-  gap: var(--space-200);
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Layout & Components */
-main {
-  max-width: 1440px;
-  margin: 0 auto;  
-}
-
-nav {
-  text-align: center;
-  padding: var(--space-1000) 0 var(--space-800);
-  margin: 0 auto;
-  max-width: fit-content;
-}
-
-nav img {
-  width: auto;
-  height: auto;
-  display: block;
-}
-
-/* Hero Section */
+/* Components */
 .hero {
   text-align: center;
-  margin-bottom: var(--space-1000);
+  padding: var(--space-400) var(--space-200);
 }
 
 .hero__content {
-  max-width: 540px;
-  margin: 0 auto;
-  padding: var(--space-500) 0;
-}
-
-.hero__content p {
-  margin: var(--space-400) 0;
-  font-size: var(--fs-hero-p);
-}
-
-.hero__content h1 {
-  font-size: var(--fs-h1);
-  line-height: var(--lh-tight);
+  max-width: 45ch;
+  margin-inline: auto;
+  padding: var(--space-400) 0;
 }
 
 .hero__image-left,
@@ -168,11 +88,45 @@ nav img {
   display: none;
 }
 
-/* Images Grid */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+  margin-top: var(--space-400);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 100vmax;
+  padding: var(--space-200) var(--space-400);
+  font-weight: 900;
+  color: var(--clr-white);
+  transition: opacity 0.3s ease;
+}
+
+button:first-child {
+  background-color: var(--clr-cyan-600);
+}
+
+button:last-child {
+  background-color: var(--clr-purple-600);
+}
+
+button span {
+  color: var(--clr-cyan-300);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Image Grid */
 .images-grid {
   display: grid;
-  gap: var(--space-300);
-  margin-bottom: var(--space-800);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-200);
+  padding: var(--space-700) var(--space-200);
 }
 
 .images-grid img {
@@ -180,36 +134,25 @@ nav img {
   border-radius: 8px;
 }
 
-/* Main Content */
-.main-content {
-  text-align: center;
-  margin-bottom: var(--space-1000);
-}
-
+/* Content Section */
 .content {
-  max-width: 540px;
-  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-400) var(--space-200);
 }
 
 .content h2 {
-  color: var(--clr-slate-300);
-  margin-bottom: var(--space-400);
-}
-
-.content h3 {
-  color: var(--clr-cyan-600);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-wide);
-  margin-bottom: var(--space-400);
+  color: var(--clr-slate-600);
+  margin-bottom: var(--space-300);
 }
 
 /* Footer */
 .footer {
-  text-align: center;
-  background: url('../assets/desktop/image-footer.jpg') center/cover no-repeat;
-  color: var(--clr-white);
-  padding: var(--space-800) var(--space-400);
   position: relative;
+  margin-top: var(--space-900);
+  background: url('../assets/mobile/image-footer.jpg') no-repeat center/cover;
+  color: var(--clr-white);
+  text-align: center;
+  padding: var(--space-700) var(--space-200);
 }
 
 .footer::before {
@@ -218,64 +161,66 @@ nav img {
   inset: 0;
   background-color: var(--clr-cyan-600);
   opacity: 0.9;
+  z-index: 1;
 }
 
-.footer__content {
+.footer > * {
   position: relative;
-  max-width: 540px;
-  margin: 0 auto;
+  z-index: 2;
 }
 
 .footer h2 {
   color: var(--clr-white);
-  margin-bottom: var(--space-400);
-  position: relative;
+  margin-bottom: var(--space-300);
 }
 
-.footer h3 {
-  color: var(--clr-white);
-  margin-bottom: var(--space-400);
+.footer button {
+  background-color: var(--clr-purple-600);
 }
 
 /* Media Queries */
-@media (min-width: 768px) {
+@media (min-width: 48em) {
+  .button-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .images-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .content,
+  .footer__content {
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: var(--space-400);
+    padding: 0;
   }
 
   .hero__image-left,
   .hero__image-right {
     display: block;
-    width: 30%;
+    width: 100%;
+    height: auto;
   }
 
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-200);
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-400);
-    text-align: left;
+  .hero__image-left {
+    transform: translateX(-2rem);
   }
 
-  .footer__content h3 {
-    flex: 2;
+  .hero__image-right {
+    transform: translateX(2rem);
   }
 
-  .footer__content p {
-    flex: 2;
+  .footer {
+    background: url('../assets/desktop/image-footer.jpg') no-repeat center/cover;
   }
-
-  .footer__content .button-group {
-    flex: 1;
-    justify-content: flex-end;
-  }  
 }
