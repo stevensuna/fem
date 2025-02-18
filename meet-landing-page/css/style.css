@@ -23,9 +23,10 @@
   --fw-medium: 500;
   --fw-black: 900;
 
-  /* Fluid Typography - Using clamp for responsive scaling */
-  --fs-900: clamp(2.5rem, 5vw + 1rem, 4rem);        /* 40px to 64px */
+  /* Font Sizes */
+  --fs-h1: clamp(48px, 4vw + 32px, 64px);  /* 48px to 64px */
   --fs-800: clamp(2rem, 3vw + 1rem, 2.5rem);        /* 32px to 40px */
+  --fs-hero-p: clamp(16px, 1vw + 14px, 18px);       /* 16px to 18px */
   --fs-700: clamp(1rem, 1vw + 0.85rem, 1.125rem);   /* 16px to 18px */
   --fs-600: clamp(0.875rem, 0.5vw + 0.85rem, 1rem); /* 14px to 16px */
 
@@ -66,13 +67,9 @@ h1, h2, h3 {
   font-weight: var(--fw-black);
   line-height: var(--lh-tight);
   color: var(--clr-slate-900);
-  transition: font-size 0.3s ease;
 }
 
-h1 {
-  font-size: var(--fs-900);
-}
-
+/* Remove generic h1 style since we handle it specifically in hero */
 h2 {
   font-size: var(--fs-800);
 }
@@ -158,7 +155,12 @@ nav img {
 
 .hero__content p {
   margin: var(--space-400) 0;
-  font-size: 16px;
+  font-size: var(--fs-hero-p);
+}
+
+.hero__content h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
 }
 
 .hero__image-left,
@@ -275,9 +277,5 @@ nav img {
   .footer__content .button-group {
     flex: 1;
     justify-content: flex-end;
-  }
-
-  .hero__content p {
-    font-size: 18px;
-  }
+  }  
 }
