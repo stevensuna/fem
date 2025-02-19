@@ -35,6 +35,10 @@ nav img {
   margin-bottom: var(--space-1000);
 }
 
+.hero__image-right {
+  justify-self: end;
+}
+
 .hero__content {
   text-align: center;
   padding: 0 var(--space-200);
