@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Red Hat Display', system-ui, sans-serif;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-8 py-4 rounded-full font-black transition-colors;
+    }
+    .btn-primary {
+        @apply btn bg-cyan-600 text-white hover:bg-cyan-300;
+    }
+    .btn-secondary {
+        @apply btn bg-purple-600 text-white hover:bg-purple-300;
+    }
+}
+
+@layer utilities {
+    .divider-pattern {
+        @apply relative after:content-[''] after:absolute after:top-[-88px] after:left-1/2 after:-translate-x-1/2 after:w-[1px] after:h-16 after:bg-slate-300;
+    }
+}
