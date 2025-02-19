@@ -1,8 +1,5 @@
 {
   "dependencies": {
     "live-server": "^1.2.2"
-  },
-  "devDependencies": {
-    "sass": "^1.85.0"
   }
 }
