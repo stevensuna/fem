@@ -1,16 +1,13 @@
 :root {
   /* Colors */
-  --clr-cyan-600: hsl(192, 37%, 48%);
-  --clr-cyan-300: hsl(192, 90%, 77%);
-  
-  --clr-purple-600: hsl(268, 34%, 53%);
-  --clr-purple-300: hsl(268, 100%, 86%);
-  
-  --clr-slate-900: hsl(240, 21%, 20%);
-  --clr-slate-600: hsl(240, 10%, 57%);
-  --clr-slate-300: hsl(240, 18%, 85%);
-  
-  --clr-white: hsl(0, 0%, 98%);
+  --clr-cyan-600: #4D96A9;
+  --clr-cyan-300: #9FE3F9;
+  --clr-purple-600: #855FB1;
+  --clr-purple-300: #D9B8FF;
+  --clr-slate-900: #28283D;
+  --clr-slate-600: #87879D;
+  --clr-slate-300: #D1D1DF;
+  --clr-white: #FAFAFA;
 
   /* Typography */
   --ff-primary: 'Red Hat Display', sans-serif;
@@ -18,66 +15,35 @@
   /* Font weights */
   --fw-medium: 500;
   --fw-black: 900;
-  
+
   /* Font sizes */
-  --fs-1: 4rem;      /* 64px */
-  --fs-2: 2.5rem;    /* 40px */
-  --fs-3: 1rem;      /* 16px */
-  --fs-4: 1.125rem;  /* 18px */
-  --fs-5: 1rem;      /* 16px */
-  
+  --fs-900: 64px;
+  --fs-800: 40px;
+  --fs-700: 18px;
+  --fs-600: 16px;
+
   /* Line heights */
-  --lh-110: 110%;
-  --lh-150: 150%;
-  --lh-170: 170%;
-  
+  --lh-tight: 110%;
+  --lh-normal: 150%;
+  --lh-loose: 170%;
+
   /* Letter spacing */
-  --ls-4: 4px;
-  --ls-0: 0px;
-
-  /* Spacing */
-  --space-1400: 7rem;    /* 112px */
-  --space-1000: 5rem;    /* 80px */
-  --space-900: 4.5rem;   /* 72px */
-  --space-800: 4rem;     /* 64px */
-  --space-700: 3.5rem;   /* 56px */
-  --space-500: 2.5rem;   /* 40px */
-  --space-400: 2rem;     /* 32px */
-  --space-300: 1.5rem;   /* 24px */
-  --space-200: 1rem;     /* 16px */
-  --space-100: 0.5rem;   /* 8px */
-  --space-50: 0.25rem;   /* 4px */
-
-  /* Base scaling values */
-  --scale-fluid: clamp(0.5, 0.25 + 1vw, 1);
+  --ls-wide: 4px;
   
-  /* Responsive spacing */
-  --space-fluid-1400: calc(var(--space-1400) * var(--scale-fluid)); /* 112px -> 56px */
-  --space-fluid-1000: calc(var(--space-1000) * var(--scale-fluid)); /* 80px -> 40px */
-  --space-fluid-900: calc(var(--space-900) * var(--scale-fluid));   /* 72px -> 36px */
-  --space-fluid-800: calc(var(--space-800) * var(--scale-fluid));   /* 64px -> 32px */
-  --space-fluid-700: calc(var(--space-700) * var(--scale-fluid));   /* 56px -> 28px */
-  --space-fluid-500: calc(var(--space-500) * var(--scale-fluid));   /* 40px -> 20px */
-  --space-fluid-400: calc(var(--space-400) * var(--scale-fluid));   /* 32px -> 16px */
-  --space-fluid-300: calc(var(--space-300) * var(--scale-fluid));   /* 24px -> 12px */
-  --space-fluid-200: calc(var(--space-200) * var(--scale-fluid));   /* 16px -> 8px */
-  --space-fluid-100: calc(var(--space-100) * var(--scale-fluid));   /* 8px -> 4px */
-  --space-fluid-50: calc(var(--space-50) * var(--scale-fluid));     /* 4px -> 2px */
+  /* Spacing */
+  --space-1400: 112px;
+  --space-1000: 80px;
+  --space-900: 72px;
+  --space-800: 64px;
+  --space-700: 56px;
+  --space-500: 40px;
+  --space-400: 32px;
+  --space-300: 24px;
+  --space-200: 16px;
+  --space-100: 8px;
+  --space-50: 4px;
 
-  /* Responsive typography */
-  --fs-fluid-1: clamp(2.5rem, 2rem + 2vw, 4rem);      /* 64px -> 40px */
-  --fs-fluid-2: clamp(1.75rem, 1.5rem + 1vw, 2.5rem); /* 40px -> 28px */
-  --fs-fluid-3: clamp(0.875rem, 0.8rem + 0.25vw, 1rem); /* 16px -> 14px */
-  --fs-fluid-4: clamp(1rem, 0.9rem + 0.25vw, 1.125rem); /* 18px -> 16px */
-  --fs-fluid-5: clamp(0.875rem, 0.8rem + 0.25vw, 1rem); /* 16px -> 14px */
-
-  /* Breakpoints */
-  --bp-desktop: 90em;    /* 1440px */
-  --bp-tablet: 48em;     /* 768px */
-  --bp-mobile: 23.4375em;/* 375px */
-
-  /* Media Queries */
-  --mq-desktop: "(min-width: 90em)";      /* 1440px */
-  --mq-tablet: "(min-width: 48em)";       /* 768px */
-  --mq-mobile: "(min-width: 23.4375em)";  /* 375px */
+  /* Layout */
+  --container-max-width: 1110px;
+  --container-padding: var(--space-200);
 }
