@@ -29,21 +29,40 @@
 
   /* Letter spacing */
   --ls-wide: 4px;
-  
-  /* Spacing */
-  --space-1400: 112px;
-  --space-1000: 80px;
-  --space-900: 72px;
-  --space-800: 64px;
-  --space-700: 56px;
-  --space-500: 40px;
-  --space-400: 32px;
-  --space-300: 24px;
-  --space-200: 16px;
-  --space-100: 8px;
-  --space-50: 4px;
+    
+  /* Base Units */
+  --space-unit: 0.25rem;   /* 4px base unit */
+  --ratio: 1.5;            /* Perfect fifth scaling ratio */
 
-  /* Layout */
-  --container-max-width: 1110px;
-  --container-padding: var(--space-200);
+  /* Spacing Scale - Using calc() for mathematical relationships */
+  --space-2xs: calc(var(--space-unit) * 2);    /*  8px */
+  --space-xs: calc(var(--space-unit) * 3);     /* 12px */
+  --space-sm: calc(var(--space-unit) * 4);     /* 16px */
+  --space-md: calc(var(--space-unit) * 6);     /* 24px */
+  --space-lg: calc(var(--space-unit) * 8);     /* 32px */
+  --space-xl: calc(var(--space-unit) * 12);    /* 48px */
+  --space-2xl: calc(var(--space-unit) * 16);   /* 64px */
+  --space-3xl: calc(var(--space-unit) * 20);   /* 80px */
+  --space-4xl: calc(var(--space-unit) * 24);   /* 96px */
+  --space-5xl: calc(var(--space-unit) * 28);   /* 112px */
+
+  /* Fluid Spacing for Responsive Design */
+  --space-fluid-1: clamp(var(--space-xs), 2vw, var(--space-sm));
+  --space-fluid-2: clamp(var(--space-sm), 3vw, var(--space-md));
+  --space-fluid-3: clamp(var(--space-md), 5vw, var(--space-lg));
+  --space-fluid-4: clamp(var(--space-lg), 7vw, var(--space-xl));
+  --space-fluid-5: clamp(var(--space-xl), 10vw, var(--space-2xl));
+
+  /* Layout Tokens */
+  --container-max-width: 69.375rem;  /* 1110px */
+  --container-padding: var(--space-fluid-2);
+  --section-spacing: var(--space-fluid-4);
+  --component-spacing: var(--space-fluid-2);
+}
+
+/* Tablet Breakpoint Adjustments */
+@media (min-width: 48em) {
+  :root {
+    --ratio: 1.618; /* Golden ratio for larger screens */
+  }
 }
