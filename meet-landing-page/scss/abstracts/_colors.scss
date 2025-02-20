@@ -1,0 +1,46 @@
+// Colors from style guide
+$colors: (
+  'cyan': (
+    '600': hsl(192, 37%, 48%), // #4D96A9
+    '300': hsl(192, 90%, 77%)  // #9FE3F9
+  ),
+  'purple': (
+    '600': hsl(268, 34%, 53%), // #855FB1
+    '300': hsl(268, 100%, 86%) // #D98BFF
+  ),
+  'slate': (
+    '900': hsl(240, 21%, 20%), // #28283D
+    '600': hsl(240, 10%, 57%), // #87879D
+    '300': hsl(240, 18%, 85%)  // #D1D1DF
+  ),
+  'white': hsl(0, 0%, 98%) // #FAFAFA
+);
+
+// Function to access color values
+@function color($type, $shade: null) {
+  @if $shade {
+    @return map-get(map-get($colors, $type), $shade);
+  }
+  @return map-get($colors, $type);
+}
+
+// Generate color utility classes
+@each $type, $shades in $colors {
+  @if type-of($shades) == 'map' {
+    @each $shade, $value in $shades {
+      .text-#{$type}-#{$shade} {
+        color: $value;
+      }
+      .bg-#{$type}-#{$shade} {
+        background-color: $value;
+      }
+    }
+  } @else {
+    .text-#{$type} {
+      color: $shades;
+    }
+    .bg-#{$type} {
+      background-color: $shades;
+    }
+  }
+}

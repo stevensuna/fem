@@ -1,0 +1,18 @@
+.logo {
+  &__text {
+    font-family: 'Red Hat Display';
+    font-weight: 900; // Black weight
+    font-size: 40px;
+    color: $color-slate-900;
+  }
+
+  &__icon {
+    &--cyan {
+      fill: $color-cyan-600;
+    }
+    
+    &--purple {
+      fill: $color-purple-600;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.numbered-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: $color-purple-600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__number {
+    font-family: 'Red Hat Display';
+    font-weight: 900; // Black weight
+    font-size: 24px;
+    color: $color-white;
+  }
+
+  &__line {
+    position: absolute;
+    width: 1px;
+    background-color: $color-slate-600;
+    height: 84px; // Adjust based on design needs
+    z-index: -1;
+
+    &--top {
+      bottom: 100%;
+    }
+
+    &--bottom {
+      top: 100%;
+    }
+  }
+}
