@@ -2,7 +2,16 @@
 @use '../abstracts/mixins' as *;
 
 .header {
-  padding: $spacing-500 0;
+  padding-top: $spacing-1000; // 80px
+  padding-bottom: 0;
+
+  @include respond-to(tablet) {
+    padding-top: $spacing-600; // 48px
+  }
+
+  @include respond-to(mobile) {
+    padding-top: $spacing-600; // 48px
+  }
 
   .container {
     @include container;

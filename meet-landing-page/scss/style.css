@@ -129,7 +129,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .header {
-  padding: 40px 0;
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+@media (min-width: 376px) and (max-width: 768px) {
+  .header {
+    padding-top: 48px;
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    padding-top: 48px;
+  }
 }
 .header .container {
   max-width: 1110px;
