@@ -158,6 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
+  margin-top: 64px;
   margin-bottom: 112px;
 }
 .hero .container {
@@ -168,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
   margin-bottom: 64px;
   align-items: center;
 }
@@ -181,6 +182,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1/-1;
     grid-row: 2;
     order: -1;
+    margin-top: 72px;
   }
   .hero__grid .hero__image--left {
     grid-column: 1;
@@ -212,6 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero__grid .hero__content {
     grid-column: 1/-1;
     grid-row: 2;
+    margin-top: 48px;
   }
 }
 .hero__content {

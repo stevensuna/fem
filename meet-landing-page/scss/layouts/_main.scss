@@ -2,6 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 .hero {
+  margin-top: $spacing-800;
   margin-bottom: $spacing-1400;
 
   .container {
@@ -11,7 +12,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: $spacing-300;
+    gap: $spacing-400;
     margin-bottom: $spacing-800;
     align-items: center;
 
@@ -23,6 +24,7 @@
         grid-column: 1 / -1;
         grid-row: 2;
         order: -1;
+        margin-top: $spacing-900;
       }
 
       .hero__image--left {
@@ -59,6 +61,7 @@
       .hero__content {
         grid-column: 1 / -1;
         grid-row: 2;
+        margin-top: $spacing-600;
       }
     }
   }
