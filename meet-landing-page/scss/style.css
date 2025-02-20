@@ -431,4 +431,17 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
+.logo__text {
+  font-family: "Red Hat Display";
+  font-weight: 900;
+  font-size: 40px;
+  color: #28283D;
+}
+.logo__icon--cyan {
+  fill: #4D96A9;
+}
+.logo__icon--purple {
+  fill: #855FB1;
+}
+
 /*# sourceMappingURL=style.css.map */
