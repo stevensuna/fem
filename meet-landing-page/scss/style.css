@@ -154,15 +154,44 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   padding: 0 16px;
 }
-.hero__images {
+.hero__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 64px;
+  align-items: center;
+}
+@media (min-width: 376px) and (max-width: 768px) {
+  .hero__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .hero__grid .hero__content {
+    grid-column: 1/-1;
+    grid-row: 2;
+    order: -1;
+  }
+  .hero__grid .hero__image--left {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .hero__grid .hero__image--right {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 @media (max-width: 375px) {
-  .hero__images {
+  .hero__grid {
     grid-template-columns: 1fr;
+  }
+  .hero__grid .hero__image--left {
+    grid-row: 1;
+  }
+  .hero__grid .hero__image--right {
+    grid-row: 2;
+  }
+  .hero__grid .hero__content {
+    grid-row: 3;
   }
 }
 .hero__content {

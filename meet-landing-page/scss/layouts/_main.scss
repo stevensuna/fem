@@ -8,14 +8,48 @@
     @include container;
   }
 
-  &__images {
+  &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: $spacing-300;
     margin-bottom: $spacing-800;
+    align-items: center;
+
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-100;
+
+      .hero__content {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        order: -1;
+      }
+
+      .hero__image--left {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .hero__image--right {
+        grid-column: 2;
+        grid-row: 1;
+      }
+    }
 
     @include respond-to(mobile) {
       grid-template-columns: 1fr;
+      
+      .hero__image--left {
+        grid-row: 1;
+      }
+
+      .hero__image--right {
+        grid-row: 2;
+      }
+
+      .hero__content {
+        grid-row: 3;
+      }
     }
   }
 
