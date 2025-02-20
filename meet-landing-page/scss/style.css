@@ -378,8 +378,18 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   position: relative;
   color: #FAFAFA;
-  overflow: hidden;
+  overflow: visible;
 }
+
+.footer .section-separator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -84px;
+  z-index: 2;
+  margin: 0;
+}
+
 .footer__background {
   position: absolute;
   inset: 0;
