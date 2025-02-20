@@ -3,20 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet Landing Page</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Meet - Group Chat for Everyone</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/style.css">
 </head>
 <body>
-    <header>
-        <!-- Header content will go here -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="Meet Logo">
+            </div>
+        </div>
     </header>
-    
-    <main>
-        <!-- Main content will go here -->
-    </main>
 
-    <footer>
-        <!-- Footer content will go here -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__images">
+                    <img src="./assets/desktop/image-hero-left.png" alt="Hero Image Left" width="300" height="250" class="hero__image hero__image--left">
+                    <img src="./assets/desktop/image-hero-right.png" alt="Hero Image Right" width="320" height="270" class="hero__image hero__image--right">
+                </div>
+                <div class="hero__content">
+                    <h1 class="hero__title">Group Chat for Everyone</h1>
+                    <p class="hero__description">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+                    <div class="button-group">
+                        <a href="#" class="button button--primary">Download <span class="button__version">v1.3</span></a>
+                        <a href="#" class="button button--secondary">What is it?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-separator">
+                <hr class="section-separator__line">
+                <span class="section-separator__number">01</span>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="features__grid">
+                    <figure class="features__item">
+                        <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="Woman working on laptop" width="350" height="280" class="features__image">
+                    </figure>
+                    <figure class="features__item">
+                        <img src="./assets/desktop/image-women-videochatting.jpg" alt="Three women looking at a phone" width="350" height="280" class="features__image">
+                    </figure>
+                    <figure class="features__item">
+                        <img src="./assets/desktop/image-men-in-meeting.jpg" alt="Two men in a video call" width="350" height="280" class="features__image">
+                    </figure>
+                    <figure class="features__item">
+                        <img src="./assets/desktop/image-man-texting.jpg" alt="Man using a smartphone" width="350" height="280" class="features__image">
+                    </figure>
+                </div>
+                
+                <div class="features__content">
+                    <h2 class="features__title">
+                        <span class="features__subtitle">Built for Modern Use</span>
+                        Smarter meetings, all in one place
+                    </h2>
+                    <p class="features__description">Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+                </div>
+            </div>
+            <div class="section-separator">
+                <hr class="section-separator__line">
+                <span class="section-separator__number">02</span>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta__background">
+                <img src="./assets/desktop/image-footer.jpg" alt="" class="cta__image" width="1280" height="400">
+                <div class="cta__overlay"></div>
+            </div>
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">Experience more together</h2>
+                    <p class="cta__description">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+                    <a href="#" class="button button--primary button--light">Download <span class="button__version">v1.3</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+        </div>
     </footer>
 </body>
 </html>

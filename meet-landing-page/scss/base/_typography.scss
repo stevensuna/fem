@@ -1,0 +1,60 @@
+// Base typography styles
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-5;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-150;
+  color: $color-slate-900;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: $font-weight-black;
+}
+
+// Text preset styles
+.text-preset {
+  &-1 {
+    font-size: $font-size-1;
+    line-height: $line-height-110;
+    letter-spacing: $letter-spacing-0;
+  }
+
+  &-2 {
+    font-size: $font-size-2;
+    line-height: $line-height-110;
+    letter-spacing: $letter-spacing-0;
+  }
+
+  &-3 {
+    font-size: $font-size-3;
+    line-height: $line-height-110;
+    letter-spacing: $letter-spacing-4;
+    text-transform: uppercase;
+  }
+
+  &-4 {
+    font-size: $font-size-4;
+    line-height: $line-height-170;
+    letter-spacing: $letter-spacing-0;
+    font-weight: $font-weight-medium;
+  }
+
+  &-5 {
+    font-size: $font-size-5;
+    line-height: $line-height-150;
+    letter-spacing: $letter-spacing-0;
+    font-weight: $font-weight-black;
+  }
+}
+
+// Responsive typography
+@include respond-to(mobile) {
+  .text-preset-1 {
+    font-size: $font-size-2;
+  }
+  
+  .text-preset-2 {
+    font-size: $font-size-3;
+  }
+}

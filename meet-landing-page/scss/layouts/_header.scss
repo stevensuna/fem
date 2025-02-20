@@ -1,0 +1,16 @@
+.header {
+  padding: $spacing-500 0;
+
+  .container {
+    @include container;
+  }
+
+  .logo {
+    @include flex-center;
+    
+    img {
+      height: 28px;
+      width: auto;
+    }
+  }
+}

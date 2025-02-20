@@ -1,0 +1,7 @@
+.footer {
+  padding: $spacing-500 0;
+
+  .container {
+    @include container;
+  }
+}

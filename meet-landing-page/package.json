@@ -1,10 +1,10 @@
 {
   "name": "meet-landing-page",
   "version": "1.0.0",
-  "description": "Meet landing page project",
+  "description": "Meet landing page",
   "scripts": {
-    "sass": "sass scss/style.scss css/style.css --watch",
-    "sass:build": "sass scss/style.scss css/style.css --style compressed"
+    "sass": "sass scss/style.scss:scss/style.css --watch",
+    "sass:build": "sass scss/style.scss:scss/style.css --style=compressed"
   },
   "devDependencies": {
     "sass": "^1.69.5"
