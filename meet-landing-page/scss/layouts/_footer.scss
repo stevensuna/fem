@@ -21,9 +21,7 @@
   &__overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba($color-cyan-600, 0.8);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgba($color-slate-900, 0.8);
   }
 
   .container {

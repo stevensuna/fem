@@ -403,9 +403,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer__overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(77, 150, 169, 0.8);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgba(40, 40, 61, 0.8);
 }
 .footer .container {
   position: relative;
