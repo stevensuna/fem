@@ -349,6 +349,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
 }
 
+.footer-cta {
+  margin-bottom: -92px;
+  position: relative;
+  z-index: 2;
+}
+
 .section-separator {
   position: relative;
   display: flex;
@@ -379,6 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #FAFAFA;
   overflow: hidden;
+  z-index: 1;
 }
 .footer__background {
   position: absolute;

@@ -5,6 +5,7 @@
   position: relative;
   color: $color-white;
   overflow: hidden;
+  z-index: 1;
 
   &__background {
     position: absolute;
