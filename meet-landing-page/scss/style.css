@@ -220,7 +220,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 87.5em) {
   .hero__grid {
     grid-template-columns: 1fr minmax(auto, 33.75rem) 1fr;
-    gap: 7.94rem;
     margin-inline: -1rem;
   }
   .hero__grid .hero__image--left {

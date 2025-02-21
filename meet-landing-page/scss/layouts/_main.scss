@@ -72,8 +72,7 @@
     }
 
     @include break-up(2xl) {
-      grid-template-columns: 1fr minmax(auto, 33.75rem) 1fr;
-      gap: 7.94rem; // 127px for precise spacing
+      grid-template-columns: 1fr minmax(auto, 33.75rem) 1fr;      
       margin-inline: -$spacing-200;
       
       .hero__image--left {
