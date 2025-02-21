@@ -2,15 +2,15 @@
 @use '../abstracts/mixins' as *;
 
 .header {
-  padding-block-start: $spacing-600; // 48px mobile default
+  padding-block-start: calc($spacing-600 + 3.5625rem); // Add extra space for the elevated image
   padding-block-end: 0;
 
   @include break-up(md) {
-    padding-block-start: $spacing-800; // 64px tablet
+    padding-block-start: calc($spacing-800 + 3.5625rem); // 64px tablet
   }
 
   @include break-up(lg) {
-    padding-block-start: $spacing-1000; // 80px desktop
+    padding-block-start: calc($spacing-1000 + 3.5625rem); // 80px desktop
   }
 
   .container {

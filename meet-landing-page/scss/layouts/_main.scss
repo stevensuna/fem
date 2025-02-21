@@ -3,7 +3,7 @@
 
 .hero {
   margin-block: $spacing-800 $spacing-1400;
-  overflow: hidden;  // Add overflow hidden
+  position: relative;
 
   .container {
     @include container;
@@ -11,7 +11,7 @@
     @include break-up(lg) {
       max-width: 100%;
       padding: 0;
-      overflow: visible;  // Allow content to overflow container
+      position: relative;
     }
 
     @include break-up(2xl) {
@@ -53,12 +53,13 @@
     @include break-up(lg) {
       grid-template-columns: 1fr minmax(auto, 28rem) 1fr;
       gap: $spacing-800;
-      margin-inline: -$spacing-300;  // Negative margin to allow images to extend
+      margin-inline: -$spacing-300;
       
       .hero__image--left {
         grid-column: 1;
         grid-row: 1;
         justify-self: end;
+        transform: translateY(-3.5625rem); // Use transform instead of margin
       }
       
       .hero__content {
@@ -82,7 +83,7 @@
         grid-column: 1;
         grid-row: 1;
         justify-self: end;
-        margin-block-start: -3.56rem; // -57px offset for vertical alignment
+        transform: translateY(-3.5625rem); // Maintain transform at 2xl breakpoint
       }
       
       .hero__content {

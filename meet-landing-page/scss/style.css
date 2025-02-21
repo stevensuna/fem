@@ -160,17 +160,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  padding-block-start: 3rem;
+  padding-block-start: 6.5625rem;
   padding-block-end: 0;
 }
 @media (min-width: 48em) {
   .header {
-    padding-block-start: 4rem;
+    padding-block-start: 7.5625rem;
   }
 }
 @media (min-width: 62em) {
   .header {
-    padding-block-start: 5rem;
+    padding-block-start: 8.5625rem;
   }
 }
 .header .container {
@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
   margin-block: 4rem 7rem;
-  overflow: hidden;
+  position: relative;
 }
 .hero .container {
   width: 100%;
@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero .container {
     max-width: 100%;
     padding: 0;
-    overflow: visible;
+    position: relative;
   }
 }
 @media (min-width: 87.5em) {
@@ -247,6 +247,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1;
     grid-row: 1;
     justify-self: end;
+    transform: translateY(-3.5625rem);
   }
   .hero__grid .hero__content {
     grid-column: 2;
@@ -268,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1;
     grid-row: 1;
     justify-self: end;
-    margin-block-start: -3.56rem;
+    transform: translateY(-3.5625rem);
   }
   .hero__grid .hero__content {
     grid-column: 2;
