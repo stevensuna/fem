@@ -12,21 +12,26 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 
   &--primary {
     background-color: $color-cyan-600;
     color: $color-white;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: $color-cyan-300;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba($color-cyan-600, 0.25);
     }
 
     &.button--light {
       background-color: $color-purple-600;
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background-color: $color-purple-300;
+        box-shadow: 0 4px 8px rgba($color-purple-600, 0.25);
       }
     }
   }
@@ -36,17 +41,31 @@
     color: $color-white;
     width: 150px;  // Slightly smaller width for secondary button
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: $color-purple-300;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba($color-purple-600, 0.25);
     }
   }
 
   &__version {
     color: rgba($color-white, 0.75);
+    transition: color 0.3s ease;
 
     .button--light & {
       color: $color-purple-300;
     }
+  }
+
+  // Add focus styles for accessibility
+  &:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-slate-900;
   }
 }
 
