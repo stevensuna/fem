@@ -2,15 +2,15 @@
 @use '../abstracts/mixins' as *;
 
 .header {
-  padding-top: $spacing-1000; // 80px
-  padding-bottom: 0;
+  padding-block-start: $spacing-600; // 48px mobile default
+  padding-block-end: 0;
 
-  @include respond-to(tablet) {
-    padding-top: $spacing-600; // 48px
+  @include break-up(md) {
+    padding-block-start: $spacing-800; // 64px tablet
   }
 
-  @include respond-to(mobile) {
-    padding-top: $spacing-600; // 48px
+  @include break-up(lg) {
+    padding-block-start: $spacing-1000; // 80px desktop
   }
 
   .container {
@@ -21,7 +21,7 @@
     @include flex-center;
     
     img {
-      height: 28px;
+      height: 1.75rem; // 28px
       width: auto;
     }
   }

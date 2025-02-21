@@ -8,6 +8,13 @@ $color-slate-600: #87879D;
 $color-slate-300: #D1D1DF;
 $color-white: #FAFAFA;
 
+// Breakpoints in em units
+$breakpoint-sm: 36em;    // 576px
+$breakpoint-md: 48em;    // 768px
+$breakpoint-lg: 62em;    // 992px
+$breakpoint-xl: 75em;    // 1200px
+$breakpoint-2xl: 87.5em; // 1400px
+
 // Typography
 $font-family-primary: 'Red Hat Display', sans-serif;
 
@@ -15,12 +22,12 @@ $font-family-primary: 'Red Hat Display', sans-serif;
 $font-weight-medium: 500;
 $font-weight-black: 900;
 
-// Font Sizes
-$font-size-1: 64px;
-$font-size-2: 40px;
-$font-size-3: 16px;
-$font-size-4: 18px;
-$font-size-5: 16px;
+// Fluid Typography
+// clamp(min, preferred, max)
+$fluid-heading-1: clamp(2.5rem, 5vw + 1rem, 4rem);      // 40px to 64px
+$fluid-heading-2: clamp(2rem, 3vw + 1rem, 2.5rem);      // 32px to 40px
+$fluid-body: clamp(1rem, 1vw + 0.75rem, 1.125rem);      // 16px to 18px
+$fluid-small: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);   // 14px to 16px
 
 // Line Heights
 $line-height-110: 110%;
@@ -28,32 +35,27 @@ $line-height-150: 150%;
 $line-height-170: 170%;
 
 // Letter Spacing
-$letter-spacing-4: 4px;
-$letter-spacing-0: 0px;
+$letter-spacing-4: 0.25rem;  // 4px
+$letter-spacing-0: 0;
 
-// Spacing
-$spacing-1400: 112px;
-$spacing-1000: 80px;
-$spacing-900: 72px;
-$spacing-800: 64px;
-$spacing-700: 56px;
-$spacing-600: 48px;
-$spacing-500: 40px;
-$spacing-400: 32px;
-$spacing-300: 24px;
-$spacing-200: 16px;
-$spacing-100: 8px;
-$spacing-50: 4px;
-
-// Breakpoints
-$breakpoint-mobile: 375px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1440px;
+// Spacing (in rem)
+$spacing-1400: 7rem;    // 112px
+$spacing-1000: 5rem;    // 80px
+$spacing-900: 4.5rem;   // 72px
+$spacing-800: 4rem;     // 64px
+$spacing-700: 3.5rem;   // 56px
+$spacing-600: 3rem;     // 48px
+$spacing-500: 2.5rem;   // 40px
+$spacing-400: 2rem;     // 32px
+$spacing-300: 1.5rem;   // 24px
+$spacing-200: 1rem;     // 16px
+$spacing-100: 0.5rem;   // 8px
+$spacing-50: 0.25rem;   // 4px
 
 // Container
-$container-max-width: 1280px;
+$container-max-width: 80rem;  // 1280px
 $container-padding: $spacing-200;
 
 // Border Radius
-$border-radius-button: 24px;
+$border-radius-button: 1.5rem;  // 24px
 $border-radius-circle: 50%;

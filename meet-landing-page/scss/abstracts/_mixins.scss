@@ -1,21 +1,29 @@
 @use 'variables' as *;
 
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == mobile {
-    @media (max-width: $breakpoint-mobile) { @content; }
+// Mobile-first breakpoint mixin
+@mixin break-up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
   }
-  @if $breakpoint == tablet {
-    @media (min-width: #{$breakpoint-mobile + 1}) and (max-width: #{$breakpoint-tablet}) { @content; }
+  @if $breakpoint == md {
+    @media (min-width: $breakpoint-md) { @content; }
   }
-  @if $breakpoint == desktop {
-    @media (min-width: #{$breakpoint-tablet + 1}) { @content; }
+  @if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+  @if $breakpoint == 2xl {
+    @media (min-width: $breakpoint-2xl) { @content; }
   }
 }
 
 @mixin container {
+  width: 100%;
   max-width: $container-max-width;
-  margin: 0 auto;
-  padding: 0 $container-padding;
+  margin-inline: auto;
+  padding-inline: $container-padding;
 }
 
 @mixin flex-center {
@@ -24,29 +32,19 @@
   justify-content: center;
 }
 
+// Updated heading mixins to use fluid typography
 @mixin heading-1 {
   font-family: $font-family-primary;
   font-weight: $font-weight-black;
+  font-size: $fluid-heading-1;
   line-height: $line-height-110;
   letter-spacing: $letter-spacing-0;
-  
-  @include respond-to(desktop) {
-    font-size: $font-size-1; // 64px
-  }
-  
-  @include respond-to(tablet) {
-    font-size: 48px;
-  }
-  
-  @include respond-to(mobile) {
-    font-size: $font-size-2; // 40px
-  }
 }
 
 @mixin heading-2 {
   font-family: $font-family-primary;
   font-weight: $font-weight-black;
-  font-size: $font-size-2;
+  font-size: $fluid-heading-2;
   line-height: $line-height-110;
   letter-spacing: $letter-spacing-0;
 }
@@ -54,7 +52,7 @@
 @mixin button-base {
   font-family: $font-family-primary;
   font-weight: $font-weight-medium;
-  font-size: $font-size-3;
+  font-size: $fluid-body;
   padding: $spacing-200 $spacing-400;
   border-radius: $border-radius-button;
   text-decoration: none;
