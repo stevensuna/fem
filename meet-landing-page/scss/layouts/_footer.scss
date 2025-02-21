@@ -48,12 +48,23 @@
       gap: $spacing-300;
       padding: $spacing-600 $spacing-300;
     }
+
+    @include respond-to(mobile) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: $spacing-300;
+      padding: $spacing-600 $spacing-300;
+    }
   }
 
   &__title {
     @include heading-2;
 
     @include respond-to(tablet) {
+      margin-bottom: $spacing-300;
+    }
+
+    @include respond-to(mobile) {
       margin-bottom: $spacing-300;
     }
   }
@@ -66,6 +77,11 @@
     justify-self: end;
 
     @include respond-to(tablet) {
+      justify-self: center;
+      margin-top: $spacing-300;
+    }
+
+    @include respond-to(mobile) {
       justify-self: center;
       margin-top: $spacing-300;
     }
