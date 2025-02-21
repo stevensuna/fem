@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 87.5em) {
   .hero__content {
-    max-width: 33.75rem;
+    max-width: 28rem;
   }
 }
 .hero__title {
