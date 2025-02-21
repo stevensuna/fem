@@ -7,6 +7,11 @@
 
   .container {
     @include container;
+    
+    @media (min-width: $breakpoint-desktop) {
+      max-width: 100%;
+      padding: 0;
+    }
   }
 
   &__grid {
@@ -15,6 +20,22 @@
     gap: $spacing-400;
     margin-bottom: $spacing-800;
     align-items: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      grid-template-columns: 1fr minmax(auto, 540px) 1fr;
+      gap: 127px;
+
+      .hero__image--left {
+        width: 100%;
+        height: auto;
+        margin-top: -57px;
+      }
+
+      .hero__image--right {
+        width: 100%;
+        height: auto;
+      }
+    }
 
     @include respond-to(tablet) {
       grid-template-columns: repeat(2, 1fr);

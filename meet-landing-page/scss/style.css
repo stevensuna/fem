@@ -166,12 +166,33 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   padding: 0 16px;
 }
+@media (min-width: 1440px) {
+  .hero .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
 .hero__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   margin-bottom: 64px;
   align-items: center;
+}
+@media (min-width: 1440px) {
+  .hero__grid {
+    grid-template-columns: 1fr minmax(auto, 540px) 1fr;
+    gap: 127px;
+  }
+  .hero__grid .hero__image--left {
+    width: 100%;
+    height: auto;
+    margin-top: -57px;
+  }
+  .hero__grid .hero__image--right {
+    width: 100%;
+    height: auto;
+  }
 }
 @media (min-width: 376px) and (max-width: 768px) {
   .hero__grid {
