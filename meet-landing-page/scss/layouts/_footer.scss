@@ -31,6 +31,11 @@
     position: relative;
     z-index: 1;
     @include container;
+    padding: $spacing-800;
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: $spacing-1400 $spacing-1000;
+    }
   }
 
   &__grid {
@@ -39,7 +44,7 @@
     gap: $spacing-400;
     align-items: center;
     padding: $spacing-800 0;
-    max-width: 1110px;
+    max-width: 1280px;
     margin: 0 auto;
 
     @include respond-to(tablet) {

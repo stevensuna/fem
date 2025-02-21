@@ -34,6 +34,7 @@
   &--secondary {
     background-color: $color-purple-600;
     color: $color-white;
+    width: 150px;  // Slightly smaller width for secondary button
 
     &:hover {
       background-color: $color-purple-300;

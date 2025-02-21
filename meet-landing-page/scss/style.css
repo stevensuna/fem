@@ -455,6 +455,12 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 16px;
+  padding: 64px;
+}
+@media (min-width: 1440px) {
+  .footer .container {
+    padding: 112px 80px;
+  }
 }
 .footer__grid {
   display: grid;
@@ -462,7 +468,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 32px;
   align-items: center;
   padding: 64px 0;
-  max-width: 1110px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 @media (min-width: 376px) and (max-width: 768px) {
@@ -552,6 +558,7 @@ h1, h2, h3, h4, h5, h6 {
 .button--secondary {
   background-color: #855FB1;
   color: #FAFAFA;
+  width: 150px;
 }
 .button--secondary:hover {
   background-color: #D98BFF;
