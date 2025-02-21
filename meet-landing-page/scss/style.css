@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 1440px) {
   .hero__grid {
-    grid-template-columns: 1fr minmax(auto, 540px) 1fr;
+    grid-template-columns: 1fr minmax(auto, 448px) 1fr;
     gap: 127px;
   }
   .hero__grid .hero__image--left {
@@ -240,8 +240,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero__content {
   text-align: center;
-  max-width: 540px;
+  max-width: 448px;
   margin: 0 auto;
+}
+@media (min-width: 376px) and (max-width: 768px) {
+  .hero__content {
+    max-width: 448px;
+  }
+}
+@media (max-width: 375px) {
+  .hero__content {
+    max-width: 100%;
+    padding: 0 16px;
+  }
 }
 .hero__title {
   font-family: "Red Hat Display", sans-serif;
