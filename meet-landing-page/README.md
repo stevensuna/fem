@@ -23,9 +23,17 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop View](./assets/desktop-screenshot.jpeg)
-![Tablet View](./assets/tablet-screenshot.jpeg)
-![Mobile View](./assets/phone-screenshot.jpeg)
+| ![Desktop View - Showcasing full-width layout and optimal spacing](./assets/desktop-screenshot.jpeg) |
+|:--:|
+| *Desktop View - Optimal layout for large screens (992px and above)* |
+
+| ![Tablet View - Adapted layout for medium-sized screens](./assets/tablet-screenshot.jpeg) |
+|:--:|
+| *Tablet View - Responsive layout for medium screens (768px to 991px)* |
+
+| ![Mobile View - Compact layout for smartphones](./assets/phone-screenshot.jpeg) |
+|:--:|
+| *Mobile View - Mobile-optimized design for screens below 768px* |
 
 ## My process
 
