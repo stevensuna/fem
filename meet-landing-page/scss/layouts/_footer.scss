@@ -34,7 +34,7 @@
     padding: $spacing-800;
 
     @media (min-width: $breakpoint-desktop) {
-      padding: $spacing-1400 $spacing-1000;
+      padding-inline: 0;
     }
   }
 
