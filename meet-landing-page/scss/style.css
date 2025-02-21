@@ -11,6 +11,7 @@ html {
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set default scroll margin for anchor links */
@@ -23,7 +24,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   background-color: #FAFAFA;
   color: #28283D;
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 1.5;
   min-height: 100vh;
   /* Modern viewport height handling */
@@ -31,6 +32,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
   text-wrap: balance;
 }
 
@@ -189,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
   margin-block: 4rem 7rem;
+  overflow: hidden;
 }
 .hero .container {
   width: 100%;
@@ -200,6 +203,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero .container {
     max-width: 100%;
     padding: 0;
+    overflow: visible;
   }
 }
 @media (min-width: 87.5em) {
@@ -237,6 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero__grid {
     grid-template-columns: 1fr minmax(auto, 28rem) 1fr;
     gap: 4rem;
+    margin-inline: -1.5rem;
   }
   .hero__grid .hero__image--left {
     grid-column: 1;
@@ -451,18 +456,19 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   position: relative;
   color: #FAFAFA;
-  overflow: hidden;
   z-index: 1;
 }
 .footer__background {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 .footer__background img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 .footer__overlay {
   position: absolute;

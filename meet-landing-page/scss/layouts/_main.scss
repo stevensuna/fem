@@ -3,6 +3,7 @@
 
 .hero {
   margin-block: $spacing-800 $spacing-1400;
+  overflow: hidden;  // Add overflow hidden
 
   .container {
     @include container;
@@ -10,6 +11,7 @@
     @include break-up(lg) {
       max-width: 100%;
       padding: 0;
+      overflow: visible;  // Allow content to overflow container
     }
 
     @include break-up(2xl) {
@@ -51,6 +53,7 @@
     @include break-up(lg) {
       grid-template-columns: 1fr minmax(auto, 28rem) 1fr;
       gap: $spacing-800;
+      margin-inline: -$spacing-300;  // Negative margin to allow images to extend
       
       .hero__image--left {
         grid-column: 1;
