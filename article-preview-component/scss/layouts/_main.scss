@@ -1,0 +1,13 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-800);
+  
+  @include break-up(md) {
+    padding: var(--spacing-1400) var(--spacing-1000);
+  }
+}

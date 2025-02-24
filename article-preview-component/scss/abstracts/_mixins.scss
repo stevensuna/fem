@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+@mixin break-up($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @error 'Invalid breakpoint: #{$size}.';
+  }
+}
+
+@mixin fluid-type($min-size, $max-size, $min-width: 20rem, $max-width: 75rem) {
+  font-size: clamp(#{$min-size}, #{$min-size} + ((1vw - #{$min-width} * 0.01) * 100), #{$max-size});
+}

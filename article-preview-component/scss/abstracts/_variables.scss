@@ -1,0 +1,23 @@
+// Breakpoints
+$breakpoints: (
+  sm: 36em,   // 576px
+  md: 48em,   // 768px
+  lg: 62em,   // 992px
+  xl: 75em,   // 1200px
+  2xl: 87.5em // 1400px
+);
+
+// Spacing
+$spacing: (
+  800: 8rem,
+  1000: 10rem,
+  1400: 14rem
+);
+
+// Colors
+:root {
+  // Add your color variables here when needed
+  
+  // Transitions
+  --transition-default: 0.3s ease;
+}
