@@ -1,0 +1,118 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use 'sass:map';
+
+.share-button {
+  background: var(--color-grey-200);
+  border: none;
+  border-radius: 50%;
+  width: map.get(v.$spacing, 400);
+  height: map.get(v.$spacing, 400);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  margin-left: auto;
+  transition: all 0.3s ease;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: var(--color-grey-500);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    
+    img {
+      filter: brightness(100);
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &.active {
+    background: var(--color-grey-500);
+    
+    img {
+      filter: brightness(100);
+    }
+  }
+}
+
+.share-popup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-grey-900);
+  padding: map.get(v.$spacing, 200) map.get(v.$spacing, 300);
+  display: flex;
+  align-items: center;
+  gap: map.get(v.$spacing, 300);
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-default);
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: map.get(v.$spacing, 200);
+  }
+
+  &__link {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      
+      img {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  @include m.break-up(md) {
+    left: 50%;
+    bottom: 125%;
+    width: max-content;
+    border-radius: map.get(v.$spacing, 100);
+    transform: translate(-50%, map.get(v.$spacing, 300));
+    padding: map.get(v.$spacing, 200) map.get(v.$spacing, 300);
+    
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: calc(map.get(v.$spacing, 100) * -1);
+      transform: translateX(-50%);
+      border-left: map.get(v.$spacing, 100) solid transparent;
+      border-right: map.get(v.$spacing, 100) solid transparent;
+      border-top: map.get(v.$spacing, 100) solid var(--color-grey-900);
+    }
+
+    &.active {
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  width: map.get(v.$spacing, 500);
+  height: map.get(v.$spacing, 500);
+}

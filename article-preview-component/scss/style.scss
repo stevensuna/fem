@@ -1,6 +1,7 @@
-@use 'abstracts/variables';
-@use 'abstracts/mixins';
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
 @use 'base/reset';
 @use 'base/typography';
-@use 'components/buttons';
 @use 'layouts/main';
+@use 'components/card';
+@use 'components/buttons';

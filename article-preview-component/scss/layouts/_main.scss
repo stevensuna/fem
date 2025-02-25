@@ -1,13 +1,23 @@
-@use '../abstracts/mixins' as *;
-@use '../abstracts/variables' as *;
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use 'sass:map';
 
-.main {
+.container {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: var(--spacing-800);
-  
-  @include break-up(md) {
-    padding: var(--spacing-1400) var(--spacing-1000);
+  padding: map.get(v.$spacing, 800);
+  background: var(--color-grey-200);
+  perspective: 1000px;
+  overflow-x: hidden;
+
+  @include m.break-up(md) {
+    padding: map.get(v.$spacing, 1400) map.get(v.$spacing, 1000);
+  }
+
+  @include m.break-up(xl) {
+    padding: map.get(v.$spacing, 1400) 0;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }

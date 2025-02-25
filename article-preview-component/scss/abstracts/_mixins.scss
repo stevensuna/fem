@@ -1,15 +1,26 @@
-@use 'variables' as *;
+@use 'sass:math';
+@use 'sass:map';
+@use 'variables' as v;
 
-@mixin break-up($size) {
-  @if map-has-key($breakpoints, $size) {
-    @media screen and (min-width: map-get($breakpoints, $size)) {
+// Break-up mixin for mobile-first approach
+@mixin break-up($breakpoint) {
+  @if map.has-key(v.$breakpoints, $breakpoint) {
+    @media (min-width: map.get(v.$breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
-    @error 'Invalid breakpoint: #{$size}.';
+    @warn "Invalid breakpoint: #{$breakpoint}";
   }
 }
 
-@mixin fluid-type($min-size, $max-size, $min-width: 20rem, $max-width: 75rem) {
-  font-size: clamp(#{$min-size}, #{$min-size} + ((1vw - #{$min-width} * 0.01) * 100), #{$max-size});
+// Fluid typography using calc() for better browser support
+@mixin fluid-type($min-font-size, $max-font-size, $min-vw: 20rem, $max-vw: 75rem) {
+  $font-diff: math.div($max-font-size - $min-font-size, 16);
+  $vw-diff: math.div($max-vw - $min-vw, 16);
+  
+  font-size: clamp(
+    #{$min-font-size},
+    #{$min-font-size} + #{$font-diff}vw,
+    #{$max-font-size}
+  );
 }

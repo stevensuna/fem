@@ -7,16 +7,38 @@ $breakpoints: (
   2xl: 87.5em // 1400px
 );
 
-// Spacing
+// Spacing (8pt grid)
 $spacing: (
-  800: 8rem,
-  1000: 10rem,
-  1400: 14rem
+  100: 0.5rem,   // 8px
+  200: 1rem,     // 16px
+  300: 1.5rem,   // 24px
+  400: 2rem,     // 32px
+  500: 2.5rem,   // 40px
+  600: 3rem,     // 48px
+  700: 3.5rem,   // 56px
+  800: 4rem,     // 64px
+  1000: 5rem,    // 80px
+  1300: 6.5rem,  // 104px
+  1400: 7rem,    // 112px
+  2000: 10rem    // 160px
 );
 
-// Colors
 :root {
-  // Add your color variables here when needed
+  // Colors
+  --color-white: #FFFFFF;
+  --color-grey-900: #48556A;
+  --color-grey-500: #6E8098;
+  --color-grey-400: #9DAEC2;
+  --color-grey-200: #ECF2F8;
+
+  // Typography
+  --font-family-primary: 'Manrope', sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  // Layout
+  --card-max-width: 45.625rem; // 730px
+  --card-border-radius: 0.625rem; // 10px
   
   // Transitions
   --transition-default: 0.3s ease;

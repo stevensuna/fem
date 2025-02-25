@@ -1,8 +1,13 @@
-@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use 'sass:map';
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  @include fluid-type(0.875rem, 1rem);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-grey-900);
+  @include m.fluid-type(0.875rem, 1rem);
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,4 +17,48 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   max-width: 65ch;
+}
+
+.card {
+  &__title {
+    @include m.fluid-type(1.125rem, 1.5rem);
+    line-height: 1.3;
+    letter-spacing: 0.25px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: map.get(v.$spacing, 300);
+  }
+
+  &__paragraph {
+    @include m.fluid-type(0.875rem, 1rem);
+    line-height: 1.6;
+    letter-spacing: 0.12px;
+    color: var(--color-grey-500);
+    margin-bottom: map.get(v.$spacing, 400);
+  }
+}
+
+.user-info {
+  &__name {
+    @include m.fluid-type(0.875rem, 1rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.4;
+    letter-spacing: 0.12px;
+  }
+
+  &__date {
+    @include m.fluid-type(0.8125rem, 0.875rem);
+    color: var(--color-grey-500);
+    line-height: 1.4;
+    letter-spacing: 0.12px;
+  }
+}
+
+.share-popup {
+  &__text {
+    @include m.fluid-type(0.8125rem, 0.875rem);
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    color: var(--color-grey-400);
+    font-weight: var(--font-weight-bold);
+  }
 }

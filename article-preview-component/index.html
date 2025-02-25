@@ -4,11 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
   <title>Article Preview Component</title>
 </head>
 <body>
-  <main class="main">
-    <!-- Article preview component will go here -->
+  <main class="container">
+    <article class="card">
+      <figure class="card__image">
+        <img src="./assets/images/drawers.jpg" alt="Modern green drawer cabinet with framed art and vase on top" width="785" height="592">
+      </figure>
+      <div class="card__content">
+        <h1 class="card__title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+        <p class="card__paragraph">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.</p>
+        <footer class="card__footer">
+          <img src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton" class="avatar" width="40" height="40">
+          <div class="user-info">
+            <span class="user-info__name">Michelle Appleton</span>
+            <span class="user-info__date">28 Jun 2020</span>
+          </div>
+          <button class="share-button" aria-label="Share article" aria-expanded="false">
+            <img src="./assets/images/icon-share.svg" alt="" width="15" height="13" aria-hidden="true">
+          </button>
+          <div class="share-popup" aria-hidden="true">
+            <span class="share-popup__text">Share</span>
+            <div class="share-popup__socials">
+              <a href="#" class="share-popup__link" aria-label="Share on Facebook">
+                <img src="./assets/images/icon-facebook.svg" alt="" width="20" height="20" aria-hidden="true">
+              </a>
+              <a href="#" class="share-popup__link" aria-label="Share on Twitter">
+                <img src="./assets/images/icon-twitter.svg" alt="" width="20" height="20" aria-hidden="true">
+              </a>
+              <a href="#" class="share-popup__link" aria-label="Share on Pinterest">
+                <img src="./assets/images/icon-pinterest.svg" alt="" width="20" height="20" aria-hidden="true">
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </article>
   </main>
   <script src="js/script.js"></script>
 </body>
