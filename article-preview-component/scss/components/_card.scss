@@ -25,7 +25,7 @@
     height: calc(map.get(v.$spacing, 800) * 3);
     
     @include m.break-up(md) {
-      height: calc(map.get(v.$spacing, 800) * 4);
+      height: 100%;
     }
 
     img {

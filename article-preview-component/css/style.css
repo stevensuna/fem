@@ -162,7 +162,7 @@ p {
 }
 @media (min-width: 48em) {
   .card__image {
-    height: 16rem;
+    height: 100%;
   }
 }
 .card__image img {
