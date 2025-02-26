@@ -12,21 +12,28 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+  // Increase the card width to create a more rectangular appearance
+  width: 100%;
+  max-width: 60rem; // Increased from 45.625rem (730px) to 60rem (960px)
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 map.get(v.$spacing, 300) map.get(v.$spacing, 500) rgba(201, 213, 225, 0.6);
   }
 
   @include m.break-up(md) {
-    grid-template-columns: minmax(240px, 0.45fr) minmax(287px, 0.55fr);
+    // Adjust ratio to create a more rectangular appearance with image taking less width
+    grid-template-columns: minmax(220px, 0.35fr) minmax(340px, 0.65fr);
   }
 
   @include m.break-up(lg) {
-    grid-template-columns: minmax(285px, 0.45fr) minmax(350px, 0.55fr);
+    // Further adjust ratio to emphasize the rectangular shape
+    grid-template-columns: minmax(270px, 0.35fr) minmax(430px, 0.65fr);
   }
 
   @include m.break-up(xl) {
-    grid-template-columns: 309px 421px; // Precise columns for 730px total at 1440px
+    // Fixed width columns for larger screens, emphasizing the rectangular shape
+    grid-template-columns: 300px 520px; // More pronounced rectangle shape
   }
 
   &__image {

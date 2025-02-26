@@ -7,7 +7,7 @@
   --font-family-primary: "Manrope", sans-serif;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
-  --card-max-width: 45.625rem;
+  --card-max-width: 60rem;
   --card-border-radius: 0.625rem;
   --transition-default: 0.3s ease;
 }
@@ -120,12 +120,17 @@ p {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 4rem;
+  padding: 4rem 2rem;
   background: var(--color-grey-200);
   perspective: 1000px;
   overflow-x: hidden;
 }
 @media (min-width: 48em) {
+  .container {
+    padding: 7rem 4rem;
+  }
+}
+@media (min-width: 62em) {
   .container {
     padding: 7rem 5rem;
   }
@@ -133,7 +138,7 @@ p {
 @media (min-width: 75em) {
   .container {
     padding: 7rem 0;
-    max-width: 1440px;
+    max-width: 1540px;
     margin: 0 auto;
   }
 }
@@ -147,6 +152,8 @@ p {
   max-width: var(--card-max-width);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 60rem;
 }
 .card:hover {
   transform: translateY(-2px);
@@ -154,17 +161,17 @@ p {
 }
 @media (min-width: 48em) {
   .card {
-    grid-template-columns: minmax(240px, 0.45fr) minmax(287px, 0.55fr);
+    grid-template-columns: minmax(220px, 0.35fr) minmax(340px, 0.65fr);
   }
 }
 @media (min-width: 62em) {
   .card {
-    grid-template-columns: minmax(285px, 0.45fr) minmax(350px, 0.55fr);
+    grid-template-columns: minmax(270px, 0.35fr) minmax(430px, 0.65fr);
   }
 }
 @media (min-width: 75em) {
   .card {
-    grid-template-columns: 309px 421px;
+    grid-template-columns: 300px 520px;
   }
 }
 .card__image {
