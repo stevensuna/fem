@@ -22,18 +22,19 @@
   }
 
   @include m.break-up(md) {
-    // Adjust ratio to create a more rectangular appearance with image taking less width
-    grid-template-columns: minmax(220px, 0.35fr) minmax(340px, 0.65fr);
+    // Adjust ratio to make the image wider at medium screens
+    grid-template-columns: minmax(250px, 0.45fr) minmax(300px, 0.55fr);
   }
 
   @include m.break-up(lg) {
-    // Further adjust ratio to emphasize the rectangular shape
-    grid-template-columns: minmax(270px, 0.35fr) minmax(430px, 0.65fr);
+    // Further increase image width proportion on larger screens
+    grid-template-columns: minmax(320px, 0.5fr) minmax(320px, 0.5fr);
   }
 
   @include m.break-up(xl) {
-    // Fixed width columns for larger screens, emphasizing the rectangular shape
-    grid-template-columns: 300px 520px; // More pronounced rectangle shape
+    // Fixed width columns for larger screens with wider image
+    grid-template-columns: 380px 440px;
+    max-width: 820px; // Adjust overall card width to maintain proportion
   }
 
   &__image {
@@ -45,7 +46,7 @@
 
     @include m.break-up(lg) {
       height: 100%;
-      min-height: calc(map.get(v.$spacing, 1400) * 2.5);
+      min-height: calc(map.get(v.$spacing, 1400) * 2.75); // Slightly taller
     }
 
     img {
@@ -66,11 +67,11 @@
     }
 
     @include m.break-up(lg) {
-      padding: map.get(v.$spacing, 800);
+      padding: map.get(v.$spacing, 700);
     }
 
     @include m.break-up(xl) {
-      padding: map.get(v.$spacing, 1000) map.get(v.$spacing, 800);
+      padding: map.get(v.$spacing, 800) map.get(v.$spacing, 700);
     }
   }
 

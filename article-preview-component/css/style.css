@@ -161,17 +161,18 @@ p {
 }
 @media (min-width: 48em) {
   .card {
-    grid-template-columns: minmax(220px, 0.35fr) minmax(340px, 0.65fr);
+    grid-template-columns: minmax(250px, 0.45fr) minmax(300px, 0.55fr);
   }
 }
 @media (min-width: 62em) {
   .card {
-    grid-template-columns: minmax(270px, 0.35fr) minmax(430px, 0.65fr);
+    grid-template-columns: minmax(320px, 0.5fr) minmax(320px, 0.5fr);
   }
 }
 @media (min-width: 75em) {
   .card {
-    grid-template-columns: 300px 520px;
+    grid-template-columns: 380px 440px;
+    max-width: 820px;
   }
 }
 .card__image {
@@ -185,7 +186,7 @@ p {
 @media (min-width: 62em) {
   .card__image {
     height: 100%;
-    min-height: 17.5rem;
+    min-height: 19.25rem;
   }
 }
 .card__image img {
@@ -206,12 +207,12 @@ p {
 }
 @media (min-width: 62em) {
   .card__content {
-    padding: 4rem;
+    padding: 3.5rem;
   }
 }
 @media (min-width: 75em) {
   .card__content {
-    padding: 5rem 4rem;
+    padding: 4rem 3.5rem;
   }
 }
 .card__footer {
