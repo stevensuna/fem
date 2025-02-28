@@ -324,7 +324,7 @@ p {
 .share-popup {
   position: absolute;
   left: 50%;
-  bottom: calc(100% + 25px);
+  bottom: calc(100% + 30px);
   transform: translateX(-50%) scale(0.9);
   background-color: hsl(212, 19%, 35%);
   border-radius: 10px;
@@ -335,8 +335,8 @@ p {
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition-default), visibility var(--transition-default), transform var(--transition-default);
-  z-index: 10;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
   min-width: 250px;
   pointer-events: none; /* Prevents clicking when hidden */
 }
@@ -346,6 +346,7 @@ p {
     right: -105px;
     transform: scale(0.9);
     bottom: calc(100% + 25px);
+    z-index: 100;
   }
 }
 .share-popup::after {
@@ -357,6 +358,7 @@ p {
   width: 16px;
   height: 16px;
   background-color: hsl(212, 19%, 35%);
+  z-index: -1;
 }
 @media (min-width: 48rem) {
   .share-popup::after {
@@ -397,6 +399,8 @@ p {
   .card__footer {
     padding: 1rem 1.5rem;
     transition: background-color var(--transition-default);
+    position: relative;
+    z-index: 1;
   }
   .card__footer.share-active {
     background-color: hsl(212, 19%, 35%);
@@ -404,6 +408,7 @@ p {
     padding: 1.5rem;
     border-bottom-left-radius: var(--card-border-radius);
     border-bottom-right-radius: var(--card-border-radius);
+    z-index: 90;
   }
   .card__footer.share-active .avatar,
   .card__footer.share-active .user-info {
@@ -421,6 +426,7 @@ p {
     box-shadow: none;
     padding: 0;
     width: 100%;
+    z-index: 100;
   }
   .card__footer.share-active .share-popup::after {
     display: none;
