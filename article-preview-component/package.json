@@ -1,7 +1,6 @@
 {
   "name": "article-preview-component",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch scss:css"
@@ -12,5 +11,7 @@
   "type": "commonjs",
   "dependencies": {
     "sass": "^1.85.1"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
