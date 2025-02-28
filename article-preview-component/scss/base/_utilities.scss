@@ -1,0 +1,30 @@
+/* Utility classes */
+
+/* 
+ * Visually hidden class - hides content visually
+ * while keeping it accessible to screen readers
+ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+/* Container width constraint */
+.content-container {
+  width: 100%;
+  max-width: var(--content-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding, 1rem);
+}
+
+/* Flow utility for consistent vertical spacing */
+.flow > * + * {
+  margin-top: var(--flow-spacing, 1rem);
+}

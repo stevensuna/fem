@@ -3,99 +3,109 @@
 @use 'sass:map';
 
 .card {
-  display: grid;
-  grid-template-columns: 1fr;
-  background: var(--color-white);
+  background-color: v.$color-white;
   border-radius: var(--card-border-radius);
-  box-shadow: 0 map.get(v.$spacing, 200) map.get(v.$spacing, 400) rgba(201, 213, 225, 0.5);
-  max-width: var(--card-max-width);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  // Increase the card width to create a more rectangular appearance
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  max-width: var(--card-max-width);
   width: 100%;
-  max-width: 60rem; // Increased from 45.625rem (730px) to 60rem (960px)
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 map.get(v.$spacing, 300) map.get(v.$spacing, 500) rgba(201, 213, 225, 0.6);
+  
+  @include m.respond-to(tablet) {
+    flex-direction: row;
   }
-
-  @include m.break-up(md) {
-    // Adjust ratio to make the image wider at medium screens
-    grid-template-columns: minmax(250px, 0.45fr) minmax(300px, 0.55fr);
-  }
-
-  @include m.break-up(lg) {
-    // Further increase image width proportion on larger screens
-    grid-template-columns: minmax(320px, 0.5fr) minmax(320px, 0.5fr);
-  }
-
-  @include m.break-up(xl) {
-    // Fixed width columns for larger screens with wider image
-    grid-template-columns: 380px 440px;
-    max-width: 820px; // Adjust overall card width to maintain proportion
-  }
-
+  
   &__image {
-    height: calc(map.get(v.$spacing, 800) * 3);
+    flex-shrink: 0;
+    margin: 0;
+    height: 200px;
+    overflow: hidden;
     
-    @include m.break-up(md) {
-      height: 100%;
+    @include m.respond-to(tablet) {
+      width: 40%;
+      height: auto;
     }
-
-    @include m.break-up(lg) {
-      height: 100%;
-      min-height: calc(map.get(v.$spacing, 1400) * 2.75); // Slightly taller
-    }
-
+    
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
     }
   }
-
+  
   &__content {
-    padding: map.get(v.$spacing, 300);
-    position: relative;
+    padding: v.$spacing-300;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-
-    @include m.break-up(md) {
-      padding: map.get(v.$spacing, 400);
-    }
-
-    @include m.break-up(lg) {
-      padding: map.get(v.$spacing, 700);
-    }
-
-    @include m.break-up(xl) {
-      padding: map.get(v.$spacing, 800) map.get(v.$spacing, 700);
+    
+    @include m.respond-to(tablet) {
+      padding: v.$spacing-400;
     }
   }
-
+  
   &__footer {
+    margin-top: auto;
     display: flex;
     align-items: center;
-    gap: map.get(v.$spacing, 200);
-    margin-top: auto;
-    padding-top: map.get(v.$spacing, 200);
     position: relative;
-
-    @include m.break-up(lg) {
-      padding-top: map.get(v.$spacing, 400);
-      gap: map.get(v.$spacing, 300);
-    }
   }
 }
 
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: v.$spacing-200;
+}
+
 .user-info {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: map.get(v.$spacing, 100);
+  gap: 0.25rem; // Using direct value instead of map.get
 
-  @include m.break-up(lg) {
-    gap: map.get(v.$spacing, 200);
+  @include m.respond-to(tablet) {
+    gap: 0.5rem; // Using direct value instead of map.get
+  }
+}
+
+.share-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: v.$color-grey-200;
+  @include m.flex(row, center, center);
+  transition: background-color var(--transition-default);
+  position: relative;
+  z-index: 2;
+  
+  &:hover, &:focus {
+    background-color: v.$color-grey-400;
+    
+    img {
+      filter: brightness(5);
+    }
+  }
+  
+  &:focus-visible {
+    outline: 2px solid v.$color-grey-900; // Fixed - using v. namespace
+    outline-offset: 2px;
+  }
+  
+  &.active {
+    background-color: v.$color-grey-500;
+    
+    img {
+      filter: brightness(5);
+    }
+  }
+  
+  img {
+    width: 15px;
+    height: 13px;
+    transition: filter var(--transition-default);
   }
 }

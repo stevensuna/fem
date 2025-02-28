@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as v;
+
+:root {
+  // Colors
+  --color-white: #{v.$color-white};
+  --color-grey-900: #{v.$color-grey-900};
+  --color-grey-500: #{v.$color-grey-500};
+  --color-grey-400: #{v.$color-grey-400};
+  --color-grey-200: #{v.$color-grey-200};
+
+  // Typography
+  --font-family-primary: #{v.$font-family-primary};
+  --font-weight-medium: #{v.$font-weight-medium};
+  --font-weight-bold: #{v.$font-weight-bold};
+  
+  // Layout
+  --card-max-width: 45.625rem; // 730px
+  --card-border-radius: 0.625rem; // 10px
+  
+  // Transitions
+  --transition-default: 0.3s ease;
+}

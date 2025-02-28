@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Article preview component with social sharing functionality">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,33 +13,96 @@
 </head>
 <body>
   <main class="container">
-    <article class="card">
+    <article class="card" itemscope itemtype="https://schema.org/Article">
       <figure class="card__image">
-        <img src="./assets/images/drawers.jpg" alt="Modern green drawer cabinet with framed art and vase on top" width="785" height="592">
+        <img 
+          src="./assets/images/drawers.jpg" 
+          alt="Modern green drawer cabinet with framed art and vase on top" 
+          width="785" 
+          height="592"
+          itemprop="image"
+        >
       </figure>
       <div class="card__content">
-        <h1 class="card__title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
-        <p class="card__paragraph">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.</p>
+        <h1 class="card__title" itemprop="headline">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+        <p class="card__paragraph" itemprop="description">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.</p>
         <footer class="card__footer">
-          <img src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton" class="avatar" width="40" height="40">
+          <img 
+            src="./assets/images/avatar-michelle.jpg" 
+            alt="Michelle Appleton profile picture" 
+            class="avatar" 
+            width="40" 
+            height="40"
+            itemprop="author" 
+            itemscope 
+            itemtype="https://schema.org/Person"
+          >
           <div class="user-info">
-            <span class="user-info__name">Michelle Appleton</span>
-            <span class="user-info__date">28 Jun 2020</span>
+            <span class="user-info__name" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <span itemprop="name">Michelle Appleton</span>
+            </span>
+            <time class="user-info__date" datetime="2020-06-28" itemprop="datePublished">28 Jun 2020</time>
           </div>
-          <button class="share-button" aria-label="Share article" aria-expanded="false">
-            <img src="./assets/images/icon-share.svg" alt="" width="15" height="13" aria-hidden="true">
+          <button 
+            class="share-button" 
+            aria-label="Share article" 
+            aria-expanded="false"
+            aria-controls="share-popup"
+            aria-haspopup="true"
+          >
+            <img 
+              src="./assets/images/icon-share.svg" 
+              alt="" 
+              width="15" 
+              height="13" 
+              aria-hidden="true"
+            >
+            <span class="visually-hidden">Share</span>
           </button>
-          <div class="share-popup" aria-hidden="true">
-            <span class="share-popup__text">Share</span>
+          <div id="share-popup" class="share-popup" aria-hidden="true" role="dialog">
+            <span class="share-popup__text">SHARE</span>
             <div class="share-popup__socials">
-              <a href="#" class="share-popup__link" aria-label="Share on Facebook">
-                <img src="./assets/images/icon-facebook.svg" alt="" width="20" height="20" aria-hidden="true">
+              <a 
+                href="#" 
+                class="share-popup__link" 
+                aria-label="Share on Facebook"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="./assets/images/icon-facebook.svg" 
+                  alt="" 
+                  width="20" 
+                  height="20" 
+                  aria-hidden="true"
+                >
               </a>
-              <a href="#" class="share-popup__link" aria-label="Share on Twitter">
-                <img src="./assets/images/icon-twitter.svg" alt="" width="20" height="20" aria-hidden="true">
+              <a 
+                href="#" 
+                class="share-popup__link" 
+                aria-label="Share on Twitter"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="./assets/images/icon-twitter.svg" 
+                  alt="" 
+                  width="20" 
+                  height="20" 
+                  aria-hidden="true"
+                >
               </a>
-              <a href="#" class="share-popup__link" aria-label="Share on Pinterest">
-                <img src="./assets/images/icon-pinterest.svg" alt="" width="20" height="20" aria-hidden="true">
+              <a 
+                href="#" 
+                class="share-popup__link" 
+                aria-label="Share on Pinterest"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="./assets/images/icon-pinterest.svg" 
+                  alt="" 
+                  width="20" 
+                  height="20" 
+                  aria-hidden="true"
+                >
               </a>
             </div>
           </div>

@@ -23,21 +23,77 @@ $spacing: (
   2000: 10rem    // 160px
 );
 
+// Colors
+$color-white: hsl(0, 0%, 100%);
+$color-grey-900: hsl(212, 19%, 35%); // #48556A
+$color-grey-500: hsl(212, 17%, 51%); // #6E8098
+$color-grey-400: hsl(212, 23%, 69%); // #9DAEC2
+$color-grey-200: hsl(210, 42%, 95%); // #ECF2F8
+
+// Typography
+$font-family-primary: 'Manrope', sans-serif;
+
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.8125rem;  // 13px
+$font-size-base: 0.875rem; // 14px
+$font-size-md: 1rem;       // 16px
+$font-size-lg: 1.25rem;    // 20px
+$font-size-xl: 1.5rem;     // 24px
+
+$font-size-body: $font-size-sm;
+$font-size-title: $font-size-lg;
+
+$line-height-sm: 1.2;
+$line-height-base: 1.5;
+$line-height-lg: 1.3;
+
+$line-height-body: 1.4;
+$line-height-title: 1.3;
+
+$letter-spacing-sm: 0.12px;
+$letter-spacing-md: 0.25px;
+$letter-spacing-lg: 0.5px;
+
+$letter-spacing-body: $letter-spacing-sm;
+$letter-spacing-title: $letter-spacing-md;
+$letter-spacing-share: $letter-spacing-md;
+
+// Legacy spacing (keeping for backward compatibility)
+$spacing-0: 0;
+$spacing-100: 0.5rem;  // 8px
+$spacing-200: 1rem;    // 16px
+$spacing-300: 1.5rem;  // 24px
+$spacing-400: 2rem;    // 32px
+$spacing-500: 2.5rem;  // 40px
+$spacing-600: 3rem;    // 48px
+$spacing-700: 3.5rem;  // 56px
+$spacing-800: 4rem;    // 64px
+$spacing-1300: 6.5rem; // 104px
+$spacing-2000: 10rem;  // 160px
+
+// Legacy breakpoints
+$breakpoint-tablet: 48rem; // 768px
+$breakpoint-desktop: 64rem; // 1024px
+
+// Root CSS variables for global access
 :root {
   // Colors
-  --color-white: #FFFFFF;
-  --color-grey-900: #48556A;
-  --color-grey-500: #6E8098;
-  --color-grey-400: #9DAEC2;
-  --color-grey-200: #ECF2F8;
+  --color-white: #{$color-white};
+  --color-grey-900: #{$color-grey-900};
+  --color-grey-500: #{$color-grey-500};
+  --color-grey-400: #{$color-grey-400};
+  --color-grey-200: #{$color-grey-200};
 
   // Typography
-  --font-family-primary: 'Manrope', sans-serif;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --font-family-primary: #{$font-family-primary};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-bold: #{$font-weight-bold};
   
   // Layout
-  --card-max-width: 60rem; // Increased from 45.625rem (730px) to 60rem (960px)
+  --card-max-width: 45.625rem; // 730px
   --card-border-radius: 0.625rem; // 10px
   
   // Transitions
