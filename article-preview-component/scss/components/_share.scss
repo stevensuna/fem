@@ -124,13 +124,27 @@
         padding: 0;
         width: 100%;
         z-index: 100; // Maintain consistent z-index
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         &::after {
           display: none;
         }
+
+        &__text {
+          flex: 0 0 auto;
+        }
+
+        &__socials {
+          flex: 1;
+          justify-content: center;
+          margin: 0 v.$spacing-200;
+        }
       }
 
       .share-button {
+        flex: 0 0 auto;
         background-color: v.$color-grey-500;
 
         img {

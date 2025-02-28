@@ -427,11 +427,23 @@ p {
     padding: 0;
     width: 100%;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .card__footer.share-active .share-popup::after {
     display: none;
   }
+  .card__footer.share-active .share-popup__text {
+    flex: 0 0 auto;
+  }
+  .card__footer.share-active .share-popup__socials {
+    flex: 1;
+    justify-content: center;
+    margin: 0 1rem;
+  }
   .card__footer.share-active .share-button {
+    flex: 0 0 auto;
     background-color: hsl(212, 17%, 51%);
   }
   .card__footer.share-active .share-button img {
