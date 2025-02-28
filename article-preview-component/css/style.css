@@ -324,7 +324,7 @@ p {
 .share-popup {
   position: absolute;
   left: 50%;
-  bottom: calc(100% + 15px);
+  bottom: calc(100% + 25px);
   transform: translateX(-50%) scale(0.9);
   background-color: hsl(212, 19%, 35%);
   border-radius: 10px;
@@ -336,14 +336,14 @@ p {
   visibility: hidden;
   transition: opacity var(--transition-default), visibility var(--transition-default), transform var(--transition-default);
   z-index: 10;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   min-width: 250px;
   pointer-events: none; /* Prevents clicking when hidden */
 }
 @media (min-width: 48rem) {
   .share-popup {
-    right: -75px;
     left: auto;
+    right: -105px;
     transform: scale(0.9);
     bottom: calc(100% + 25px);
   }
@@ -361,7 +361,7 @@ p {
 @media (min-width: 48rem) {
   .share-popup::after {
     left: auto;
-    right: 85px;
+    right: 105px;
   }
 }
 .share-popup.active {
