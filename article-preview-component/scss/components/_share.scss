@@ -92,7 +92,6 @@
 // Mobile share overlay - replaces the normal footer when sharing on mobile
 @media (max-width: #{v.$breakpoint-tablet - 0.0625rem}) {
   .card__footer {
-    padding: v.$spacing-200 v.$spacing-300;
     transition: background-color var(--transition-default);
     position: relative; // Create stacking context
     z-index: 1; // Ensure proper stacking

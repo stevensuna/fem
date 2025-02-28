@@ -1,6 +1,6 @@
-@use '../abstracts/variables' as v;
-@use '../abstracts/mixins' as m;
-@use 'sass:map';
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
 
 .card {
   background-color: v.$color-white;
@@ -11,22 +11,22 @@
   flex-direction: column;
   max-width: var(--card-max-width);
   width: 100%;
-  
+
   @include m.respond-to(tablet) {
     flex-direction: row;
   }
-  
+
   &__image {
     flex-shrink: 0;
     margin: 0;
     height: 200px;
     overflow: hidden;
-    
+
     @include m.respond-to(tablet) {
       width: 40%;
       height: auto;
     }
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -34,18 +34,22 @@
       object-position: center;
     }
   }
-  
+
   &__content {
-    padding: v.$spacing-300;
+    padding: v.$spacing-500;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    
+
     @include m.respond-to(tablet) {
+      padding: v.$spacing-800;
+    }
+
+    @include m.respond-to(desktop) {
       padding: v.$spacing-400;
     }
   }
-  
+
   &__footer {
     margin-top: auto;
     display: flex;
@@ -81,28 +85,29 @@
   transition: background-color var(--transition-default);
   position: relative;
   z-index: 2;
-  
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     background-color: v.$color-grey-400;
-    
+
     img {
       filter: brightness(5);
     }
   }
-  
+
   &:focus-visible {
     outline: 2px solid v.$color-grey-900; // Fixed - using v. namespace
     outline-offset: 2px;
   }
-  
+
   &.active {
     background-color: v.$color-grey-500;
-    
+
     img {
       filter: brightness(5);
     }
   }
-  
+
   img {
     width: 15px;
     height: 13px;
