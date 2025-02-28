@@ -1,6 +1,6 @@
-@use '../abstracts/variables' as v;
-@use '../abstracts/mixins' as m;
-@use 'sass:map';
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:map";
 
 .share-popup {
   position: absolute;
@@ -15,24 +15,23 @@
   gap: v.$spacing-200;
   opacity: 0;
   visibility: hidden;
-  transition: 
-    opacity var(--transition-default),
-    visibility var(--transition-default),
-    transform var(--transition-default);
+  transition: opacity var(--transition-default),
+    visibility var(--transition-default), transform var(--transition-default);
   z-index: 10;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   min-width: 250px;
   pointer-events: none; /* Prevents clicking when hidden */
-  
+
   @include m.respond-to(tablet) {
-    right: 0;
+    right: -75px; // Push the popup more to the right
     left: auto;
     transform: scale(0.9);
+    bottom: calc(100% + 25px); // Increase distance from button
   }
-  
+
   // Adds the triangular "tail" at the bottom of the popup
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     bottom: -8px;
@@ -40,38 +39,39 @@
     width: 16px;
     height: 16px;
     background-color: v.$color-grey-900;
-    
+
     @include m.respond-to(tablet) {
       left: auto;
-      right: 25px;
+      right: 85px; // Align with the share button center
     }
   }
-  
+
   &.active {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) scale(1);
     pointer-events: auto; /* Re-enables clicking when visible */
-    
+
     @include m.respond-to(tablet) {
       transform: scale(1);
     }
   }
-  
+
   &__socials {
     display: flex;
     align-items: center;
     gap: v.$spacing-200;
   }
-  
+
   &__link {
     transition: transform var(--transition-default);
     display: flex; /* Improves rendering of SVG icons */
-    
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       transform: scale(1.1);
     }
-    
+
     &:focus-visible {
       outline: 2px solid v.$color-white;
       outline-offset: 2px;
@@ -85,22 +85,23 @@
   .card__footer {
     padding: v.$spacing-200 v.$spacing-300;
     transition: background-color var(--transition-default);
-    
+
     &.share-active {
       background-color: v.$color-grey-900;
       margin: 0 -#{v.$spacing-300};
       padding: v.$spacing-300;
       border-bottom-left-radius: var(--card-border-radius);
       border-bottom-right-radius: var(--card-border-radius);
-      
+
       .avatar,
       .user-info {
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        transition: opacity var(--transition-default), visibility var(--transition-default);
+        transition: opacity var(--transition-default),
+          visibility var(--transition-default);
       }
-      
+
       .share-popup {
         position: static;
         transform: none;
@@ -110,15 +111,15 @@
         box-shadow: none;
         padding: 0;
         width: 100%;
-        
+
         &::after {
           display: none;
         }
       }
-      
+
       .share-button {
         background-color: v.$color-grey-500;
-        
+
         img {
           filter: brightness(5);
         }

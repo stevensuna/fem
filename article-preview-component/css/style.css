@@ -342,9 +342,10 @@ p {
 }
 @media (min-width: 48rem) {
   .share-popup {
-    right: 0;
+    right: -75px;
     left: auto;
     transform: scale(0.9);
+    bottom: calc(100% + 25px);
   }
 }
 .share-popup::after {
@@ -360,7 +361,7 @@ p {
 @media (min-width: 48rem) {
   .share-popup::after {
     left: auto;
-    right: 25px;
+    right: 85px;
   }
 }
 .share-popup.active {
