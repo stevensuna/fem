@@ -5,12 +5,13 @@
 .card {
   background-color: v.$color-white;
   border-radius: var(--card-border-radius);
-  overflow: hidden;
+  overflow: visible; // Changed from hidden to visible to prevent popup clipping
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   max-width: var(--card-max-width);
   width: 100%;
+  position: relative; // Added to ensure proper stacking context
 
   @include m.respond-to(tablet) {
     flex-direction: row;
@@ -40,6 +41,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    overflow: visible; // Ensure content doesn't clip the popup
 
     @include m.respond-to(tablet) {
       padding: v.$spacing-800;
@@ -54,7 +56,8 @@
     margin-top: auto;
     display: flex;
     align-items: center;
-    position: relative;
+    position: relative; // Reinforcing relative positioning
+    overflow: visible; // Ensure footer doesn't clip the popup
   }
 }
 

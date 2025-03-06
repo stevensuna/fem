@@ -24,6 +24,9 @@
   ); // Better shadow that works with the triangle
   min-width: 250px;
   pointer-events: none; /* Prevents clicking when hidden */
+  // Ensure no clipping occurs
+  max-width: calc(100vw - 40px);
+  overflow: visible;
 
   @include m.respond-to(tablet) {
     // Position relative to the share button on tablet/desktop
@@ -89,6 +92,16 @@
   }
 }
 
+// Ensure card footer and card content don't clip the popup
+.card__footer {
+  position: relative;
+  overflow: visible;
+}
+
+.card__content {
+  overflow: visible;
+}
+
 // Mobile share overlay - replaces the normal footer when sharing on mobile
 @media (max-width: #{v.$breakpoint-tablet - 0.0625rem}) {
   .card__footer {
@@ -126,6 +139,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        overflow: visible;
+        max-width: 100%;
 
         &::after {
           display: none;

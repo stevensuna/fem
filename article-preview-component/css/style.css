@@ -218,12 +218,13 @@ p {
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: var(--card-border-radius);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   max-width: var(--card-max-width);
   width: 100%;
+  position: relative;
 }
 @media (min-width: 48rem) {
   .card {
@@ -253,6 +254,7 @@ p {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  overflow: visible;
 }
 @media (min-width: 48rem) {
   .card__content {
@@ -269,6 +271,7 @@ p {
   display: flex;
   align-items: center;
   position: relative;
+  overflow: visible;
 }
 
 .avatar {
@@ -344,6 +347,8 @@ p {
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
   min-width: 250px;
   pointer-events: none; /* Prevents clicking when hidden */
+  max-width: calc(100vw - 40px);
+  overflow: visible;
 }
 @media (min-width: 48rem) {
   .share-popup {
@@ -400,6 +405,15 @@ p {
   border-radius: 0.25rem;
 }
 
+.card__footer {
+  position: relative;
+  overflow: visible;
+}
+
+.card__content {
+  overflow: visible;
+}
+
 @media (max-width: 47.9375rem) {
   .card__footer {
     transition: background-color var(--transition-default);
@@ -434,6 +448,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: visible;
+    max-width: 100%;
   }
   .card__footer.share-active .share-popup::after {
     display: none;
