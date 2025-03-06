@@ -120,7 +120,7 @@
 
     &.share-active {
       background-color: v.$color-grey-900;
-      margin: 0 -#{v.$spacing-500};
+      margin: 0 -#{v.$spacing-300};
       padding: v.$spacing-300;
       border-bottom-left-radius: var(--card-border-radius);
       border-bottom-right-radius: var(--card-border-radius);
