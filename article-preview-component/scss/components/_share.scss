@@ -10,10 +10,15 @@
   transform: translateX(-50%) scale(0.9);
   background-color: v.$color-grey-900;
   border-radius: 10px;
-  padding: v.$spacing-200;
+  width: 248px;
+  height: 67px;
+  padding: 18px 38px;
   display: flex;
-  align-items: center;
+  flex-direction: row; // Changed to row to display items in one line
+  align-items: center; // Center items vertically
+  justify-content: center; // Center items horizontally
   gap: v.$spacing-200;
+  flex-shrink: 0;
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition-default),
@@ -22,11 +27,15 @@
   filter: drop-shadow(
     0 5px 15px rgba(0, 0, 0, 0.15)
   ); // Better shadow that works with the triangle
-  min-width: 250px;
   pointer-events: none; /* Prevents clicking when hidden */
   // Ensure no clipping occurs
   max-width: calc(100vw - 40px);
   overflow: visible;
+
+  &__text {
+    text-align: center;
+    margin-right: 4px; // Small spacing between text and social icons
+  }
 
   @include m.respond-to(tablet) {
     // Position relative to the share button on tablet/desktop
@@ -135,8 +144,10 @@
         box-shadow: none;
         padding: 0;
         width: 100%;
+        height: auto;
         z-index: 100; // Maintain consistent z-index
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         overflow: visible;
@@ -148,6 +159,8 @@
 
         &__text {
           flex: 0 0 auto;
+          text-align: center;
+          margin-right: 0;
         }
 
         &__socials {

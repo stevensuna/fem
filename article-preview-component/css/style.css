@@ -336,19 +336,27 @@ p {
   transform: translateX(-50%) scale(0.9);
   background-color: hsl(212, 19%, 35%);
   border-radius: 10px;
-  padding: 1rem;
+  width: 248px;
+  height: 67px;
+  padding: 18px 38px;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  flex-shrink: 0;
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition-default), visibility var(--transition-default), transform var(--transition-default);
   z-index: 100;
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
-  min-width: 250px;
   pointer-events: none; /* Prevents clicking when hidden */
   max-width: calc(100vw - 40px);
   overflow: visible;
+}
+.share-popup__text {
+  text-align: center;
+  margin-right: 4px;
 }
 @media (min-width: 48rem) {
   .share-popup {
@@ -444,8 +452,10 @@ p {
     box-shadow: none;
     padding: 0;
     width: 100%;
+    height: auto;
     z-index: 100;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     overflow: visible;
@@ -456,6 +466,8 @@ p {
   }
   .card__footer.share-active .share-popup__text {
     flex: 0 0 auto;
+    text-align: center;
+    margin-right: 0;
   }
   .card__footer.share-active .share-popup__socials {
     flex: 1;
