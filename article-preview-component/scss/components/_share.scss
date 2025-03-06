@@ -125,11 +125,10 @@
       border-bottom-left-radius: var(--card-border-radius);
       border-bottom-right-radius: var(--card-border-radius);
       z-index: 90; // High enough to stay above other card elements but below popup
-      position: absolute; // Position at the bottom of the card
-      bottom: 0; // Align to bottom
-      left: 25px; // Offset from the left edge
-      right: 0; // Extend fully to the right
-      width: 100%; // Ensure full width
+      position: relative; // Changed from absolute to relative
+      display: flex; // Added to maintain layout
+      align-items: center; // Added to maintain vertical centering
+      min-height: 64px; // Added explicit height to match the non-active state
 
       .avatar,
       .user-info {
