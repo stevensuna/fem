@@ -21,3 +21,6 @@ node_modules/
 .sass-cache/
 .devcontainer/
 .vscode/
+
+# Ignore the temporary folder
+javascript-practice/
