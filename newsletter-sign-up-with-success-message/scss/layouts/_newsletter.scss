@@ -79,6 +79,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    padding: $spacing-300 $spacing-300 0 0;
   }
 
   @include respond-to(tablet) {
