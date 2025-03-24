@@ -24,3 +24,4 @@ node_modules/
 
 # Ignore the temporary folder
 javascript-practice/
+.doc/
