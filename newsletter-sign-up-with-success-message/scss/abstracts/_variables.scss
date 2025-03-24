@@ -1,0 +1,60 @@
+// Colors
+// Primary
+$color-primary-red: hsl(4, 100%, 67%);
+$color-primary-gradient-start: hsl(15, 100%, 61%);
+$color-primary-gradient-end: hsl(346, 100%, 66%);
+
+// Neutral
+$color-blue-800: hsl(234, 29%, 20%);
+$color-blue-700: hsl(235, 18%, 26%);
+$color-grey: hsl(0, 0%, 58%);
+$color-white: hsl(0, 0%, 100%);
+
+// Typography
+$font-family-primary: "Roboto", sans-serif;
+$font-size-body: 16px;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-base: 1.5;
+$line-height-tight: 1;
+
+// Text Presets
+// Desktop: 56px, 100% line height, Roboto Bold
+// Mobile: 88px, 100% line height, Roboto Bold
+$font-size-preset-1-desktop: 3.5rem; // 56px
+$font-size-preset-1-mobile: 2.5rem; // 40px (adjusted for better mobile appearance)
+$line-height-preset-1: 1;
+
+// Preset 2 (Bold & Regular): 16px, 150% line height
+$font-size-preset-2: 1rem; // 16px
+$line-height-preset-2: 1.5;
+
+// Preset 3: 12px, Roboto Bold
+$font-size-preset-3: 0.75rem; // 12px
+
+// Spacing
+$spacing-100: 0.5rem; // 8px
+$spacing-200: 1rem; // 16px
+$spacing-300: 1.5rem; // 24px
+$spacing-400: 2rem; // 32px
+$spacing-500: 2.5rem; // 40px
+$spacing-600: 3rem; // 48px
+$spacing-800: 4rem; // 64px
+$spacing-900: 4.5rem; // 72px
+$spacing-1300: 6.5rem; // 104px
+
+// Breakpoints
+$breakpoint-mobile: 23.4375rem; // 375px
+$breakpoint-tablet: 48rem; // 768px
+$breakpoint-desktop: 90rem; // 1440px
+
+// Border Radius
+$border-radius-sm: 0.5rem; // 8px
+$border-radius-md: 0.75rem; // 12px
+$border-radius-lg: 2rem; // 32px
+
+// Animation
+$transition-duration: 0.3s;
+$transition-timing: ease-in-out;

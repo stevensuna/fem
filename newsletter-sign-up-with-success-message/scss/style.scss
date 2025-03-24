@@ -1,0 +1,27 @@
+// Main SCSS file using 7-1 architecture pattern
+// https://sass-guidelin.es/#the-7-1-pattern
+
+// 1. Vendors
+// No vendors in this project
+
+// 2. Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// 3. Base
+@import "base/reset";
+@import "base/typography";
+
+// 4. Components
+@import "components/buttons";
+@import "components/form";
+
+// 5. Layout
+@import "layouts/newsletter";
+@import "layouts/success";
+
+// 6. Pages
+// No specific page styles in this project
+
+// 7. Themes
+// No themes in this project

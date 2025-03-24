@@ -1,0 +1,31 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: $spacing-200;
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-bold;
+  transition: all $transition-duration $transition-timing;
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  @include focus-visible;
+}
+
+.btn--primary {
+  background-color: $color-blue-800;
+  color: $color-white;
+
+  &:hover {
+    @include gradient-primary;
+  }
+}

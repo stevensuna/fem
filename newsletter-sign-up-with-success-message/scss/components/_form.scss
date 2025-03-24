@@ -1,0 +1,66 @@
+.form {
+  margin-bottom: $spacing-300;
+
+  @include respond-to(tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.form__group {
+  margin-bottom: $spacing-200;
+}
+
+.form__label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-100;
+}
+
+.form__label {
+  color: $color-blue-800;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-preset-3;
+}
+
+.form__error-message {
+  color: $color-primary-red;
+  display: none;
+}
+
+.form__input {
+  width: 100%;
+  padding: $spacing-200;
+  border: 1px solid rgba($color-grey, 0.5);
+  border-radius: $border-radius-sm;
+  color: $color-blue-800;
+  transition: border-color $transition-duration $transition-timing;
+
+  &::placeholder {
+    color: rgba($color-grey, 0.8);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-blue-800;
+  }
+
+  @include focus-visible;
+}
+
+/* Error state */
+.form--error {
+  .form__error-message {
+    display: block;
+  }
+
+  .form__input {
+    border-color: $color-primary-red;
+    color: $color-primary-red;
+    background-color: rgba($color-primary-red, 0.08);
+
+    &::placeholder {
+      color: rgba($color-primary-red, 0.5);
+    }
+  }
+}

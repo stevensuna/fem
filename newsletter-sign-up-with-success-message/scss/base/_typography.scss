@@ -1,0 +1,80 @@
+/* Font face declarations */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global typography styles */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-300;
+  color: $color-blue-800;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: $spacing-200;
+}
+
+/* Typography preset implementations */
+.newsletter__title {
+  font-size: $font-size-preset-1-mobile;
+  line-height: $line-height-preset-1;
+
+  @include respond-to(tablet) {
+    font-size: $font-size-preset-1-desktop;
+  }
+}
+
+.newsletter__description,
+.newsletter__feature,
+.form__label,
+.form__input,
+.btn,
+.success__message {
+  font-size: $font-size-preset-2;
+  line-height: $line-height-preset-2;
+}
+
+.success__title {
+  font-size: $font-size-preset-1-mobile;
+  line-height: $line-height-preset-1;
+
+  @include respond-to(tablet) {
+    font-size: $font-size-preset-1-desktop;
+  }
+}
+
+.form__error-message {
+  font-size: $font-size-preset-3;
+  font-weight: $font-weight-bold;
+}
+
+.success__email {
+  font-weight: $font-weight-bold;
+}
+
+/* Strong text */
+strong {
+  font-weight: $font-weight-bold;
+}
