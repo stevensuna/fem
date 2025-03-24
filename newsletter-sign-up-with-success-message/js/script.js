@@ -7,6 +7,7 @@
  * - Form submission handling
  * - Toggle between form and success message
  * - Dismiss button functionality
+ * - Accessibility features
  */
 
 (function () {
@@ -78,7 +79,10 @@
 
   // Event Listeners
 
-  // Form submission handling
+  /**
+   * Handles form submission
+   * @param {Event} e - Form submit event
+   */
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -103,7 +107,9 @@
     clearError();
   });
 
-  // Input validation on change/blur
+  /**
+   * Handles input validation on change/blur
+   */
   emailInput.addEventListener("input", function () {
     if (
       emailInput.value.trim() !== "" &&
@@ -113,7 +119,9 @@
     }
   });
 
-  // Dismiss button handling
+  /**
+   * Handles dismiss button click to show the form again
+   */
   dismissButton.addEventListener("click", showNewsletterForm);
 
   // Initialize form state
