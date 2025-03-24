@@ -89,27 +89,3 @@ a {
     scroll-behavior: auto !important;
   }
 }
-
-/* Footer styles */
-.attribution {
-  font-size: $font-size-preset-3;
-  text-align: center;
-  padding: $spacing-200;
-
-  @include respond-to(tablet) {
-    color: $color-white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: underline;
-
-    &:hover {
-      color: $color-primary-red;
-    }
-  }
-}

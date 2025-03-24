@@ -15,10 +15,15 @@
 
   @include respond-to(tablet) {
     min-height: auto;
-    padding: $spacing-500 $spacing-600;
+    padding: $spacing-500;
     border-radius: $border-radius-lg;
-    max-width: 32rem; // 512px
+    max-width: 28rem; // 448px - adjusted for tablet
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  @include respond-to(desktop) {
+    padding: $spacing-500 $spacing-600;
+    max-width: 32rem; // 512px for desktop
   }
 }
 
@@ -39,6 +44,10 @@
   margin-bottom: $spacing-600;
 
   @include respond-to(tablet) {
+    margin-bottom: $spacing-600;
+  }
+
+  @include respond-to(desktop) {
     margin-bottom: $spacing-800;
   }
 }

@@ -8,6 +8,15 @@
     @media (min-width: $breakpoint-desktop) {
       @content;
     }
+  } @else if $breakpoint == mobile-only {
+    @media (max-width: #{$breakpoint-tablet - 0.0625rem}) {
+      // 767.99px
+      @content;
+    }
+  } @else if $breakpoint == tablet-only {
+    @media (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 0.0625rem}) {
+      @content;
+    }
   }
 }
 
