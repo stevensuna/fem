@@ -84,7 +84,7 @@
   @include respond-to(tablet) {
     flex: 1;
     min-width: 25rem; // 400px
-    padding: $spacing-300 $spacing-300 0 0;
+    padding: $spacing-300 $spacing-300 0;
   }
 }
 
