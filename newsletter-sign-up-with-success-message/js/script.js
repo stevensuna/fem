@@ -21,6 +21,25 @@
   const errorMessage = document.querySelector(".form__error-message");
   const confirmedEmail = document.getElementById("confirmed-email");
   const dismissButton = document.getElementById("dismiss-button");
+  const backdrop = document.getElementById("backdrop");
+
+  function showSuccessMessage() {
+    newsletterSection.setAttribute("hidden", "");
+    successSection.removeAttribute("hidden");
+    successSection.classList.add("active");
+    backdrop.classList.add("active");
+    // Set focus on dismiss button for better accessibility
+    dismissButton.focus();
+  }
+
+  function showNewsletterForm() {
+    successSection.setAttribute("hidden", "");
+    successSection.classList.remove("active");
+    backdrop.classList.remove("active");
+    newsletterSection.removeAttribute("hidden");
+    // Set focus back to email input for better accessibility
+    emailInput.focus();
+  }
 
   /**
    * Validates email using regex pattern
@@ -53,28 +72,6 @@
     errorMessage.textContent = "";
     emailInput.setAttribute("aria-invalid", "false");
     document.getElementById("email-error").textContent = "";
-  }
-
-  /**
-   * Shows success message and hides form
-   */
-  function showSuccessMessage() {
-    newsletterSection.setAttribute("hidden", "");
-    successSection.removeAttribute("hidden");
-    successSection.classList.add("active");
-    // Set focus on dismiss button for better accessibility
-    dismissButton.focus();
-  }
-
-  /**
-   * Shows newsletter form and hides success message
-   */
-  function showNewsletterForm() {
-    successSection.setAttribute("hidden", "");
-    successSection.classList.remove("active");
-    newsletterSection.removeAttribute("hidden");
-    // Set focus back to email input for better accessibility
-    emailInput.focus();
   }
 
   // Event Listeners
