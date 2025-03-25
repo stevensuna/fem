@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Newsletter Signup Component](https://your-live-site-url.com)
+- Live Site URL: [Newsletter Signup Component](https://stevensuna.github.io/fem/newsletter-sign-up-with-success-message/)
 
 ## My process
 
