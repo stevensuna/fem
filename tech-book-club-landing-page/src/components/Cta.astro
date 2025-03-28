@@ -1,97 +1,25 @@
 ---
 // CTA component for final call to action
 ---
-
-<section class="cta section section-dark">
+<section class="section py-08 md:py-10 bg-neutral-900 text-neutral-100 text-center">
   <div class="container">
-    <h2 class="text-center">Ready to debug your reading list?</h2>
-
-    <div class="cta-container">
-      <a href="#membership-options" class="btn btn-dark">
+    <h2 class="text-center mb-07">Ready to debug your reading list?</h2>
+    <div class="mb-07">
+      <a href="#membership-options" class="btn btn-primary inline-flex items-center">
         REVIEW MEMBERSHIP OPTIONS
-        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ml-02" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
-
-    <div class="social-proof">
-      <div class="avatars">
-        <div class="avatar-circle"></div>
-        <div class="avatar-circle"></div>
-        <div class="avatar-circle"></div>
+    <div class="flex items-center justify-center flex-wrap gap-04">
+      <div class="flex">
+        <div class="w-8 h-8 rounded-full bg-[#706FE5] border-2 border-neutral-900"></div>
+        <div class="w-8 h-8 rounded-full bg-[#FF8066] border-2 border-neutral-900 -ml-[10px]"></div>
+        <div class="w-8 h-8 rounded-full bg-[#57C4A7] border-2 border-neutral-900 -ml-[10px]"></div>
       </div>
-      <div class="stars">
-        ★★★★★
-      </div>
-      <p class="members-count">200+ developers joined already</p>
+      <div class="text-[#FF8066] text-xl">★★★★★</div>
+      <p class="text-sm opacity-90 m-0">200+ developers joined already</p>
     </div>
   </div>
 </section>
-
-<style>
-  .cta {
-    padding: var(--spacing-10) 0;
-    background-color: var(--neutral-900);
-    color: var(--neutral-0);
-    text-align: center;
-  }
-
-  .cta h2 {
-    margin-bottom: var(--spacing-07);
-  }
-
-  .cta-container {
-    margin-bottom: var(--spacing-07);
-  }
-
-  .social-proof {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-04);
-  }
-
-  .avatars {
-    display: flex;
-  }
-
-  .avatar-circle {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: var(--neutral-700);
-    border: 2px solid var(--neutral-900);
-    margin-right: -10px;
-  }
-
-  .avatar-circle:nth-child(1) {
-    background-color: #706FE5;
-  }
-
-  .avatar-circle:nth-child(2) {
-    background-color: #FF8066;
-  }
-
-  .avatar-circle:nth-child(3) {
-    background-color: #57C4A7;
-  }
-
-  .stars {
-    color: var(--light-salmon-400);
-    font-size: 1.25rem;
-  }
-
-  .members-count {
-    font-size: 0.875rem;
-    margin-bottom: 0;
-    opacity: 0.9;
-  }
-
-  @media (max-width: 768px) {
-    .cta {
-      padding: var(--spacing-08) 0;
-    }
-  }
-</style>

@@ -1,188 +1,85 @@
 ---
 // Pricing component with membership options
 ---
-
-<section id="membership-options" class="pricing section">
+<section id="membership-options" class="section bg-light-salmon-100 py-09 md:py-11">
   <div class="container">
-    <h2 class="text-center">Membership options</h2>
-
-    <div class="pricing-grid">
+    <h2 class="text-center mb-08">Membership options</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-06 mt-08">
       <!-- Starter Plan -->
-      <div class="pricing-card">
-        <h3>Starter</h3>
-        <div class="price-container">
-          <span class="price">$19</span>
-          <span class="frequency">/month</span>
+      <div class="bg-white rounded-03 p-06 shadow-md flex flex-col">
+        <h3 class="font-merriweather font-semibold text-2xl mb-03 text-center">Starter</h3>
+        <div class="text-center mb-04">
+          <span class="text-4xl font-semibold text-neutral-900">$19</span>
+          <span class="text-base text-gray-600">/month</span>
         </div>
-        <div class="divider"></div>
-        <ul class="features-list">
-          <li>
-            <div class="check-icon">✓</div>
+        <div class="w-full h-px bg-gray-200 my-04"></div>
+        <ul class="list-none p-0 m-0 mb-06 flex-grow">
+          <li class="flex mb-03 items-start">
+            <div class="flex items-center justify-center w-5 h-5 rounded-01 bg-neutral-900 text-white mr-03 flex-shrink-0 text-xs">✓</div>
             <span>1 book/month</span>
           </li>
-          <li>
-            <div class="check-icon">✓</div>
+          <li class="flex mb-03 items-start">
+            <div class="flex items-center justify-center w-5 h-5 rounded-01 bg-neutral-900 text-white mr-03 flex-shrink-0 text-xs">✓</div>
             <span>Online forums</span>
           </li>
         </ul>
-        <div class="card-cta">
-          <a href="#" class="btn btn-light">SUBSCRIBE NOW</a>
+        <div class="mt-auto text-center">
+          <a href="#" class="btn btn-primary">SUBSCRIBE NOW</a>
         </div>
       </div>
 
       <!-- Pro Plan -->
-      <div class="pricing-card featured">
-        <h3>Pro</h3>
-        <div class="price-container">
-          <span class="price">$29</span>
-          <span class="frequency">/month</span>
+      <div class="bg-white rounded-03 p-06 shadow-md border-2 border-[#FF8066] md:scale-105 flex flex-col">
+        <h3 class="font-merriweather font-semibold text-2xl mb-03 text-center">Pro</h3>
+        <div class="text-center mb-04">
+          <span class="text-4xl font-semibold text-neutral-900">$29</span>
+          <span class="text-base text-gray-600">/month</span>
         </div>
-        <div class="divider"></div>
-        <ul class="features-list">
-          <li>
-            <div class="check-icon">✓</div>
+        <div class="w-full h-px bg-gray-200 my-04"></div>
+        <ul class="list-none p-0 m-0 mb-06 flex-grow">
+          <li class="flex mb-03 items-start">
+            <div class="flex items-center justify-center w-5 h-5 rounded-01 bg-neutral-900 text-white mr-03 flex-shrink-0 text-xs">✓</div>
             <span>2 books/month</span>
           </li>
-          <li>
-            <div class="check-icon">✓</div>
+          <li class="flex mb-03 items-start">
+            <div class="flex items-center justify-center w-5 h-5 rounded-01 bg-neutral-900 text-white mr-03 flex-shrink-0 text-xs">✓</div>
             <span>Virtual meetups</span>
           </li>
-          <li>
-            <div class="check-icon">✓</div>
+          <li class="flex mb-03 items-start">
+            <div class="flex items-center justify-center w-5 h-5 rounded-01 bg-neutral-900 text-white mr-03 flex-shrink-0 text-xs">✓</div>
             <span>Early access to new releases</span>
           </li>
         </ul>
-        <div class="card-cta">
-          <a href="#" class="btn btn-light">SUBSCRIBE NOW</a>
+        <div class="mt-auto text-center">
+          <a href="#" class="btn btn-primary">SUBSCRIBE NOW</a>
         </div>
       </div>
 
       <!-- Enterprise Plan -->
-      <div class="pricing-card">
-        <h3>Enterprise</h3>
-        <div class="price-container">
-          <span class="price">Custom</span>
+      <div class="bg-white rounded-03 p-06 shadow-md flex flex-col">
+        <h3 class="font-merriweather font-semibold text-2xl mb-03 text-center">Enterprise</h3>
+        <div class="text-center mb-04">
+          <span class="text-4xl font-semibold text-neutral-900">Custom</span>
         </div>
-        <div class="divider"></div>
-        <ul class="features-list">
-          <li>
-            <div class="check-icon">✓</div>
+        <div class="w-full h-px bg-gray-200 my-04"></div>
+        <ul class="list-none p-0 m-0 mb-06 flex-grow">
+          <li class="flex mb-03 items-start">
+            <div class="flex items-center justify-center w-5 h-5 rounded-01 bg-neutral-900 text-white mr-03 flex-shrink-0 text-xs">✓</div>
             <span>Team access</span>
           </li>
-          <li>
-            <div class="check-icon">✓</div>
+          <li class="flex mb-03 items-start">
+            <div class="flex items-center justify-center w-5 h-5 rounded-01 bg-neutral-900 text-white mr-03 flex-shrink-0 text-xs">✓</div>
             <span>Private sessions</span>
           </li>
-          <li>
-            <div class="check-icon">✓</div>
+          <li class="flex mb-03 items-start">
+            <div class="flex items-center justify-center w-5 h-5 rounded-01 bg-neutral-900 text-white mr-03 flex-shrink-0 text-xs">✓</div>
             <span>Customized reading plans</span>
           </li>
         </ul>
-        <div class="card-cta">
-          <a href="#" class="btn btn-light">TALK TO US</a>
+        <div class="mt-auto text-center">
+          <a href="#" class="btn btn-primary">TALK TO US</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  .pricing {
-    padding: var(--spacing-11) 0;
-    background-color: var(--light-salmon-100);
-  }
-
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-06);
-    margin-top: var(--spacing-08);
-  }
-
-  .pricing-card {
-    background-color: var(--neutral-0);
-    border-radius: var(--radius-03);
-    padding: var(--spacing-06);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .pricing-card.featured {
-    border: 2px solid var(--light-salmon-400);
-    transform: scale(1.02);
-  }
-
-  .pricing-card h3 {
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-03);
-    text-align: center;
-  }
-
-  .price-container {
-    text-align: center;
-    margin-bottom: var(--spacing-04);
-  }
-
-  .price {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--neutral-900);
-  }
-
-  .frequency {
-    font-size: 1rem;
-    color: var(--neutral-700);
-  }
-
-  .divider {
-    width: 100%;
-    height: 1px;
-    background-color: var(--neutral-200);
-    margin: var(--spacing-04) 0;
-  }
-
-  .features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 var(--spacing-06) 0;
-    flex-grow: 1;
-  }
-
-  .features-list li {
-    display: flex;
-    margin-bottom: var(--spacing-03);
-    align-items: flex-start;
-  }
-
-  .check-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    border-radius: var(--radius-01);
-    background-color: var(--neutral-900);
-    color: var(--neutral-0);
-    margin-right: var(--spacing-03);
-    flex-shrink: 0;
-    font-size: 0.8rem;
-  }
-
-  .card-cta {
-    margin-top: auto;
-    text-align: center;
-  }
-
-  @media (max-width: 768px) {
-    .pricing {
-      padding: var(--spacing-09) 0;
-    }
-
-    .pricing-card.featured {
-      transform: scale(1);
-    }
-  }
-</style>
