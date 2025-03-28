@@ -1,0 +1,188 @@
+---
+// Pricing component with membership options
+---
+
+<section id="membership-options" class="pricing section">
+  <div class="container">
+    <h2 class="text-center">Membership options</h2>
+
+    <div class="pricing-grid">
+      <!-- Starter Plan -->
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="price-container">
+          <span class="price">$19</span>
+          <span class="frequency">/month</span>
+        </div>
+        <div class="divider"></div>
+        <ul class="features-list">
+          <li>
+            <div class="check-icon">✓</div>
+            <span>1 book/month</span>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Online forums</span>
+          </li>
+        </ul>
+        <div class="card-cta">
+          <a href="#" class="btn btn-light">SUBSCRIBE NOW</a>
+        </div>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="pricing-card featured">
+        <h3>Pro</h3>
+        <div class="price-container">
+          <span class="price">$29</span>
+          <span class="frequency">/month</span>
+        </div>
+        <div class="divider"></div>
+        <ul class="features-list">
+          <li>
+            <div class="check-icon">✓</div>
+            <span>2 books/month</span>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Virtual meetups</span>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Early access to new releases</span>
+          </li>
+        </ul>
+        <div class="card-cta">
+          <a href="#" class="btn btn-light">SUBSCRIBE NOW</a>
+        </div>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price-container">
+          <span class="price">Custom</span>
+        </div>
+        <div class="divider"></div>
+        <ul class="features-list">
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Team access</span>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Private sessions</span>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Customized reading plans</span>
+          </li>
+        </ul>
+        <div class="card-cta">
+          <a href="#" class="btn btn-light">TALK TO US</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing {
+    padding: var(--spacing-11) 0;
+    background-color: var(--light-salmon-100);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-06);
+    margin-top: var(--spacing-08);
+  }
+
+  .pricing-card {
+    background-color: var(--neutral-0);
+    border-radius: var(--radius-03);
+    padding: var(--spacing-06);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-card.featured {
+    border: 2px solid var(--light-salmon-400);
+    transform: scale(1.02);
+  }
+
+  .pricing-card h3 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-03);
+    text-align: center;
+  }
+
+  .price-container {
+    text-align: center;
+    margin-bottom: var(--spacing-04);
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--neutral-900);
+  }
+
+  .frequency {
+    font-size: 1rem;
+    color: var(--neutral-700);
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--neutral-200);
+    margin: var(--spacing-04) 0;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-06) 0;
+    flex-grow: 1;
+  }
+
+  .features-list li {
+    display: flex;
+    margin-bottom: var(--spacing-03);
+    align-items: flex-start;
+  }
+
+  .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-01);
+    background-color: var(--neutral-900);
+    color: var(--neutral-0);
+    margin-right: var(--spacing-03);
+    flex-shrink: 0;
+    font-size: 0.8rem;
+  }
+
+  .card-cta {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .pricing {
+      padding: var(--spacing-09) 0;
+    }
+
+    .pricing-card.featured {
+      transform: scale(1);
+    }
+  }
+</style>

@@ -1,0 +1,145 @@
+---
+// Hero component with main heading and call-to-action
+---
+
+<section class="hero section">
+  <div class="container">
+    <div class="row">
+      <div class="col hero-content">
+        <h1><span class="highlight">Join the</span> ultimate tech book club</h1>
+        <p>Turn your reading time into learning time with fellow tech enthusiasts. Get curated recommendations, join vibrant discussions, and level up your skills one chapter at a time.</p>
+
+        <div class="cta-container">
+          <a href="#membership-options" class="btn btn-light">
+            REVIEW MEMBERSHIP OPTIONS
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="social-proof">
+          <div class="avatars">
+            <div class="avatar-circle"></div>
+            <div class="avatar-circle"></div>
+            <div class="avatar-circle"></div>
+          </div>
+          <div class="stars">
+            ★★★★★
+          </div>
+          <p class="members-count">200+ developers joined already</p>
+        </div>
+      </div>
+
+      <div class="col hero-image">
+        <img
+          src="/src/assets/images/hero-desktop.jpg"
+          srcset="/src/assets/images/image-hero-mobile.webp 480w,
+                  /src/assets/images/image-hero-tablet.webp 768w,
+                  /src/assets/images/image-hero-desktop.webp 1200w"
+          sizes="(max-width: 480px) 480px,
+                 (max-width: 768px) 768px,
+                 1200px"
+          alt="Tech enthusiasts studying together"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: var(--spacing-10) 0 var(--spacing-11);
+    background-color: var(--light-salmon-100);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-04);
+  }
+
+  .hero p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-06);
+    max-width: 42ch;
+  }
+
+  .cta-container {
+    margin-bottom: var(--spacing-07);
+  }
+
+  .social-proof {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-04);
+  }
+
+  .avatars {
+    display: flex;
+  }
+
+  .avatar-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--neutral-700);
+    border: 2px solid var(--neutral-0);
+    margin-right: -10px;
+  }
+
+  .avatar-circle:nth-child(1) {
+    background-color: #706FE5;
+  }
+
+  .avatar-circle:nth-child(2) {
+    background-color: #FF8066;
+  }
+
+  .avatar-circle:nth-child(3) {
+    background-color: #57C4A7;
+  }
+
+  .stars {
+    color: var(--light-salmon-400);
+    font-size: 1.25rem;
+  }
+
+  .members-count {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--radius-03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--spacing-08) 0;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-image {
+      margin-top: var(--spacing-07);
+    }
+  }
+</style>

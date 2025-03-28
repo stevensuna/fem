@@ -1,0 +1,87 @@
+---
+// Testimonial component
+---
+
+<section class="testimonial section">
+  <div class="container">
+    <div class="stars text-center">
+      ★★★★★
+    </div>
+
+    <blockquote class="quote">
+      "This book club transformed my technical reading from a solitary activity into an enriching community experience. The discussions are gold!"
+    </blockquote>
+
+    <p class="attribution text-center">
+      - Sarah Chen, Software Architect
+    </p>
+  </div>
+</section>
+
+<style>
+  .testimonial {
+    padding: var(--spacing-10) 0;
+    background-color: var(--light-salmon-100);
+  }
+
+  .stars {
+    color: var(--light-salmon-400);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-04);
+  }
+
+  .quote {
+    font-family: 'Merriweather', serif;
+    font-size: 1.75rem;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-06);
+    color: var(--neutral-900);
+    position: relative;
+  }
+
+  .quote::before,
+  .quote::after {
+    content: '"';
+    font-size: 4rem;
+    color: var(--light-salmon-400);
+    opacity: 0.3;
+    position: absolute;
+    line-height: 1;
+  }
+
+  .quote::before {
+    top: -20px;
+    left: -30px;
+  }
+
+  .quote::after {
+    bottom: -40px;
+    right: -30px;
+  }
+
+  .attribution {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--neutral-700);
+  }
+
+  @media (max-width: 768px) {
+    .testimonial {
+      padding: var(--spacing-08) 0;
+    }
+
+    .quote {
+      font-size: 1.25rem;
+      padding: 0 var(--spacing-04);
+    }
+
+    .quote::before,
+    .quote::after {
+      display: none;
+    }
+  }
+</style>

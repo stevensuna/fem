@@ -1,0 +1,255 @@
+/* Global CSS based on the style guide */
+
+/* Font imports from Google Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* Custom font for Martian Mono - using CDN */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    /* Colors */
+    --neutral-900: #1A282F;
+    --neutral-700: #4D6470;
+    --neutral-200: #E3E5E5;
+    --neutral-100: #F8F8F8;
+    --neutral-0: #FFFFFF;
+
+    --light-salmon-400: #FFAD8E;
+    --light-salmon-200: #FFE5DB;
+    --light-salmon-100: #FFF5F2;
+
+    --light-cabernet-900: #8C4DFF;
+
+    /* Spacing */
+    --spacing-01: 4px;
+    --spacing-02: 8px;
+    --spacing-03: 12px;
+    --spacing-04: 16px;
+    --spacing-05: 20px;
+    --spacing-06: 24px;
+    --spacing-07: 32px;
+    --spacing-08: 40px;
+    --spacing-09: 48px;
+    --spacing-10: 64px;
+    --spacing-11: 128px;
+
+    /* Border radius */
+    --radius-01: 4px;
+    --radius-02: 8px;
+    --radius-03: 12px;
+    --radius-04: 16px;
+    --radius-05: 20px;
+    --radius-06: 24px;
+    --radius-07: 32px;
+    --radius-full: 999px;
+}
+
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--neutral-900);
+    background-color: var(--neutral-100);
+}
+
+/* Typography */
+h1,
+.text-preset-1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 120%;
+    letter-spacing: -2px;
+    margin-bottom: var(--spacing-06);
+}
+
+h2,
+.text-preset-2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 130%;
+    letter-spacing: -2px;
+    margin-bottom: var(--spacing-05);
+}
+
+h3,
+.text-preset-3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 130%;
+    letter-spacing: -1px;
+    margin-bottom: var(--spacing-04);
+}
+
+.text-preset-4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+}
+
+.text-preset-5 {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.text-preset-6 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -1px;
+}
+
+.text-preset-7 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: var(--spacing-04);
+}
+
+.highlight {
+    color: var(--light-salmon-400);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-03) var(--spacing-05);
+    border: 1px solid var(--neutral-900);
+    border-radius: var(--radius-02);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-light {
+    background-color: transparent;
+    color: var(--neutral-900);
+}
+
+.btn-dark {
+    background-color: transparent;
+    color: var(--neutral-0);
+    border-color: var(--neutral-0);
+}
+
+.btn-light:hover {
+    background-color: var(--neutral-900);
+    color: var(--neutral-0);
+}
+
+.btn-dark:hover {
+    background-color: var(--neutral-0);
+    color: var(--neutral-900);
+}
+
+.btn-icon {
+    margin-left: var(--spacing-02);
+}
+
+/* Container & Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 var(--spacing-04);
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    padding: var(--spacing-04);
+}
+
+/* Section Styles */
+.section {
+    padding: var(--spacing-10) 0;
+}
+
+.section-light {
+    background-color: var(--light-salmon-100);
+}
+
+.section-dark {
+    background-color: var(--neutral-900);
+    color: var(--neutral-0);
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--neutral-0);
+    border-radius: var(--radius-03);
+    padding: var(--spacing-06);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}

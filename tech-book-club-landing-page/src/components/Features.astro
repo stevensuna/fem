@@ -1,0 +1,95 @@
+---
+// Features component with list of benefits
+---
+
+<section class="features section">
+  <div class="container">
+    <div class="row">
+      <div class="col features-image">
+        <img src="/src/assets/images/reading-together.jpg" alt="People reading together" />
+      </div>
+
+      <div class="col features-content">
+        <h2>Read together, grow together</h2>
+        <ul class="features-list">
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Monthly curated tech reads selected by industry experts</span>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Virtual and in-person meetups for deep-dive discussions</span>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Early access to new tech book releases</span>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <span>Author Q&A sessions with tech thought leaders</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: var(--spacing-11) 0;
+    background-color: var(--light-salmon-100);
+  }
+
+  .features-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--radius-03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .features-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .features-list li {
+    display: flex;
+    margin-bottom: var(--spacing-04);
+    align-items: flex-start;
+  }
+
+  .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-01);
+    background-color: var(--neutral-900);
+    color: var(--neutral-0);
+    margin-right: var(--spacing-03);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .features {
+      padding: var(--spacing-09) 0;
+    }
+
+    .features-image {
+      margin-bottom: var(--spacing-07);
+    }
+
+    .row {
+      flex-direction: column-reverse;
+    }
+  }
+</style>
