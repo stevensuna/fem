@@ -1,0 +1,71 @@
+---
+// Import images and assets
+import featureImage from '../assets/images/feature-reading-group.webp';
+---
+
+<section class="py-16 md:py-24 overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-16">
+      <!-- Text Content -->
+      <div class="max-w-xl lg:order-2">
+        <h2 class="font-['Martian_Mono'] font-semibold text-3xl md:text-4xl lg:text-5xl leading-[1.3] tracking-[-2px] text-[#062630] mb-8">
+          Read together, <span class="block">grow together</span>
+        </h2>
+
+        <ul class="space-y-4 md:space-y-6">
+          <li class="flex items-start gap-3">
+            <div class="bg-[#FEA38F] rounded-full p-1 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <span class="font-['Inter'] text-lg leading-[1.4] text-[#385159]">
+              <strong>Monthly curated tech reads</strong> selected by industry leaders and voted on by the community
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="bg-[#FEA38F] rounded-full p-1 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <span class="font-['Inter'] text-lg leading-[1.4] text-[#385159]">
+              <strong>Virtual and in-person meetups</strong> to discuss concepts, share insights, and network with peers
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="bg-[#FEA38F] rounded-full p-1 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <span class="font-['Inter'] text-lg leading-[1.4] text-[#385159]">
+              <strong>Early access to new tech books</strong> through our publisher partnerships and pre-release programs
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="bg-[#FEA38F] rounded-full p-1 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <span class="font-['Inter'] text-lg leading-[1.4] text-[#385159]">
+              <strong>Author Q&A sessions</strong> where you can ask questions directly to the minds behind the books
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Feature Image -->
+      <div class="relative w-full max-w-md mx-auto lg:max-w-xl lg:mx-0 lg:order-1">
+        <img
+          src={featureImage.src}
+          alt="Tech book club members reading and discussing together"
+          class="w-full h-auto rounded-[20px] shadow-lg"
+          width="600"
+          height="400"
+        />
+      </div>
+    </div>
+  </div>
+</section>
