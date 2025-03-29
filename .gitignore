@@ -21,7 +21,10 @@ node_modules/
 .sass-cache/
 .devcontainer/
 .vscode/
+.env
+
 
 # Ignore the temporary folder
 javascript-practice/
 .doc/
+.aider*
