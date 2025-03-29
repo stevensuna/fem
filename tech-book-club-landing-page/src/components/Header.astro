@@ -1,11 +1,12 @@
 ---
 // Header component for the Tech Book Club landing page
+import logoImg from '../assets/images/logo.svg';
 ---
 
 <header class="bg-neutral-900 py-300 px-400 md:px-600">
   <div class="container mx-auto flex items-center justify-between">
     <div class="flex items-center">
-      <img src="../assets/images/logo.svg" alt="Tech book club logo" class="h-[32px] w-auto mr-200" />
+      <img src={logoImg.src} alt="Tech book club logo" class="h-[32px] w-auto mr-200" />
       <span class="text-neutral-0 font-martian text-[20px] font-medium hidden md:block">Tech Book Club</span>
     </div>
     <nav class="hidden md:block">

@@ -1,5 +1,9 @@
 ---
 // Read Together section component
+import iconCheck from '../assets/images/icon-check.svg';
+import readTogetherDesktopImg from '../assets/images/image-read-together-desktop.webp';
+import readTogetherMobileImg from '../assets/images/image-read-together-mobile.webp';
+import readTogetherTabletImg from '../assets/images/image-read-together-tablet.webp';
 ---
 
 <section id="features" class="read-together bg-neutral-0 py-600 md:py-800 px-400 md:px-600">
@@ -7,10 +11,10 @@
     <div class="flex flex-col-reverse md:flex-row items-center gap-600">
       <div class="image-content flex-1">
         <picture>
-          <source media="(min-width: 1024px)" srcset="../assets/images/image-read-together-desktop.webp">
-          <source media="(min-width: 768px)" srcset="../assets/images/image-read-together-tablet.webp">
+          <source media="(min-width: 1024px)" srcset={readTogetherDesktopImg.src}>
+          <source media="(min-width: 768px)" srcset={readTogetherTabletImg.src}>
           <img
-            src="../assets/images/image-read-together-mobile.webp"
+            src={readTogetherMobileImg.src}
             alt="People reading books together in a cozy setting"
             class="w-full h-auto rounded-24 shadow-lg object-cover"
           />
@@ -22,25 +26,25 @@
         </h2>
         <ul class="features-list space-y-150">
           <li class="flex items-start">
-            <img src="../assets/images/icon-check.svg" alt="" class="w-[24px] h-[24px] mt-100 mr-200" />
+            <img src={iconCheck.src} alt="" class="w-[24px] h-[24px] mt-100 mr-200" />
             <p class="text-neutral-700 font-inter text-[20px] leading-[140%] tracking-[-0.5px]">
               Monthly curated tech reads selected by industry experts
             </p>
           </li>
           <li class="flex items-start">
-            <img src="../assets/images/icon-check.svg" alt="" class="w-[24px] h-[24px] mt-100 mr-200" />
+            <img src={iconCheck.src} alt="" class="w-[24px] h-[24px] mt-100 mr-200" />
             <p class="text-neutral-700 font-inter text-[20px] leading-[140%] tracking-[-0.5px]">
               Virtual and in-person meetups for deep-dive discussions
             </p>
           </li>
           <li class="flex items-start">
-            <img src="../assets/images/icon-check.svg" alt="" class="w-[24px] h-[24px] mt-100 mr-200" />
+            <img src={iconCheck.src} alt="" class="w-[24px] h-[24px] mt-100 mr-200" />
             <p class="text-neutral-700 font-inter text-[20px] leading-[140%] tracking-[-0.5px]">
               Early access to new tech book releases
             </p>
           </li>
           <li class="flex items-start">
-            <img src="../assets/images/icon-check.svg" alt="" class="w-[24px] h-[24px] mt-100 mr-200" />
+            <img src={iconCheck.src} alt="" class="w-[24px] h-[24px] mt-100 mr-200" />
             <p class="text-neutral-700 font-inter text-[20px] leading-[140%] tracking-[-0.5px]">
               Author Q&A sessions with tech thought leaders
             </p>

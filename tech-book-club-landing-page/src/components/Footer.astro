@@ -1,5 +1,7 @@
 ---
 // Footer component for the Tech Book Club landing page
+import blueskyLogo from '../assets/images/logo-bluesky.svg';
+import linkedinLogo from '../assets/images/logo-linkedin.svg';
 ---
 
 <footer class="bg-neutral-900 py-400 px-400 md:px-600">
@@ -12,10 +14,10 @@
 
     <div class="social-links flex gap-300">
       <a href="#" class="text-neutral-700 hover:text-neutral-0 transition-colors">
-        <img src="../assets/images/logo-linkedin.svg" alt="LinkedIn" class="w-[24px] h-[24px]" />
+        <img src={linkedinLogo.src} alt="LinkedIn" class="w-[24px] h-[24px]" />
       </a>
       <a href="#" class="text-neutral-700 hover:text-neutral-0 transition-colors">
-        <img src="../assets/images/logo-bluesky.svg" alt="Bluesky" class="w-[24px] h-[24px]" />
+        <img src={blueskyLogo.src} alt="Bluesky" class="w-[24px] h-[24px]" />
       </a>
     </div>
   </div>
