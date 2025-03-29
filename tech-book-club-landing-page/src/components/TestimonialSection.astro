@@ -1,0 +1,27 @@
+---
+// Testimonial section component
+---
+
+<section class="testimonial py-600 md:py-800 px-400 md:px-600">
+  <div class="container mx-auto max-w-[900px]">
+    <div class="stars flex justify-center mb-300">
+      {Array(5).fill(0).map((_, i) => (
+        <img src="/assets/images/icon-star.svg" alt="" class="w-[24px] h-[24px] mx-100" />
+      ))}
+    </div>
+
+    <blockquote class="text-neutral-900 font-martian font-normal text-[20px] md:text-[24px] text-center mb-300 tracking-[-1px] leading-[110%]">
+      "This book club transformed my technical reading from a solitary activity into an enriching community experience. The discussions are gold!"
+    </blockquote>
+
+    <p class="text-neutral-700 font-martian text-[16px] text-center tracking-[-1px]">
+      Sarah Chen, Software Architect
+    </p>
+  </div>
+</section>
+
+<style>
+  .testimonial {
+    background-color: #ffffff;
+  }
+</style>

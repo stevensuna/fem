@@ -1,0 +1,78 @@
+---
+// Tech Journey section component
+---
+
+<section class="tech-journey py-600 md:py-800 px-400 md:px-600">
+  <div class="container mx-auto">
+    <div class="journey-container bg-salmon-gradient rounded-24 py-600 px-400 relative">
+      <h2 class="font-martian font-semibold text-[24px] md:text-[34px] leading-[130%] text-neutral-900 mb-600 text-center tracking-[-1px]">
+        Your tech reading journey
+      </h2>
+
+      <div class="steps-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-400">
+        <div class="step flex flex-col items-center text-center relative">
+          <div class="step-number w-[50px] h-[50px] rounded-full border border-neutral-200 flex items-center justify-center mb-200">
+            <span class="font-martian font-semibold text-[24px] text-neutral-900">1</span>
+          </div>
+          <h3 class="font-martian font-semibold text-[16px] text-neutral-700 mb-100">Choose your membership tier</h3>
+          <div class="connector hidden lg:block"></div>
+        </div>
+
+        <div class="step flex flex-col items-center text-center relative">
+          <div class="step-number w-[50px] h-[50px] rounded-full border border-neutral-200 flex items-center justify-center mb-200">
+            <span class="font-martian font-semibold text-[24px] text-neutral-900">2</span>
+          </div>
+          <h3 class="font-martian font-semibold text-[16px] text-neutral-700 mb-100">Get your monthly book selection</h3>
+          <div class="connector hidden lg:block"></div>
+        </div>
+
+        <div class="step flex flex-col items-center text-center relative">
+          <div class="step-number w-[50px] h-[50px] rounded-full border border-neutral-200 flex items-center justify-center mb-200">
+            <span class="font-martian font-semibold text-[24px] text-neutral-900">3</span>
+          </div>
+          <h3 class="font-martian font-semibold text-[16px] text-neutral-700 mb-100">Join our discussion forums</h3>
+          <div class="connector hidden lg:block"></div>
+        </div>
+
+        <div class="step flex flex-col items-center text-center">
+          <div class="step-number w-[50px] h-[50px] rounded-full border border-neutral-200 flex items-center justify-center mb-200">
+            <span class="font-martian font-semibold text-[24px] text-neutral-900">4</span>
+          </div>
+          <h3 class="font-martian font-semibold text-[16px] text-neutral-700 mb-100">Attend exclusive meetups</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg-salmon-gradient {
+    background: linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%);
+  }
+
+  .step {
+    letter-spacing: -1px;
+    line-height: 130%;
+  }
+
+  .connector {
+    position: absolute;
+    top: 25px;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    border-top: 2px dashed #E6E1DF;
+  }
+
+  .connector::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -6px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid #E6E1DF;
+  }
+</style>

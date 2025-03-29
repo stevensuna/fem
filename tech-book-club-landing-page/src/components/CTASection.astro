@@ -1,0 +1,46 @@
+---
+import Button from './ui/Button.astro';
+import SocialProof from './ui/SocialProof.astro';
+---
+
+<section class="cta bg-neutral-900 py-800 px-400 md:px-600 relative overflow-hidden">
+  <div class="bg-pattern absolute inset-0 opacity-10">
+    <img src="/assets/images/pattern-dark-bg.svg" alt="" class="w-full h-full object-cover" />
+  </div>
+
+  <div class="container mx-auto relative z-10">
+    <h2 class="font-martian font-semibold text-[34px] md:text-[50px] leading-[130%] text-neutral-0 mb-500 text-center tracking-[-2px]">
+      Ready to debug your reading list?
+    </h2>
+
+    <div class="flex flex-col items-center">
+      <Button
+        text="REVIEW MEMBERSHIP OPTIONS"
+        style="outline"
+        iconRight="+"
+        borderColor="neutral-200"
+        textColor="neutral-0"
+        borderRadius="radius-full"
+        className="mb-400"
+        href="#membership"
+      />
+
+      <SocialProof
+        avatarsSrc="/assets/images/image-avatars.webp"
+        content="200+ developers joined already"
+        textColor="neutral-200"
+        className="mt-400"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    position: relative;
+  }
+
+  .bg-pattern {
+    pointer-events: none;
+  }
+</style>

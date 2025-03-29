@@ -1,0 +1,29 @@
+---
+interface Props {
+  avatarsSrc: string;
+  content: string;
+  textColor?: string;
+  className?: string;
+}
+
+const {
+  avatarsSrc,
+  content,
+  textColor = "neutral-700",
+  className = ""
+} = Astro.props;
+---
+
+<div class={`social-proof flex items-center ${className}`}>
+  <div class="avatars-container mr-200">
+    <img src={avatarsSrc} alt="Member avatars" class="h-auto w-[120px]" />
+  </div>
+  <p class={`text-${textColor} font-martian text-[14px]`}>{content}</p>
+</div>
+
+<style>
+  .social-proof p {
+    letter-spacing: -1px;
+    line-height: 120%;
+  }
+</style>
