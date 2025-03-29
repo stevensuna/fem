@@ -1,8 +1,6 @@
 ---
 // Import any needed assets
-import avatarImg1 from '../assets/images/avatar-01.webp';
-import avatarImg2 from '../assets/images/avatar-02.webp';
-import avatarImg3 from '../assets/images/avatar-03.webp';
+import avatars from '../assets/images/image-avatars.webp';
 ---
 
 <section class="py-16 md:py-24 bg-[#062630] overflow-hidden">
@@ -25,28 +23,13 @@ import avatarImg3 from '../assets/images/avatar-03.webp';
 
       <!-- Social Proof -->
       <div class="flex flex-col items-center">
-        <div class="flex -space-x-3 mb-3">
+        <div class="flex items-center justify-center mb-3">
           <img
-            src={avatarImg1.src}
-            alt=""
-            class="w-10 h-10 rounded-full border-2 border-white"
+            src={avatars.src}
+            alt="Member avatars"
+            class="h-10"
             aria-hidden="true"
           />
-          <img
-            src={avatarImg2.src}
-            alt=""
-            class="w-10 h-10 rounded-full border-2 border-white"
-            aria-hidden="true"
-          />
-          <img
-            src={avatarImg3.src}
-            alt=""
-            class="w-10 h-10 rounded-full border-2 border-white"
-            aria-hidden="true"
-          />
-          <span class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white bg-[#FEA38F] text-white text-xs font-bold">
-            +
-          </span>
         </div>
         <p class="font-['Inter'] text-[#E6E1DF]">
           <span class="font-semibold">200+</span> developers joined already

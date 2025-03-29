@@ -1,6 +1,8 @@
 ---
 // Import images and assets
-import featureImage from '../assets/images/feature-reading-group.webp';
+import featureImageDesktop from '../assets/images/image-read-together-desktop.webp';
+import featureImageMobile from '../assets/images/image-read-together-mobile.webp';
+import featureImageTablet from '../assets/images/image-read-together-tablet.webp';
 ---
 
 <section class="py-16 md:py-24 overflow-hidden">
@@ -58,13 +60,28 @@ import featureImage from '../assets/images/feature-reading-group.webp';
 
       <!-- Feature Image -->
       <div class="relative w-full max-w-md mx-auto lg:max-w-xl lg:mx-0 lg:order-1">
-        <img
-          src={featureImage.src}
-          alt="Tech book club members reading and discussing together"
-          class="w-full h-auto rounded-[20px] shadow-lg"
-          width="600"
-          height="400"
-        />
+        <picture>
+          <source
+            srcset={featureImageDesktop.src}
+            media="(min-width: 1024px)"
+            width="600"
+            height="400"
+          />
+          <source
+            srcset={featureImageTablet.src}
+            media="(min-width: 768px)"
+            width="500"
+            height="350"
+          />
+          <img
+            src={featureImageMobile.src}
+            alt="Tech book club members reading and discussing together"
+            class="w-full h-auto rounded-[20px] shadow-lg"
+            width="400"
+            height="300"
+            loading="lazy"
+          />
+        </picture>
       </div>
     </div>
   </div>
