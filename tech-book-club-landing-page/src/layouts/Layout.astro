@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 interface Props {
   title?: string;
   description?: string;
@@ -8,8 +10,6 @@ const {
   title = "Tech Book Club - Join the Ultimate Tech Book Community",
   description = "Turn your reading time into learning time. Connect with fellow tech enthusiasts through curated recommendations, vibrant discussions, and exclusive meetups."
 } = Astro.props;
-
-import "../styles/global.css";
 ---
 
 <!doctype html>
