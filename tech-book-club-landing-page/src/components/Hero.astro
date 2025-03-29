@@ -1,6 +1,7 @@
 ---
 // Hero component for Tech Book Club
 import { Image } from 'astro:assets';
+import starIcon from '../assets/images/icon-star.svg';
 import avatarsImage from '../assets/images/image-avatars.webp';
 import heroDesktopImage from '../assets/images/image-hero-desktop.webp';
 import heroMobileImage from '../assets/images/image-hero-mobile.webp';
@@ -27,17 +28,56 @@ import heroTabletImage from '../assets/images/image-hero-tablet.webp';
           </button>
         </div>
 
-        <div class="flex items-center space-x-4">
-          <Image
-            src={avatarsImage}
-            alt="Avatars of members"
-            class="h-8 w-auto"
-            width={120}
-            height={32}
-          />
-          <span class="font-martian font-normal text-sm leading-[120%] tracking-[-1px] text-[#385159]">
-            200+ developers joined already
-          </span>
+        <div class="flex flex-col space-y-2">
+          <div class="flex space-x-1">
+            <Image
+              src={starIcon}
+              alt=""
+              width={20}
+              height={20}
+              class="w-5 h-5"
+            />
+            <Image
+              src={starIcon}
+              alt=""
+              width={20}
+              height={20}
+              class="w-5 h-5"
+            />
+            <Image
+              src={starIcon}
+              alt=""
+              width={20}
+              height={20}
+              class="w-5 h-5"
+            />
+            <Image
+              src={starIcon}
+              alt=""
+              width={20}
+              height={20}
+              class="w-5 h-5"
+            />
+            <Image
+              src={starIcon}
+              alt=""
+              width={20}
+              height={20}
+              class="w-5 h-5"
+            />
+          </div>
+          <div class="flex items-center space-x-4">
+            <Image
+              src={avatarsImage}
+              alt="Avatars of members"
+              class="h-8 w-auto"
+              width={120}
+              height={32}
+            />
+            <span class="font-martian font-normal text-sm leading-[120%] tracking-[-1px] text-[#385159]">
+              200+ developers joined already
+            </span>
+          </div>
         </div>
       </div>
 
