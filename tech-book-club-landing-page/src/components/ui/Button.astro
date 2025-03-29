@@ -19,7 +19,7 @@ const {
   backgroundColor = 'neutral-900',
   textColor = style === 'solid' ? 'neutral-0' : 'neutral-700',
   borderColor = style === 'solid' ? 'transparent' : 'neutral-700',
-  borderRadius = 'radius-full',
+  borderRadius = 'full',
   className = '',
 } = Astro.props;
 
@@ -27,20 +27,13 @@ const {
 const bgClass = style === 'solid' ? `bg-${backgroundColor}` : 'bg-transparent';
 const textClass = `text-${textColor}`;
 const borderClass = `border border-${borderColor}`;
-const radiusClass = `rounded-${borderRadius.replace('radius-', '')}`;
+const radiusClass = `rounded-${borderRadius}`;
 ---
 
 <a
   href={href}
-  class={`button inline-flex items-center justify-center px-400 py-200 font-martian text-[16px] font-semibold transition-all duration-200 hover:opacity-90 ${bgClass} ${textClass} ${borderClass} ${radiusClass} ${className}`}
+  class={`button inline-flex items-center justify-center px-400 py-200 font-martian text-preset-6 transition-all duration-200 hover:opacity-90 ${bgClass} ${textClass} ${borderClass} ${radiusClass} ${className}`}
 >
   {text}
   {iconRight && <span class="ml-100">{iconRight}</span>}
 </a>
-
-<style>
-  .button {
-    letter-spacing: -1px;
-    line-height: 130%;
-  }
-</style>

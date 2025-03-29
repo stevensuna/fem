@@ -56,6 +56,125 @@ export default {
           "linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%)",
         "salmon-gradient": "linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%)",
       },
+      fontSize: {
+        // Text Preset 1 - Martian Mono, Bold
+        "preset-1": [
+          "62px",
+          {
+            lineHeight: "120%",
+            letterSpacing: "-2px",
+            fontWeight: "700",
+          },
+        ],
+        // Text Preset 1 (Mobile) - Martian Mono, Bold
+        "preset-1-mobile": [
+          "38px",
+          {
+            lineHeight: "120%",
+            letterSpacing: "-2px",
+            fontWeight: "700",
+          },
+        ],
+        // Text Preset 2 - Martian Mono, Semibold
+        "preset-2": [
+          "50px",
+          {
+            lineHeight: "130%",
+            letterSpacing: "-2px",
+            fontWeight: "600",
+          },
+        ],
+        // Text Preset 2 (Mobile) - Martian Mono, Semibold
+        "preset-2-mobile": [
+          "34px",
+          {
+            lineHeight: "130%",
+            letterSpacing: "-2px",
+            fontWeight: "600",
+          },
+        ],
+        // Text Preset 3 - Martian Mono, Semibold
+        "preset-3": [
+          "34px",
+          {
+            lineHeight: "130%",
+            letterSpacing: "-1px",
+            fontWeight: "600",
+          },
+        ],
+        // Text Preset 3 (Mobile) - Martian Mono, Semibold
+        "preset-3-mobile": [
+          "24px",
+          {
+            lineHeight: "110%",
+            letterSpacing: "-1px",
+            fontWeight: "600",
+          },
+        ],
+        // Text Preset 4 - Martian Mono, Semibold
+        "preset-4": [
+          "24px",
+          {
+            lineHeight: "110%",
+            letterSpacing: "-1px",
+            fontWeight: "600",
+          },
+        ],
+        // Text Preset 4 (Regular) - Martian Mono, Regular
+        "preset-4-regular": [
+          "24px",
+          {
+            lineHeight: "110%",
+            letterSpacing: "-1px",
+            fontWeight: "400",
+          },
+        ],
+        // Text Preset 5 - Inter, Regular
+        "preset-5": [
+          "20px",
+          {
+            lineHeight: "140%",
+            letterSpacing: "-0.5px",
+            fontWeight: "400",
+          },
+        ],
+        // Text Preset 5 (Semibold) - Inter, Semibold
+        "preset-5-semibold": [
+          "20px",
+          {
+            lineHeight: "140%",
+            letterSpacing: "-0.5px",
+            fontWeight: "600",
+          },
+        ],
+        // Text Preset 6 - Martian Mono, Semibold
+        "preset-6": [
+          "16px",
+          {
+            lineHeight: "130%",
+            letterSpacing: "-1px",
+            fontWeight: "600",
+          },
+        ],
+        // Text Preset 6 (Mobile) - Martian Mono, Semibold
+        "preset-6-mobile": [
+          "16px",
+          {
+            lineHeight: "130%",
+            letterSpacing: "-1px",
+            fontWeight: "600",
+          },
+        ],
+        // Text Preset 7 - Martian Mono, Regular
+        "preset-7": [
+          "14px",
+          {
+            lineHeight: "120%",
+            letterSpacing: "-1px",
+            fontWeight: "400",
+          },
+        ],
+      },
     },
   },
   plugins: [],
