@@ -24,3 +24,12 @@
     font-style: italic;
     font-display: swap;
 }
+
+/* Custom utility classes */
+.text-gradient {
+    background: linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
