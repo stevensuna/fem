@@ -28,3 +28,6 @@ node_modules/
 javascript-practice/
 .doc/
 .aider*
+
+#Cline memory
+memory-bank/

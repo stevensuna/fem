@@ -1,49 +1,33 @@
 ---
 // src/components/CallToAction.astro
 import { Image } from 'astro:assets';
-
-// Image paths from src/assets/images/
-// Avatars seem to be in a sprite 'image-avatars.webp'. Using individual images or CSS background techniques is recommended.
-// Keeping placeholder variables for structure for now.
-const avatar1Src = '/assets/images/avatar-placeholder-1.jpg'; // Placeholder - Update required
-const avatar2Src = '/assets/images/avatar-placeholder-2.jpg'; // Placeholder - Update required
-const avatar3Src = '/assets/images/avatar-placeholder-3.jpg'; // Placeholder - Update required
+import iconArrowUp from '../assets/images/icon-arrow-up.svg';
+import starIcon from '../assets/images/icon-star.svg';
+import avatarGroup from '../assets/images/image-avatars.webp';
 ---
 <section class="py-1000 px-400 md:px-800 bg-neutral-900 text-neutral-0">
   <div class="container mx-auto text-center">
-    {/* Text Preset 2: Martian Mono, Semibold, 50px/34px, 130% line height, -2px tracking */}
-    <h2 class="font-mono font-semibold text-[34px] md:text-[50px] mb-400 leading-[1.3] tracking-[-2px]">
+    <h2 class="font-mono font-semibold text-preset-2-mobile md:text-preset-2 mb-400">
       Ready to debug your reading list?
     </h2>
-    {/* Updated CTA Button: Outlined style, Up arrow icon */}
     <div class="flex justify-center mb-300">
-       <a href="#membership" class="inline-flex items-center gap-100 bg-neutral-900 text-neutral-0 border border-neutral-700 px-300 py-150 rounded-8 font-sans font-semibold text-base leading-[1.3] tracking-[-1px] hover:bg-neutral-700 transition-colors">
-          <span>REVIEW MEMBERSHIP OPTIONS</span>
-           {/* Up Arrow Icon SVG */}
-           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-             <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-           </svg>
-        </a>
+      <a href="#membership" class="inline-flex items-center gap-100 bg-neutral-900 text-neutral-0 border border-neutral-700 px-300 py-150 rounded-8 font-mono font-semibold text-preset-6 hover:bg-neutral-700 transition-colors">
+        <span>REVIEW MEMBERSHIP OPTIONS</span>
+        <Image src={iconArrowUp} alt="" width={16} height={16} />
+      </a>
     </div>
-     {/* Updated Social Proof: Stars, Text, Font, Avatar border */}
-     <div class="flex items-center justify-center space-x-150">
-       {/* Avatars - Updated border color */}
-       <div class="flex -space-x-150">
-          <Image src={avatar1Src} alt="Member avatar 1" width={40} height={40} class="w-10 h-10 rounded-full border-2 border-neutral-0 object-cover"/> {/* Placeholder image path */}
-          <Image src={avatar2Src} alt="Member avatar 2" width={40} height={40} class="w-10 h-10 rounded-full border-2 border-neutral-0 object-cover"/> {/* Placeholder image path */}
-          <Image src={avatar3Src} alt="Member avatar 3" width={40} height={40} class="w-10 h-10 rounded-full border-2 border-neutral-0 object-cover"/> {/* Placeholder image path */}
-       </div>
-        {/* Star Rating */}
-         <div class="flex text-light-salmon-500">
-            {/* Placeholder Star Icon SVG - Repeat 5 times */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="w-200 h-200"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/> </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="w-200 h-200"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/> </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="w-200 h-200"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/> </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="w-200 h-200"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/> </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="w-200 h-200"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/> </svg>
-         </div>
-       {/* Updated Text and Font */}
-       <span class="font-sans text-sm text-neutral-200 leading-[1.2] tracking-[-1px]">200+ developers joined already</span>
+    <div class="flex items-center justify-center space-x-150">
+      <div class="w-[110px] h-[40px]">
+        <Image src={avatarGroup} alt="Member avatars" width={110} height={40} class="w-full h-full object-cover" />
+      </div>
+      <div class="flex text-light-salmon-500">
+        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
+      </div>
+      <span class="font-mono text-preset-7 text-neutral-200">200+ developers joined already</span>
     </div>
   </div>
 </section>
