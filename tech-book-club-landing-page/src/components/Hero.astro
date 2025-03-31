@@ -13,60 +13,24 @@ import heroTabletImage from '../assets/images/image-hero-tablet.webp';
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
       <!-- Text Section -->
       <div class="flex flex-col space-y-8">
-        <h1 class="font-martian font-bold text-4xl md:text-5xl lg:text-[62px] leading-[120%] tracking-[-2px] text-gradient">
+        <h1 class="font-mono font-bold text-4xl md:text-5xl lg:text-[62px] leading-[120%] tracking-[-2px] text-gradient">
           Join the ultimate tech book club
         </h1>
 
-        <p class="font-inter text-xl leading-[140%] tracking-[-0.5px] text-[#385159]">
+        <p class="font-sans text-xl leading-[140%] tracking-[-0.5px] text-[#385159]">
           Turn your reading time into learning time. Connect with fellow tech enthusiasts. Get curated recommendations, join vibrant discussions, and level up your skills one chapter at a time.
         </p>
 
         <div>
-          <button class="rounded-full border border-[#385159] text-[#385159] px-6 py-3 font-martian font-semibold text-base leading-[130%] tracking-[-1px] inline-flex items-center hover:bg-[#385159] hover:text-white transition-colors duration-300">
+          <button class="rounded-full border border-[#385159] text-[#385159] px-6 py-3 font-mono font-semibold text-base leading-[130%] tracking-[-1px] inline-flex items-center hover:bg-[#385159] hover:text-white transition-colors duration-300">
             REVIEW MEMBERSHIP OPTIONS
             <span class="ml-2">+</span>
           </button>
         </div>
 
-        <div class="flex flex-col space-y-2">
-          <div class="flex space-x-1">
-            <Image
-              src={starIcon}
-              alt=""
-              width={20}
-              height={20}
-              class="w-5 h-5"
-            />
-            <Image
-              src={starIcon}
-              alt=""
-              width={20}
-              height={20}
-              class="w-5 h-5"
-            />
-            <Image
-              src={starIcon}
-              alt=""
-              width={20}
-              height={20}
-              class="w-5 h-5"
-            />
-            <Image
-              src={starIcon}
-              alt=""
-              width={20}
-              height={20}
-              class="w-5 h-5"
-            />
-            <Image
-              src={starIcon}
-              alt=""
-              width={20}
-              height={20}
-              class="w-5 h-5"
-            />
-          </div>
-          <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-2">
+          <!-- Avatar column -->
+          <div class="flex items-center">
             <Image
               src={avatarsImage}
               alt="Avatars of members"
@@ -74,7 +38,48 @@ import heroTabletImage from '../assets/images/image-hero-tablet.webp';
               width={120}
               height={32}
             />
-            <span class="font-martian font-normal text-sm leading-[120%] tracking-[-1px] text-[#385159]">
+          </div>
+
+          <!-- Stars and member count column -->
+          <div class="flex flex-col space-y-2">
+            <div class="flex space-x-1">
+              <Image
+                src={starIcon}
+                alt=""
+                width={20}
+                height={20}
+                class="w-5 h-5"
+              />
+              <Image
+                src={starIcon}
+                alt=""
+                width={20}
+                height={20}
+                class="w-5 h-5"
+              />
+              <Image
+                src={starIcon}
+                alt=""
+                width={20}
+                height={20}
+                class="w-5 h-5"
+              />
+              <Image
+                src={starIcon}
+                alt=""
+                width={20}
+                height={20}
+                class="w-5 h-5"
+              />
+              <Image
+                src={starIcon}
+                alt=""
+                width={20}
+                height={20}
+                class="w-5 h-5"
+              />
+            </div>
+            <span class="font-mono font-normal text-sm leading-[120%] tracking-[-1px] text-[#385159]">
               200+ developers joined already
             </span>
           </div>
