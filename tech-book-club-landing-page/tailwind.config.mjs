@@ -12,7 +12,6 @@ export default {
         "light-salmon-500": "#FEA38F",
         "light-salmon-100": "#FFE2D1",
         "light-salmon-50": "#FFF5EF",
-        "brand-brown": "#8C5B4F", // Approximate brown from hero text gradient start
       },
       spacing: {
         // Keep existing spacing
@@ -47,27 +46,53 @@ export default {
       },
       backgroundImage: {
         "text-gradient":
-          "linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%)", // Existing hero text gradient
-        "section-gradient": "linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%)", // Gradient from style guide
-        // Simple grid pattern using SVG data URI - using neutral-200 for grid color
-        "grid-pattern": `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23E6E1DF' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          "linear-gradient(107deg, var(--colors-light-salmon-500, #FEA36F) -11.37%, var(--colors-neutral-900, #062630) 61.84%)",
       },
-      // Add text fill utility for gradient text
-      textFillColor: (theme) => theme("borderColor"),
-      backgroundClip: {
-        text: "text",
+      fontSize: {
+        "preset-1": ["62px", { lineHeight: "120%", letterSpacing: "-2px" }],
+        "preset-1-mobile": [
+          "38px",
+          { lineHeight: "120%", letterSpacing: "-2px" },
+        ],
+        "preset-2": ["50px", { lineHeight: "130%", letterSpacing: "-2px" }],
+        "preset-2-mobile": [
+          "34px",
+          { lineHeight: "130%", letterSpacing: "-2px" },
+        ],
+        "preset-3": ["34px", { lineHeight: "130%", letterSpacing: "-1px" }],
+        "preset-3-mobile": [
+          "24px",
+          { lineHeight: "110%", letterSpacing: "-1px" },
+        ],
+        "preset-4": ["24px", { lineHeight: "110%", letterSpacing: "-1px" }],
+        "preset-4-regular": [
+          "24px",
+          { lineHeight: "110%", letterSpacing: "-1px" },
+        ],
+        "preset-5": ["20px", { lineHeight: "140%", letterSpacing: "-0.5px" }],
+        "preset-5-semi-bold": [
+          "20px",
+          { lineHeight: "140%", letterSpacing: "-0.5px" },
+        ],
+        "preset-6": ["18px", { lineHeight: "130%", letterSpacing: "-1px" }],
+        "preset-6-mobile": [
+          "16px",
+          { lineHeight: "130%", letterSpacing: "-1px" },
+        ],
+        "preset-7": ["14px", { lineHeight: "120%", letterSpacing: "-1px" }],
       },
     },
   },
   plugins: [
-    // Plugin to add text-fill utilities
-    function ({ addUtilities, theme, e }) {
-      const utilities = Object.entries(theme("textFillColor")).map(
-        ([key, value]) => ({
-          [`.${e(`text-fill-${key}`)}`]: { "-webkit-text-fill-color": value },
-        })
-      );
-      addUtilities(utilities);
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".text-gradient-fill": {
+          "-webkit-background-clip": "text",
+          "background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+        },
+      };
+      addUtilities(newUtilities);
     },
   ],
 };
