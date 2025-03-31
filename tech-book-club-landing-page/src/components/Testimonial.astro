@@ -1,0 +1,26 @@
+---
+// src/components/Testimonial.astro
+import { Image } from 'astro:assets';
+
+// Image paths from src/assets/images/
+// Using individual image for testimonial avatar
+const testimonialAvatarSrc = '/assets/images/avatar-sarah-chen.jpg'; // Placeholder - Update required
+---
+{/* Updated background to white */}
+<section class="py-1000 px-400 md:px-800 bg-neutral-0">
+  <div class="container mx-auto max-w-3xl text-center"> {/* Constrain width for testimonial */}
+    {/* Updated quote styling: removed italic, darker text */}
+    <blockquote class="font-sans text-xl md:text-2xl text-neutral-900 mb-400 leading-[1.4] tracking-[-0.5px]">
+      "This book club transformed my technical reading from a solitary activity into an enriching community experience. The discussions are gold!"
+    </blockquote>
+    <div class="flex items-center justify-center space-x-200">
+      <Image src={testimonialAvatarSrc} alt="Sarah Chen avatar" width={48} height={48} class="w-600 h-600 rounded-full object-cover" /> {/* Updated placeholder path */}
+      <div>
+        {/* Updated Font: Sans-serif */}
+        <p class="font-sans font-semibold text-base text-neutral-900 leading-[1.3] tracking-[-1px]">Sarah Chen</p>
+        {/* Updated Font: Sans-serif */}
+        <p class="font-sans text-sm text-neutral-700 leading-[1.2] tracking-[-1px]">Software Architect</p>
+      </div>
+    </div>
+  </div>
+</section>
