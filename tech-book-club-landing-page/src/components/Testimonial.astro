@@ -1,19 +1,23 @@
 ---
 // src/components/Testimonial.astro
 import { Image } from 'astro:assets';
-import testimonialAvatar from '../assets/images/avatar-sarah-chen.jpg';
+import iconStar from '../assets/images/icon-star.svg';
 ---
 <section class="py-1000 px-400 md:px-800 gradients-background">
   <div class="container mx-auto max-w-3xl text-center">
+    <div class="flex justify-center space-x-100 mb-300">
+      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
+      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
+      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
+      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
+      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
+    </div>
     <blockquote class="font-sans text-preset-5 md:text-preset-4 text-neutral-900 mb-400">
       "This book club transformed my technical reading from a solitary activity into an enriching community experience. The discussions are gold!"
     </blockquote>
-    <div class="flex items-center justify-center space-x-200">
-      <Image src={testimonialAvatar} alt="Sarah Chen avatar" width={48} height={48} class="w-[48px] h-[48px] rounded-full object-cover" />
-      <div>
-        <p class="font-sans font-semibold text-preset-6 text-neutral-900">Sarah Chen</p>
-        <p class="font-sans text-preset-7 text-neutral-700">Software Architect</p>
-      </div>
+    <div>
+      <p class="font-sans font-semibold text-preset-6 text-neutral-900">Sarah Chen</p>
+      <p class="font-sans text-preset-7 text-neutral-700">Software Architect</p>
     </div>
   </div>
 </section>
