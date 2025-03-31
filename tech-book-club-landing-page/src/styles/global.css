@@ -1,28 +1,35 @@
 @import "tailwindcss";
 
-/* Font configurations */
-@font-face {
-    font-family: 'Martian Mono';
-    src: url('/fonts/martian-mono/MartianMono-VariableFont_wdth,wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
+/*
+ * Font configurations using Astro's recommended approach
+ * See: https://docs.astro.build/en/guides/fonts/
+ */
+@layer base {
 
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
+    /* Local font definitions */
+    @font-face {
+        font-family: 'Martian Mono';
+        src: url('/fonts/martian-mono/MartianMono-VariableFont_wdth,wght.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+    }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: italic;
-    font-display: swap;
+    @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: italic;
+        font-display: swap;
+    }
 }
 
 /* Custom utility classes */

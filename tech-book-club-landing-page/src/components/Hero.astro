@@ -8,78 +8,78 @@ import heroMobileImage from '../assets/images/image-hero-mobile.webp';
 import heroTabletImage from '../assets/images/image-hero-tablet.webp';
 ---
 
-<section class="bg-white py-16 md:py-20 lg:py-24">
-  <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+<section class="bg-neutral-0 py-600 md:py-800 lg:py-1000">
+  <div class="container mx-auto px-300">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-400 md:gap-500 items-center">
       <!-- Text Section -->
-      <div class="flex flex-col space-y-8">
-        <h1 class="font-mono font-bold text-4xl md:text-5xl lg:text-[62px] leading-[120%] tracking-[-2px] text-gradient">
+      <div class="flex flex-col space-y-400">
+        <h1 class="font-mono text-preset-1-mobile md:text-preset-2 lg:text-preset-1 bg-text-gradient text-transparent">
           Join the ultimate tech book club
         </h1>
 
-        <p class="font-sans text-xl leading-[140%] tracking-[-0.5px] text-[#385159]">
+        <p class="font-sans text-preset-5 text-neutral-700">
           Turn your reading time into learning time. Connect with fellow tech enthusiasts. Get curated recommendations, join vibrant discussions, and level up your skills one chapter at a time.
         </p>
 
         <div>
-          <button class="rounded-full border border-[#385159] text-[#385159] px-6 py-3 font-mono font-semibold text-base leading-[130%] tracking-[-1px] inline-flex items-center hover:bg-[#385159] hover:text-white transition-colors duration-300">
+          <button class="rounded-full border border-neutral-700 text-neutral-700 px-300 py-150 font-mono font-semibold text-preset-6 inline-flex items-center hover:bg-neutral-700 hover:text-neutral-0 transition-colors duration-300">
             REVIEW MEMBERSHIP OPTIONS
-            <span class="ml-2">+</span>
+            <span class="ml-100">+</span>
           </button>
         </div>
 
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-100">
           <!-- Avatar column -->
           <div class="flex items-center">
             <Image
               src={avatarsImage}
               alt="Avatars of members"
-              class="h-8 w-auto"
+              class="h-[32px] w-auto"
               width={120}
               height={32}
             />
           </div>
 
           <!-- Stars and member count column -->
-          <div class="flex flex-col space-y-2">
-            <div class="flex space-x-1">
+          <div class="flex flex-col space-y-100">
+            <div class="flex space-x-025">
               <Image
                 src={starIcon}
                 alt=""
                 width={20}
                 height={20}
-                class="w-5 h-5"
+                class="w-[20px] h-[20px]"
               />
               <Image
                 src={starIcon}
                 alt=""
                 width={20}
                 height={20}
-                class="w-5 h-5"
+                class="w-[20px] h-[20px]"
               />
               <Image
                 src={starIcon}
                 alt=""
                 width={20}
                 height={20}
-                class="w-5 h-5"
+                class="w-[20px] h-[20px]"
               />
               <Image
                 src={starIcon}
                 alt=""
                 width={20}
                 height={20}
-                class="w-5 h-5"
+                class="w-[20px] h-[20px]"
               />
               <Image
                 src={starIcon}
                 alt=""
                 width={20}
                 height={20}
-                class="w-5 h-5"
+                class="w-[20px] h-[20px]"
               />
             </div>
-            <span class="font-mono font-normal text-sm leading-[120%] tracking-[-1px] text-[#385159]">
+            <span class="font-mono text-preset-7 text-neutral-700">
               200+ developers joined already
             </span>
           </div>
@@ -100,7 +100,7 @@ import heroTabletImage from '../assets/images/image-hero-tablet.webp';
           <Image
             src={heroMobileImage}
             alt="Group of people discussing around a table with books"
-            class="w-full h-auto rounded-lg"
+            class="w-full h-auto rounded-16"
             width={heroMobileImage.width}
             height={heroMobileImage.height}
           />

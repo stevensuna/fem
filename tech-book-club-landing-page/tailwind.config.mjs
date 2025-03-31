@@ -4,23 +4,22 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Martian Mono", "monospace"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["'Martian Mono'", "monospace"],
+        sans: ["'Inter'", "system-ui", "sans-serif"],
       },
       colors: {
         // Neutral colors
         neutral: {
-          900: "#062630", // Neutral 900
-          700: "#385159", // Neutral 700
-          200: "#E6E1DF", // Neutral 200
-          100: "#FAF5F3", // Neutral 100
-          0: "#ffffff", // Neutral 0
+          900: "#062630",
+          700: "#385159",
+          200: "#E6E1DF",
+          100: "#FAF5F3",
+          0: "#ffffff",
         },
-        // Light Salmon colors
         salmon: {
-          500: "#FEA36F", // Light Salmon 500
-          100: "#FFE2D1", // Light Salmon 100
-          50: "#FFF5EF", // Light Salmon 50
+          500: "#FEA36F",
+          100: "#FFE2D1",
+          50: "#FFF5EF",
         },
       },
       fontSize: {
