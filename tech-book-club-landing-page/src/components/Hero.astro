@@ -1,17 +1,17 @@
 ---
 // src/components/Hero.astro
 import { Image } from 'astro:assets'; // Use Astro's Image component for optimization
-import logo from '../assets/images/logo.svg'; // Import the logo SVG
 import iconArrowDown from '../assets/images/icon-arrow-down.svg';
 import iconStar from '../assets/images/icon-star.svg';
 import actualAvatars from '../assets/images/image-avatars.webp'; // Added import for actual avatars
 import heroImage from '../assets/images/image-hero-desktop.webp';
+import logo from '../assets/images/logo.svg'; // Import the logo SVG
 
 // Avatars seem to be in a sprite 'image-avatars.webp'. Using individual images or CSS background techniques is recommended.
 // Using placeholder variables for structure for now.
 ---
 {/* Apply the new SVG background class */}
-<section class="bg-hero-svg"> {/* Updated background class */}
+<section class="bg-pattern">
   {/* Container for the entire hero section, including the merged header */}
   <div class="container mx-auto px-400 md:px-800">
     {/* Merged Header part */}

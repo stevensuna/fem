@@ -44,10 +44,14 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"], // Inter as the primary sans-serif
         mono: ["Martian Mono", "monospace"],
       },
-      backgroundImage: {
-        "text-gradient":
-          "linear-gradient(107deg, var(--colors-light-salmon-500, #FEA36F) -11.37%, var(--colors-neutral-900, #062630) 61.84%)",
+      gradients: {
+        text: "linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%)",
+        background: "linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%)",
       },
+      backgroundImage: {
+        pattern: 'url("/src/assets/images/bg-pattern.svg")',
+      },
+
       fontSize: {
         "preset-1": ["62px", { lineHeight: "120%", letterSpacing: "-2px" }],
         "preset-1-mobile": [
