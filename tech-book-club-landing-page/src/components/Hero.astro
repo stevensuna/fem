@@ -10,59 +10,43 @@ import logo from '../assets/images/logo.svg'; // Import the logo SVG
 // Avatars seem to be in a sprite 'image-avatars.webp'. Using individual images or CSS background techniques is recommended.
 // Using placeholder variables for structure for now.
 ---
-{/* Apply the new SVG background class */}
 <section class="bg-pattern">
-  {/* Container for the entire hero section, including the merged header */}
   <div class="container mx-auto px-400 md:px-800">
-    {/* Merged Header part */}
-    <div class="py-600"> {/* Maintain original header padding */}
-      <img src={logo.src} alt="Tech book club logo" class="h-[32px] w-auto" /> {/* Logo from Header */}
+    <div class="py-400">
+      <img src={logo.src} alt="Tech book club logo" class="h-[32px] w-auto" />
     </div>
 
-    {/* Original Hero Content Grid */}
-    <div class="grid md:grid-cols-2 gap-600 items-center pb-800"> {/* Added bottom padding */}
-      {/* Text Content */}
+    <div class="grid md:grid-cols-2 gap-600 items-center pb-800">
       <div class="space-y-400">
-        {/* Heading with gradient text */}
         <h1 class="font-mono font-bold text-preset-1-mobile md:text-preset-1">
-          <span class="bg-text-gradient text-gradient-fill">Join the ultimate tech book club</span>
+          <span class="inline-block gradients-text">Join the ultimate tech book club</span>
         </h1>
-        {/* Updated paragraph text */}
         <p class="font-sans text-preset-5 text-neutral-700">
           Turn your reading time into learning time with fellow tech enthusiasts. Get curated recommendations, join vibrant discussions, and level up your skills one chapter at a time.
         </p>
-        {/* Updated CTA Button */}
         <div class="flex items-center space-x-300">
           <a href="#membership" class="inline-flex items-center gap-100 bg-neutral-0 text-neutral-900 border border-neutral-900 px-300 py-150 rounded-8 font-mono font-semibold text-preset-6 hover:bg-neutral-100 transition-colors">
             <span>REVIEW MEMBERSHIP OPTIONS</span>
-            {/* Down Arrow Icon */}
             <Image src={iconArrowDown} alt="" width={16} height={16} class="w-4 h-4" />
           </a>
         </div>
-        {/* Updated Social Proof */}
         <div class="flex items-center space-x-150 pt-200">
-           {/* Avatars - Using actual image */}
-           <div class="flex -space-x-150">
-              <Image src={actualAvatars} alt="Member avatars" width={110} height={40} /> {/* Using actual avatar sprite */}
-           </div>
-           {/* Wrapper for Stars and Text */}
-           <div class="flex flex-col space-y-100">
-              {/* Star Rating */}
-              <div class="flex text-light-salmon-500">
-                 {/* Star Icons */}
-                 <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
-                 <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
-                 <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
-                 <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
-                 <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
-              </div>
-              {/* Updated Text */}
-              <span class="font-mono text-preset-7 text-neutral-700">200+ developers joined already</span>
-           </div>
+          <div class="flex -space-x-150">
+            <Image src={actualAvatars} alt="Member avatars" width={110} height={40} />
+          </div>
+          <div class="flex flex-col space-y-100">
+            <div class="flex text-light-salmon-500">
+              <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-4 h-4" />
+            </div>
+            <span class="font-mono text-preset-7 text-neutral-700">200+ developers joined already</span>
+          </div>
         </div>
       </div>
 
-      {/* Updated Image */}
       <div class="mt-600 md:mt-0">
         <Image src={heroImage} alt="Group of people discussing around a table" width={600} height={400} class="rounded-12 w-full h-auto object-cover" />
       </div>

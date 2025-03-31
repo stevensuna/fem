@@ -44,10 +44,6 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"], // Inter as the primary sans-serif
         mono: ["Martian Mono", "monospace"],
       },
-      gradients: {
-        text: "linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%)",
-        background: "linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%)",
-      },
       backgroundImage: {
         pattern: 'url("/src/assets/images/bg-pattern.svg")',
       },
@@ -90,10 +86,15 @@ export default {
   plugins: [
     function ({ addUtilities }) {
       const newUtilities = {
-        ".text-gradient-fill": {
+        ".gradients-text": {
+          background:
+            "linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%)",
           "-webkit-background-clip": "text",
           "background-clip": "text",
-          "-webkit-text-fill-color": "transparent",
+          color: "transparent",
+        },
+        ".gradients-background": {
+          background: "linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%)",
         },
       };
       addUtilities(newUtilities);
