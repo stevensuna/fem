@@ -4,84 +4,82 @@ import { Image } from 'astro:assets';
 import checkIcon from '../assets/images/icon-check.svg';
 import starIcon from '../assets/images/icon-star.svg';
 ---
-<section id="membership" class="py-1000 px-400 md:px-800">
+<section id="membership" class="py-400 md:py-600 lg:py-800 px-4 md:px-400 lg:px-800">
   <div class="container mx-auto">
-    <h2 class="font-mono font-semibold text-preset-2-mobile md:text-preset-2 text-neutral-900 text-center mb-800">
+    <h2 class="font-mono font-semibold text-preset-2-mobile md:text-preset-2 text-neutral-900 text-center mb-400 md:mb-600 lg:mb-800">
       Membership options
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-400 md:gap-600">
-
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-300 md:gap-400 lg:gap-600">
       {/* Starter Plan */}
-      <div class="border border-neutral-200 rounded-12 p-400 flex flex-col">
-        <h3 class="font-mono font-semibold text-preset-3 text-neutral-900 mb-100">Starter</h3>
-        <p class="font-mono font-semibold text-preset-4 text-neutral-900 mb-300">
+      <div class="border border-neutral-200 rounded-12 p-300 md:p-400 flex flex-col">
+        <h3 class="font-mono font-semibold text-preset-3-mobile md:text-preset-3 text-neutral-900 mb-075 md:mb-100">Starter</h3>
+        <p class="font-mono font-semibold text-preset-4 text-neutral-900 mb-250 md:mb-300">
           $19
           <span class="font-mono font-normal text-preset-7 text-neutral-700">/month</span>
         </p>
-        <ul class="space-y-150 mb-400 flex-grow">
-          <li class="flex items-center space-x-100">
-            <Image src={checkIcon} alt="" width={16} height={16} class="w-150 h-150 text-light-salmon-500" />
+        <ul class="space-y-150 mb-300 md:mb-400 flex-grow">
+          <li class="flex items-start space-x-100">
+            <Image src={checkIcon} alt="" width={16} height={16} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
             <span class="font-sans text-preset-7 text-neutral-700">1 book/month</span>
           </li>
-          <li class="flex items-center space-x-100">
-            <Image src={checkIcon} alt="" width={16} height={16} class="w-150 h-150 text-light-salmon-500" />
+          <li class="flex items-start space-x-100">
+            <Image src={checkIcon} alt="" width={16} height={16} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
             <span class="font-sans text-preset-7 text-neutral-700">Online forums</span>
           </li>
         </ul>
-        <a href="#" class="mt-auto block w-full text-center bg-neutral-0 text-light-salmon-500 border border-light-salmon-500 px-300 py-150 rounded-8 font-sans font-semibold text-preset-6 hover:bg-light-salmon-50 transition-colors">
+        <a href="#" class="mt-auto block w-full text-center bg-neutral-0 text-light-salmon-500 border border-light-salmon-500 px-200 py-150 md:px-300 md:py-200 rounded-8 font-sans font-semibold text-preset-6-mobile md:text-preset-6 hover:bg-light-salmon-50 transition-colors">
           SUBSCRIBE NOW
         </a>
       </div>
 
       {/* Pro Plan */}
-      <div class="border-2 border-light-salmon-500 rounded-12 p-400 flex flex-col relative gradients-background">
-        <span class="absolute top-0 right-400 -mt-150 bg-light-salmon-500 text-neutral-0 font-mono text-preset-7 px-150 py-050 rounded-full">POPULAR</span>
-        <h3 class="font-mono font-semibold text-preset-3 text-neutral-900 mb-100">Pro</h3>
-        <p class="font-mono font-semibold text-preset-4 text-neutral-900 mb-300">
+      <div class="border-2 border-light-salmon-500 rounded-12 p-300 md:p-400 flex flex-col relative gradients-background">
+        <span class="absolute top-0 right-300 md:right-400 -mt-150 bg-light-salmon-500 text-neutral-0 font-mono text-preset-7 px-150 py-050 rounded-full">POPULAR</span>
+        <h3 class="font-mono font-semibold text-preset-3-mobile md:text-preset-3 text-neutral-900 mb-075 md:mb-100">Pro</h3>
+        <p class="font-mono font-semibold text-preset-4 text-neutral-900 mb-250 md:mb-300">
           $29
           <span class="font-mono font-normal text-preset-7 text-neutral-700">/month</span>
         </p>
-        <ul class="space-y-150 mb-300 flex-grow">
-          <li class="flex items-center space-x-100">
-            <Image src={checkIcon} alt="" width={16} height={16} class="w-150 h-150 text-light-salmon-500" />
+        <ul class="space-y-150 mb-250 md:mb-300 flex-grow">
+          <li class="flex items-start space-x-100">
+            <Image src={checkIcon} alt="" width={16} height={16} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
             <span class="font-sans text-preset-7 text-neutral-700">2 books/month</span>
           </li>
-          <li class="flex items-center space-x-100">
-            <Image src={checkIcon} alt="" width={16} height={16} class="w-150 h-150 text-light-salmon-500" />
+          <li class="flex items-start space-x-100">
+            <Image src={checkIcon} alt="" width={16} height={16} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
             <span class="font-sans text-preset-7 text-neutral-700">Virtual meetups</span>
           </li>
         </ul>
-        <div class="flex justify-center text-light-salmon-500 mb-300">
-          <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
-          <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
-          <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
-          <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
-          <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
+        <div class="flex justify-center text-light-salmon-500 mb-250 md:mb-300">
+          <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
+          <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
+          <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
+          <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
+          <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
         </div>
-        <a href="#" class="mt-auto block w-full text-center bg-light-salmon-500 text-neutral-0 border border-light-salmon-500 px-300 py-150 rounded-8 font-sans font-semibold text-preset-6 hover:opacity-90 transition-opacity">
+        <a href="#" class="mt-auto block w-full text-center bg-light-salmon-500 text-neutral-0 border border-light-salmon-500 px-200 py-150 md:px-300 md:py-200 rounded-8 font-sans font-semibold text-preset-6-mobile md:text-preset-6 hover:opacity-90 transition-opacity">
           SUBSCRIBE NOW
         </a>
       </div>
 
       {/* Enterprise Plan */}
-      <div class="border border-neutral-200 rounded-12 p-400 flex flex-col">
-        <h3 class="font-mono font-semibold text-preset-3 text-neutral-900 mb-100">Enterprise</h3>
-        <p class="font-mono font-semibold text-preset-4 text-neutral-900 mb-300">Custom</p>
-        <ul class="space-y-150 mb-400 flex-grow">
-          <li class="flex items-center space-x-100">
-            <Image src={checkIcon} alt="" width={16} height={16} class="w-150 h-150 text-light-salmon-500" />
+      <div class="border border-neutral-200 rounded-12 p-300 md:p-400 flex flex-col">
+        <h3 class="font-mono font-semibold text-preset-3-mobile md:text-preset-3 text-neutral-900 mb-075 md:mb-100">Enterprise</h3>
+        <p class="font-mono font-semibold text-preset-4 text-neutral-900 mb-250 md:mb-300">Custom</p>
+        <ul class="space-y-150 mb-300 md:mb-400 flex-grow">
+          <li class="flex items-start space-x-100">
+            <Image src={checkIcon} alt="" width={16} height={16} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
             <span class="font-sans text-preset-7 text-neutral-700">Team access</span>
           </li>
-          <li class="flex items-center space-x-100">
-            <Image src={checkIcon} alt="" width={16} height={16} class="w-150 h-150 text-light-salmon-500" />
+          <li class="flex items-start space-x-100">
+            <Image src={checkIcon} alt="" width={16} height={16} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
             <span class="font-sans text-preset-7 text-neutral-700">Private sessions</span>
           </li>
         </ul>
-        <a href="#" class="mt-auto block w-full text-center bg-neutral-0 text-light-salmon-500 border border-light-salmon-500 px-300 py-150 rounded-8 font-sans font-semibold text-preset-6 hover:bg-light-salmon-50 transition-colors">
+        <a href="#" class="mt-auto block w-full text-center bg-neutral-0 text-light-salmon-500 border border-light-salmon-500 px-200 py-150 md:px-300 md:py-200 rounded-8 font-sans font-semibold text-preset-6-mobile md:text-preset-6 hover:bg-light-salmon-50 transition-colors">
           TALK TO US
         </a>
       </div>
-
     </div>
   </div>
 </section>

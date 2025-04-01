@@ -3,20 +3,20 @@
 import { Image } from 'astro:assets';
 import iconStar from '../assets/images/icon-star.svg';
 ---
-<section class="py-1000 px-400 md:px-800 gradients-background">
-  <div class="container mx-auto max-w-3xl text-center">
-    <div class="flex justify-center space-x-100 mb-300">
-      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
-      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
-      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
-      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
-      <Image src={iconStar} alt="" width={20} height={20} class="w-200 h-200 text-light-salmon-500" />
+<section class="py-400 md:py-600 lg:py-800 px-4 md:px-400 lg:px-800 gradients-background">
+  <div class="container mx-auto max-w-[95%] md:max-w-[85%] lg:max-w-3xl text-center">
+    <div class="flex justify-center space-x-100 mb-250 md:mb-300">
+      <Image src={iconStar} alt="" width={20} height={20} class="w-100 md:w-150 lg:w-200 h-100 md:h-150 lg:h-200 text-light-salmon-500" />
+      <Image src={iconStar} alt="" width={20} height={20} class="w-100 md:w-150 lg:w-200 h-100 md:h-150 lg:h-200 text-light-salmon-500" />
+      <Image src={iconStar} alt="" width={20} height={20} class="w-100 md:w-150 lg:w-200 h-100 md:h-150 lg:h-200 text-light-salmon-500" />
+      <Image src={iconStar} alt="" width={20} height={20} class="w-100 md:w-150 lg:w-200 h-100 md:h-150 lg:h-200 text-light-salmon-500" />
+      <Image src={iconStar} alt="" width={20} height={20} class="w-100 md:w-150 lg:w-200 h-100 md:h-150 lg:h-200 text-light-salmon-500" />
     </div>
-    <blockquote class="font-sans text-preset-5 md:text-preset-4 text-neutral-900 mb-400">
+    <blockquote class="font-sans text-preset-4-mobile md:text-preset-4 text-neutral-900 mb-250 md:mb-300 lg:mb-400">
       "This book club transformed my technical reading from a solitary activity into an enriching community experience. The discussions are gold!"
     </blockquote>
-    <div>
-      <p class="font-sans font-semibold text-preset-6 text-neutral-900">Sarah Chen</p>
+    <div class="space-y-075 md:space-y-100">
+      <p class="font-sans font-semibold text-preset-6-mobile md:text-preset-6 text-neutral-900">Sarah Chen</p>
       <p class="font-sans text-preset-7 text-neutral-700">Software Architect</p>
     </div>
   </div>

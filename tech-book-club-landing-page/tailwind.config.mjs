@@ -46,6 +46,7 @@ export default {
       },
       backgroundImage: {
         pattern: 'url("/src/assets/images/bg-pattern.svg")',
+        "pattern-glow": 'url("/src/assets/images/pattern-glow.svg")',
       },
 
       fontSize: {

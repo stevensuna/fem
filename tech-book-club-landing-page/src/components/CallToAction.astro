@@ -5,27 +5,27 @@ import iconArrowUp from '../assets/images/icon-arrow-up.svg';
 import starIcon from '../assets/images/icon-star.svg';
 import avatarGroup from '../assets/images/image-avatars.webp';
 ---
-<section class="py-1000 px-400 md:px-800 bg-neutral-900 text-neutral-0">
+<section class="py-400 md:py-600 lg:py-800 px-4 md:px-400 lg:px-800 bg-neutral-900 text-neutral-0">
   <div class="container mx-auto text-center">
-    <h2 class="font-mono font-semibold text-preset-2-mobile md:text-preset-2 mb-400">
+    <h2 class="font-mono font-semibold text-preset-2-mobile md:text-preset-2 mb-300 md:mb-400">
       Ready to debug your reading list?
     </h2>
-    <div class="flex justify-center mb-300">
-      <a href="#membership" class="inline-flex items-center gap-100 bg-neutral-900 text-neutral-0 border border-neutral-700 px-300 py-150 rounded-8 font-mono font-semibold text-preset-6 hover:bg-neutral-700 transition-colors">
+    <div class="flex justify-center mb-250 md:mb-300">
+      <a href="#membership" class="inline-flex items-center gap-100 bg-neutral-900 text-neutral-0 border border-neutral-700 px-200 py-150 md:px-300 md:py-200 rounded-8 font-mono font-semibold text-preset-6-mobile md:text-preset-6 hover:bg-neutral-700 transition-colors w-full md:w-auto justify-center">
         <span>REVIEW MEMBERSHIP OPTIONS</span>
-        <Image src={iconArrowUp} alt="" width={16} height={16} />
+        <Image src={iconArrowUp} alt="" width={16} height={16} class="w-4 h-4" />
       </a>
     </div>
-    <div class="flex items-center justify-center space-x-150">
-      <div class="w-[110px] h-[40px]">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-200 md:gap-0 md:space-x-150">
+      <div class="w-[90px] h-[32px] md:w-[100px] md:h-[36px] lg:w-[110px] lg:h-[40px]">
         <Image src={avatarGroup} alt="Member avatars" width={110} height={40} class="w-full h-full object-cover" />
       </div>
       <div class="flex text-light-salmon-500">
-        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
-        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
-        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
-        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
-        <Image src={starIcon} alt="" width={20} height={20} class="w-200 h-200" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
+        <Image src={starIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px]" />
       </div>
       <span class="font-mono text-preset-7 text-neutral-200">200+ developers joined already</span>
     </div>

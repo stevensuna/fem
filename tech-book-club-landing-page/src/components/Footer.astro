@@ -4,17 +4,17 @@ import { Image } from 'astro:assets';
 import twitterIcon from '../assets/images/logo-bluesky.svg';
 import linkedinIcon from '../assets/images/logo-linkedin.svg';
 ---
-<footer class="py-600 px-400 md:px-800 bg-neutral-900">
-  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-    <span class="font-mono text-preset-7 text-neutral-200 mb-200 md:mb-0">
+<footer class="py-300 md:py-400 lg:py-500 px-4 md:px-400 lg:px-800 bg-neutral-900">
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-250 md:gap-0 text-center md:text-left">
+    <span class="font-mono text-preset-7 text-neutral-200">
       &copy; 2024 - Tech Book Club
     </span>
-    <div class="flex space-x-300">
-      <a href="#" aria-label="Twitter" class="text-neutral-200 hover:text-light-salmon-500 transition-colors">
-        <Image src={twitterIcon} alt="" width={24} height={24} />
+    <div class="flex items-center space-x-250 md:space-x-300">
+      <a href="#" aria-label="Twitter" class="text-neutral-200 hover:text-light-salmon-500 transition-colors p-075 md:p-100">
+        <Image src={twitterIcon} alt="" width={24} height={24} class="w-[18px] h-[18px] md:w-[20px] md:h-[20px] lg:w-[24px] lg:h-[24px]" />
       </a>
-      <a href="#" aria-label="LinkedIn" class="text-neutral-200 hover:text-light-salmon-500 transition-colors">
-        <Image src={linkedinIcon} alt="" width={24} height={24} />
+      <a href="#" aria-label="LinkedIn" class="text-neutral-200 hover:text-light-salmon-500 transition-colors p-075 md:p-100">
+        <Image src={linkedinIcon} alt="" width={24} height={24} class="w-[18px] h-[18px] md:w-[20px] md:h-[20px] lg:w-[24px] lg:h-[24px]" />
       </a>
     </div>
   </div>
