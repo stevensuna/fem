@@ -14,7 +14,6 @@ export default {
         "light-salmon-50": "#FFF5EF",
       },
       spacing: {
-        // Keep existing spacing
         "025": "2px",
         "050": "4px",
         "075": "6px",

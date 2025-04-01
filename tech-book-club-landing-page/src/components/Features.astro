@@ -1,12 +1,12 @@
 ---
 // src/components/Features.astro
 import { Image } from 'astro:assets';
-import readTogetherDesktop from '../assets/images/image-read-together-desktop.webp';
-import readTogetherTablet from '../assets/images/image-read-together-tablet.webp';
-import readTogetherMobile from '../assets/images/image-read-together-mobile.webp';
 import checkIcon from '../assets/images/icon-check.svg';
+import readTogetherDesktop from '../assets/images/image-read-together-desktop.webp';
+import readTogetherMobile from '../assets/images/image-read-together-mobile.webp';
+import readTogetherTablet from '../assets/images/image-read-together-tablet.webp';
 ---
-<section class="py-400 md:py-600 lg:py-800 px-4 md:px-400 lg:px-800">
+<section class="py-400 md:py-600 lg:py-800 px-200 md:px-400 lg:px-800">
   <div class="container mx-auto grid md:grid-cols-2 gap-300 md:gap-500 lg:gap-600 items-center">
     {/* Image (Order reversed on mobile, handled by grid) */}
     <div class="order-2 md:order-1">
@@ -40,19 +40,19 @@ import checkIcon from '../assets/images/icon-check.svg';
       </h2>
       <ul class="space-y-200">
         <li class="flex items-start space-x-150">
-          <Image src={checkIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
+          <Image src={checkIcon} alt="" width={20} height={20} class="w-200 h-200 md:w-200 md:h-200 lg:w-250 lg:h-250 mt-050 flex-shrink-0 text-light-salmon-500" />
           <span class="font-sans text-preset-5 text-neutral-700">Monthly curated tech reads selected by industry experts</span>
         </li>
         <li class="flex items-start space-x-150">
-          <Image src={checkIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
+          <Image src={checkIcon} alt="" width={20} height={20} class="w-200 h-200 md:w-200 md:h-200 lg:w-250 lg:h-250 mt-050 flex-shrink-0 text-light-salmon-500" />
           <span class="font-sans text-preset-5 text-neutral-700">Virtual and in-person meetups for deep-dive discussions</span>
         </li>
         <li class="flex items-start space-x-150">
-          <Image src={checkIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
+          <Image src={checkIcon} alt="" width={20} height={20} class="w-200 h-200 md:w-200 md:h-200 lg:w-250 lg:h-250 mt-050 flex-shrink-0 text-light-salmon-500" />
           <span class="font-sans text-preset-5 text-neutral-700">Early access to new tech book releases</span>
         </li>
         <li class="flex items-start space-x-150">
-          <Image src={checkIcon} alt="" width={20} height={20} class="w-[16px] h-[16px] md:w-[18px] md:h-[18px] lg:w-[20px] lg:h-[20px] mt-050 flex-shrink-0 text-light-salmon-500" />
+          <Image src={checkIcon} alt="" width={20} height={20} class="w-200 h-200 md:w-200 md:h-200 lg:w-250 lg:h-250 mt-050 flex-shrink-0 text-light-salmon-500" />
           <span class="font-sans text-preset-5 text-neutral-700">Author Q&A sessions with tech thought leaders</span>
         </li>
       </ul>

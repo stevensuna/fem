@@ -3,7 +3,7 @@
 import { Image } from 'astro:assets';
 import patternArrow from '../assets/images/pattern-arrow.svg';
 ---
-<section class="py-400 md:py-600 lg:py-800 px-4 md:px-400 lg:px-800 gradients-background">
+<section class="py-400 md:py-600 lg:py-800 px-200 md:px-400 lg:px-800 gradients-background">
   <div class="container mx-auto text-center">
     {/* Heading */}
     <h2 class="font-mono font-semibold text-preset-2-mobile md:text-preset-2 text-neutral-900 mb-400 md:mb-600 lg:mb-800">
@@ -12,13 +12,13 @@ import patternArrow from '../assets/images/pattern-arrow.svg';
     {/* Steps Grid */}
     <div class="grid grid-cols-1 md:grid-cols-4 gap-x-400 lg:gap-x-600 gap-y-300 md:gap-y-400 relative">
       {/* Connecting Arrows - Positioned absolutely between steps on tablet/desktop */}
-      <div class="hidden md:block absolute top-[20px] left-[calc(25%-15px)] w-[calc(25%+30px)] h-[26px] z-0">
+      <div class="hidden md:block absolute top-250 left-[calc(25%-15px)] w-[calc(25%+30px)] h-[26px] z-0">
         <Image src={patternArrow} alt="" width={280} height={26} class="w-full h-full" />
       </div>
-      <div class="hidden md:block absolute top-[20px] left-[calc(50%-15px)] w-[calc(25%+30px)] h-[26px] z-0">
+      <div class="hidden md:block absolute top-250 left-[calc(50%-15px)] w-[calc(25%+30px)] h-[26px] z-0">
         <Image src={patternArrow} alt="" width={280} height={26} class="w-full h-full transform scale-y-[-1]" />
       </div>
-      <div class="hidden md:block absolute top-[20px] left-[calc(75%-15px)] w-[calc(25%+30px)] h-[26px] z-0">
+      <div class="hidden md:block absolute top-250 left-[calc(75%-15px)] w-[calc(25%+30px)] h-[26px] z-0">
         <Image src={patternArrow} alt="" width={280} height={26} class="w-full h-full" />
       </div>
 
@@ -35,7 +35,7 @@ import patternArrow from '../assets/images/pattern-arrow.svg';
 
       {/* Step 1 */}
       <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="w-[32px] h-[32px] md:w-[36px] md:h-[36px] lg:w-[40px] lg:h-[40px] rounded-8 border-2 border-neutral-900 flex items-center justify-center text-neutral-900 font-mono font-semibold text-preset-4 mb-200">
+        <div class="w-400 h-400 md:w-500 md:h-500 lg:w-500 lg:h-500 rounded-8 border-025 border-neutral-900 flex items-center justify-center text-neutral-900 font-mono font-semibold text-preset-4 mb-200">
           1
         </div>
         <h3 class="font-sans font-semibold text-preset-5 text-neutral-900 mb-075 md:mb-100">Choose your membership tier</h3>
@@ -44,7 +44,7 @@ import patternArrow from '../assets/images/pattern-arrow.svg';
 
       {/* Step 2 */}
       <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="w-[32px] h-[32px] md:w-[36px] md:h-[36px] lg:w-[40px] lg:h-[40px] rounded-8 border-2 border-neutral-900 flex items-center justify-center text-neutral-900 font-mono font-semibold text-preset-4 mb-200">
+        <div class="w-400 h-400 md:w-500 md:h-500 lg:w-500 lg:h-500 rounded-8 border-025 border-neutral-900 flex items-center justify-center text-neutral-900 font-mono font-semibold text-preset-4 mb-200">
           2
         </div>
         <h3 class="font-sans font-semibold text-preset-5 text-neutral-900 mb-075 md:mb-100">Get your monthly book selection</h3>
@@ -53,7 +53,7 @@ import patternArrow from '../assets/images/pattern-arrow.svg';
 
       {/* Step 3 */}
       <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="w-[32px] h-[32px] md:w-[36px] md:h-[36px] lg:w-[40px] lg:h-[40px] rounded-8 border-2 border-neutral-900 flex items-center justify-center text-neutral-900 font-mono font-semibold text-preset-4 mb-200">
+        <div class="w-400 h-400 md:w-500 md:h-500 lg:w-500 lg:h-500 rounded-8 border-025 border-neutral-900 flex items-center justify-center text-neutral-900 font-mono font-semibold text-preset-4 mb-200">
           3
         </div>
         <h3 class="font-sans font-semibold text-preset-5 text-neutral-900 mb-075 md:mb-100">Join our discussion forums</h3>
@@ -62,7 +62,7 @@ import patternArrow from '../assets/images/pattern-arrow.svg';
 
       {/* Step 4 */}
       <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="w-[32px] h-[32px] md:w-[36px] md:h-[36px] lg:w-[40px] lg:h-[40px] rounded-8 border-2 border-neutral-900 flex items-center justify-center text-neutral-900 font-mono font-semibold text-preset-4 mb-200">
+        <div class="w-400 h-400 md:w-500 md:h-500 lg:w-500 lg:h-500 rounded-8 border-025 border-neutral-900 flex items-center justify-center text-neutral-900 font-mono font-semibold text-preset-4 mb-200">
           4
         </div>
         <h3 class="font-sans font-semibold text-preset-5 text-neutral-900 mb-075 md:mb-100">Attend exclusive meetups</h3>

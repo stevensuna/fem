@@ -13,9 +13,9 @@ import logo from '../assets/images/logo.svg'; // Import the logo SVG
 // Using placeholder variables for structure for now.
 ---
 <section class="bg-pattern bg-neutral-100 overflow-x-hidden">
-  <div class="container mx-auto px-4 sm:px-6 md:px-8">
+  <div class="container mx-auto px-200 sm:px-300 md:px-400">
     <div class="py-200 md:py-300 lg:py-400">
-      <img src={logo.src} alt="Tech book club logo" class="h-193px w-36px" />
+      <img src={logo.src} alt="Tech book club logo" class="h-auto w-auto" />
     </div>
 
     <div class="flex flex-col gap-300 md:gap-500 lg:gap-600 pb-300 md:pb-600 lg:pb-800 md:grid md:grid-cols-2 md:items-center">
@@ -26,23 +26,23 @@ import logo from '../assets/images/logo.svg'; // Import the logo SVG
         <p class="font-sans text-preset-5 text-neutral-700 max-w-[45ch]">
           Turn your reading time into learning time with fellow tech enthusiasts. Get curated recommendations, join vibrant discussions, and level up your skills one chapter at a time.
         </p>
-        <div class="flex flex-col md:flex-row items-start md:items-center gap-3 md:space-x-300">
-          <a href="#membership" class="inline-flex items-center gap-100 bg-light-salmon-50 text-neutral-900 border-2 border-neutral-900 px-200 py-150 md:px-300 md:py-200 rounded-8 font-mono font-semibold text-preset-6-mobile md:text-preset-6 hover:bg-neutral-100 transition-colors w-full md:w-auto justify-center md:justify-start whitespace-nowrap">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-150 md:space-x-300">
+          <a href="#membership" class="inline-flex items-center gap-100 bg-light-salmon-50 text-neutral-900 border-025 border-neutral-900 px-200 py-150 md:px-300 md:py-200 rounded-8 font-mono font-semibold text-preset-6-mobile md:text-preset-6 hover:bg-neutral-100 transition-colors w-full md:w-auto justify-center md:justify-start whitespace-nowrap">
             <span>REVIEW MEMBERSHIP OPTIONS</span>
-            <Image src={iconArrowDown} alt="" width={16} height={16} class="w-4 h-4" />
+            <Image src={iconArrowDown} alt="" width={16} height={16} class="w-200 h-200" />
           </a>
         </div>
-        <div class="flex items-center space-x-2 md:space-x-150 pt-2 md:pt-200">
+        <div class="flex items-center space-x-100 md:space-x-150 pt-100 md:pt-200">
           <div class="flex -space-x-150">
             <Image src={actualAvatars} alt="Member avatars" width={110} height={40} class="w-[80px] md:w-[90px] lg:w-[110px] h-auto" />
           </div>
           <div class="flex flex-col space-y-075 md:space-y-100">
             <div class="flex text-light-salmon-500">
-              <Image src={iconStar} alt="" width={16} height={16} class="w-3 h-3 md:w-4 md:h-4" />
-              <Image src={iconStar} alt="" width={16} height={16} class="w-3 h-3 md:w-4 md:h-4" />
-              <Image src={iconStar} alt="" width={16} height={16} class="w-3 h-3 md:w-4 md:h-4" />
-              <Image src={iconStar} alt="" width={16} height={16} class="w-3 h-3 md:w-4 md:h-4" />
-              <Image src={iconStar} alt="" width={16} height={16} class="w-3 h-3 md:w-4 md:h-4" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-150 h-150 md:w-200 md:h-200" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-150 h-150 md:w-200 md:h-200" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-150 h-150 md:w-200 md:h-200" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-150 h-150 md:w-200 md:h-200" />
+              <Image src={iconStar} alt="" width={16} height={16} class="w-150 h-150 md:w-200 md:h-200" />
             </div>
             <span class="font-mono text-preset-7 text-neutral-700">200+ developers joined already</span>
           </div>

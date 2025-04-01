@@ -3,17 +3,17 @@
 import { Image } from 'astro:assets';
 
 import notAverageDesktop from '../assets/images/image-not-average-desktop.webp';
-import notAverageTablet from '../assets/images/image-not-average-tablet.webp';
 import notAverageMobile from '../assets/images/image-not-average-mobile.webp';
+import notAverageTablet from '../assets/images/image-not-average-tablet.webp';
 import logosTech from '../assets/images/logos-tech.svg';
 ---
-<section class="py-300 md:py-600 lg:py-800 px-4 md:px-400 lg:px-800">
+<section class="py-300 md:py-600 lg:py-800 px-200 md:px-400 lg:px-800">
   <div class="container mx-auto grid md:grid-cols-2 gap-300 md:gap-500 lg:gap-600 items-center">
     {/* Text Content */}
     <div class="space-y-200 md:space-y-300 lg:space-y-400">
       {/* Heading with styled 'club' */}
       <h2 class="font-mono font-semibold text-preset-2-mobile md:text-preset-2 text-neutral-900">
-        Not your average book <span class="relative inline-block mt-2 sm:mt-0">
+        Not your average book <span class="relative inline-block mt-100 sm:mt-0">
           {/* Orange circle SVG - adjust stroke width, color, size as needed */}
           <svg class="absolute -top-100 -left-100 -right-100 -bottom-050 w-[calc(100%+20px)] h-[calc(100%+15px)] text-light-salmon-500" fill="none" viewBox="0 0 100 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M99 20C99 30.4934 90.4934 39 80 39C69.5066 39 61 30.4934 61 20C61 9.50659 69.5066 1 80 1C90.4934 1 99 9.50659 99 20Z" stroke="currentColor" stroke-width="2"/>
@@ -54,7 +54,7 @@ import logosTech from '../assets/images/logos-tech.svg';
       />
 
       {/* Tech Logo */}
-      <div class="absolute bottom-[-16px] md:bottom-[-24px] lg:bottom-[-30px] right-[5%] md:right-[10%]">
+      <div class="absolute bottom-[-200] md:bottom-[-300] lg:bottom-[-400] right-[5%] md:right-[10%]">
         <Image src={logosTech} alt="Technology stack logos: TypeScript, GitHub, and React" width={120} height={138} class="w-[80px] md:w-[100px] lg:w-[120px] h-auto" />
       </div>
     </div>
