@@ -32,3 +32,5 @@ javascript-practice/
 #Cline memory
 memory-bank/
 *.opencommit*
+#Repomix
+*repomix*
