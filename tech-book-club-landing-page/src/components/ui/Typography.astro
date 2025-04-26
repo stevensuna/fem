@@ -1,0 +1,34 @@
+---
+interface Props {
+  variant?: 'h1' | 'h2' | 'h3' | 'body' | 'body-lg' | 'caption';
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+  class?: string;
+  gradient?: boolean;
+}
+
+const {
+  variant = 'body',
+  as: Element = 'p',
+  class: className,
+  gradient = false,
+} = Astro.props;
+
+const variants = {
+  h1: 'font-mono font-bold text-heading-1 md:text-heading-1-lg',
+  h2: 'font-mono font-bold text-heading-2 md:text-heading-2-lg',
+  h3: 'font-mono font-bold text-heading-3 md:text-heading-3-lg',
+  'body-lg': 'font-sans text-body-lg',
+  body: 'font-sans text-body',
+  caption: 'font-mono text-caption',
+};
+---
+
+<Element 
+  class:list={[
+    variants[variant],
+    gradient && 'gradient-text',
+    className
+  ]}
+>
+  <slot />
+</Element>

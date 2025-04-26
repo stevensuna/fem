@@ -1,0 +1,32 @@
+---
+interface Props {
+  cols?: {
+    mobile?: number;
+    tablet?: number;
+    desktop?: number;
+  };
+  gap?: string;
+  class?: string;
+}
+
+const {
+  cols = { mobile: 1, tablet: 2, desktop: 3 },
+  gap = '3',
+  class: className,
+} = Astro.props;
+
+const getGridCols = (columns: number) => {
+  return `grid-cols-${columns}`;
+};
+---
+
+<div class:list={[
+  'grid',
+  `gap-${gap}`,
+  getGridCols(cols.mobile),
+  `md:${getGridCols(cols.tablet)}`,
+  `lg:${getGridCols(cols.desktop)}`,
+  className
+]}>
+  <slot />
+</div>

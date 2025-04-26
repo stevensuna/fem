@@ -1,21 +1,79 @@
 ---
-// src/components/Footer.astro
+import Container from './ui/Container.astro';
+import Typography from './ui/Typography.astro';
+import FooterLink from './ui/FooterLink.astro';
 import { Image } from 'astro:assets';
-import twitterIcon from '../assets/images/logo-bluesky.svg';
-import linkedinIcon from '../assets/images/logo-linkedin.svg';
+import logo from '../assets/images/logo.svg';
+
+const links = {
+  resources: [
+    { text: 'Book List', href: '#' },
+    { text: 'Discussion Forum', href: '#' },
+    { text: 'FAQ', href: '#' },
+    { text: 'Blog', href: '#' },
+  ],
+  community: [
+    { text: 'About Us', href: '#' },
+    { text: 'Join Discord', href: '#' },
+    { text: 'Twitter', href: '#' },
+    { text: 'LinkedIn', href: '#' },
+  ],
+  legal: [
+    { text: 'Privacy Policy', href: '#' },
+    { text: 'Terms of Service', href: '#' },
+    { text: 'Code of Conduct', href: '#' },
+  ],
+};
 ---
-<footer class="py-300 md:py-400 lg:py-500 px-200 md:px-400 lg:px-800 bg-neutral-900">
-  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-250 md:gap-0 text-center md:text-left">
-    <span class="font-mono text-preset-7 text-neutral-200">
-      &copy; 2024 - Tech Book Club
-    </span>
-    <div class="flex items-center space-x-250 md:space-x-300">
-      <a href="#" aria-label="Twitter" class="text-neutral-200 hover:text-light-salmon-500 transition-colors p-075 md:p-100">
-        <Image src={twitterIcon} alt="" width={24} height={24} class="w-200 h-200 md:w-250 md:h-250 lg:w-300 lg:h-300" />
-      </a>
-      <a href="#" aria-label="LinkedIn" class="text-neutral-200 hover:text-light-salmon-500 transition-colors p-075 md:p-100">
-        <Image src={linkedinIcon} alt="" width={24} height={24} class="w-200 h-200 md:w-250 md:h-250 lg:w-300 lg:h-300" />
-      </a>
+
+<footer class="bg-neutral-100 py-6 md:py-8 lg:py-10">
+  <Container>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div class="space-y-4">
+        <img src={logo.src} alt="Tech book club logo" class="h-8 w-auto" />
+        <Typography variant="body" class="text-neutral-700 max-w-[35ch]">
+          Building a community of tech professionals through shared learning experiences.
+        </Typography>
+      </div>
+
+      <div class="space-y-4">
+        <Typography variant="h3" as="h3">Resources</Typography>
+        <ul class="space-y-2">
+          {links.resources.map(link => (
+            <li>
+              <FooterLink href={link.href}>{link.text}</FooterLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <Typography variant="h3" as="h3">Community</Typography>
+        <ul class="space-y-2">
+          {links.community.map(link => (
+            <li>
+              <FooterLink href={link.href}>{link.text}</FooterLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <Typography variant="h3" as="h3">Legal</Typography>
+        <ul class="space-y-2">
+          {links.legal.map(link => (
+            <li>
+              <FooterLink href={link.href}>{link.text}</FooterLink>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-  </div>
+
+    <div class="mt-8 pt-8 border-t border-neutral-200">
+      <Typography variant="caption" class="text-neutral-700 text-center">
+        © {new Date().getFullYear()} Tech Book Club. All rights reserved.
+      </Typography>
+    </div>
+  </Container>
 </footer>

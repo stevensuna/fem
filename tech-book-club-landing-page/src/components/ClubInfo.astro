@@ -1,62 +1,49 @@
 ---
-// src/components/ClubInfo.astro
 import { Image } from 'astro:assets';
+import Container from './ui/Container.astro';
+import Typography from './ui/Typography.astro';
+import Grid from './ui/Grid.astro';
+import StatCard from './ui/StatCard.astro';
 
-import notAverageDesktop from '../assets/images/image-not-average-desktop.webp';
-import notAverageMobile from '../assets/images/image-not-average-mobile.webp';
-import notAverageTablet from '../assets/images/image-not-average-tablet.webp';
-import logosTech from '../assets/images/logos-tech.svg';
+const stats = [
+  { value: '12+', label: 'Books per Year' },
+  { value: '24', label: 'Live Sessions' },
+  { value: '200+', label: 'Active Members' }
+];
 ---
-<section class="py-300 md:py-600 lg:py-800 px-200 md:px-400 lg:px-800">
-  <div class="container mx-auto grid md:grid-cols-2 gap-300 md:gap-500 lg:gap-600 items-center">
-    {/* Text Content */}
-    <div class="space-y-200 md:space-y-300 lg:space-y-400">
-      {/* Heading with styled 'club' */}
-      <h2 class="font-mono font-semibold text-preset-2-mobile md:text-preset-2 text-neutral-900">
-        Not your average book <span class="relative inline-block mt-100 sm:mt-0">
-          {/* Orange circle SVG - adjust stroke width, color, size as needed */}
-          <svg class="absolute -top-100 -left-100 -right-100 -bottom-050 w-[calc(100%+20px)] h-[calc(100%+15px)] text-light-salmon-500" fill="none" viewBox="0 0 100 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M99 20C99 30.4934 90.4934 39 80 39C69.5066 39 61 30.4934 61 20C61 9.50659 69.5066 1 80 1C90.4934 1 99 9.50659 99 20Z" stroke="currentColor" stroke-width="2"/>
-            <path d="M1 20C1 30.4934 9.50659 39 20 39C30.4934 39 39 30.4934 39 20C39 9.50659 30.4934 1 20 1C9.50659 1 1 9.50659 1 20Z" stroke="currentColor" stroke-width="2"/>
-          </svg>
-          <span class="relative z-10">club</span>
-        </span>
-      </h2>
-      {/* Paragraph text */}
-      <p class="font-sans text-preset-5 text-neutral-700 max-w-[45ch]">
-        Connect with a community that speaks your language - from Python to TypeScript and everything in between. Our discussions blend technical depth with practical applications.
-      </p>
-      {/* Removed old icon section */}
-    </div>
 
-    {/* Image container with relative positioning for icons */}
-    <div class="relative mt-300 md:mt-0">
-      <Image
-        src={notAverageMobile}
-        alt="People in a meeting discussing"
-        width={343}
-        height={257}
-        class="rounded-8 md:rounded-12 w-full h-auto object-cover md:hidden"
-      />
-      <Image
-        src={notAverageTablet}
-        alt="People in a meeting discussing"
-        width={339}
-        height={381}
-        class="rounded-8 md:rounded-12 w-full h-auto object-cover hidden md:block lg:hidden"
-      />
-      <Image
-        src={notAverageDesktop}
-        alt="People in a meeting discussing"
-        width={600}
-        height={400}
-        class="rounded-8 md:rounded-12 w-full h-auto object-cover hidden lg:block"
-      />
+<section class="py-6 md:py-8 lg:py-10">
+  <Container>
+    <div class="md:grid md:grid-cols-2 md:gap-8 lg:gap-12 items-center">
+      <div class="space-y-4 md:space-y-6 mb-6 md:mb-0">
+        <Typography variant="h2" as="h2" gradient>
+          A Community of Tech Enthusiasts
+        </Typography>
+        
+        <Typography variant="body-lg" class="text-neutral-700">
+          Join a vibrant community of developers, engineers, and tech professionals who are passionate about learning and growing together.
+        </Typography>
 
-      {/* Tech Logo */}
-      <div class="absolute bottom-[-200] md:bottom-[-300] lg:bottom-[-400] right-[5%] md:right-[10%]">
-        <Image src={logosTech} alt="Technology stack logos: TypeScript, GitHub, and React" width={120} height={138} class="w-[80px] md:w-[100px] lg:w-[120px] h-auto" />
+        <Grid cols={{ mobile: 3, tablet: 3, desktop: 3 }} gap="3">
+          {stats.map(stat => (
+            <StatCard 
+              value={stat.value}
+              label={stat.label}
+            />
+          ))}
+        </Grid>
+      </div>
+
+      <div class="relative">
+        <div class="absolute inset-0 -z-10 bg-pattern-glow opacity-40"></div>
+        <Image
+          src="/src/assets/images/community-image.webp"
+          alt="Tech book club community members"
+          width={540}
+          height={405}
+          class="w-full rounded-lg shadow-lg"
+        />
       </div>
     </div>
-  </div>
+  </Container>
 </section>

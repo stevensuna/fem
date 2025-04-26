@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import Typography from './Typography.astro';
+import Rating from './Rating.astro';
+
+interface Props {
+  name: string;
+  role: string;
+  avatar: ImageMetadata;
+  quote: string;
+  stars?: number;
+  class?: string;
+}
+
+const { 
+  name, 
+  role, 
+  avatar, 
+  quote, 
+  stars = 5,
+  class: className 
+} = Astro.props;
+---
+
+<div class:list={[
+  'bg-neutral-0 border-2 border-neutral-900 rounded-lg p-4 md:p-6',
+  'flex flex-col gap-4',
+  className
+]}>
+  <div class="flex items-center gap-3">
+    <Image
+      src={avatar}
+      alt={name}
+      width={48}
+      height={48}
+      class="rounded-full w-12 h-12"
+    />
+    <div>
+      <Typography variant="h3" as="h3" class="text-neutral-900">
+        {name}
+      </Typography>
+      <Typography variant="caption" class="text-neutral-700">
+        {role}
+      </Typography>
+    </div>
+  </div>
+
+  <Rating stars={stars} />
+
+  <Typography variant="body" class="text-neutral-700">
+    "{quote}"
+  </Typography>
+</div>

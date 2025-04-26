@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import iconStar from '../../assets/images/icon-star.svg';
+
+interface Props {
+  stars?: number;
+  class?: string;
+}
+
+const { stars = 5, class: className } = Astro.props;
+---
+
+<div class:list={['flex', className]}>
+  {Array.from({ length: stars }).map(() => (
+    <Image 
+      src={iconStar} 
+      alt="" 
+      width={16} 
+      height={16} 
+      class="w-[18px] h-[18px] md:w-[20px] md:h-[20px]" 
+    />
+  ))}
+</div>
