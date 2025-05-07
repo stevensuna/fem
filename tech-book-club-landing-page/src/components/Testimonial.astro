@@ -4,29 +4,28 @@ import Typography from './ui/Typography.astro';
 import Grid from './ui/Grid.astro';
 import TestimonialCard from './ui/TestimonialCard.astro';
 
-import avatar1 from '../assets/images/avatar-1.webp';
-import avatar2 from '../assets/images/avatar-2.webp';
-import avatar3 from '../assets/images/avatar-3.webp';
+// Using a single avatar image since the individual ones are not available
+import avatarImage from '../assets/images/image-avatars.webp';
 
 const testimonials = [
   {
     name: "Sarah Chen",
     role: "Senior Software Engineer",
-    avatar: avatar1,
+    avatar: avatarImage,
     quote: "The book discussions have helped me understand complex architectural patterns that I now use daily in my work.",
     stars: 5
   },
   {
     name: "Marcus Johnson",
     role: "Tech Lead",
-    avatar: avatar2,
+    avatar: avatarImage,
     quote: "Being part of this community has accelerated my learning and career growth significantly.",
     stars: 5
   },
   {
     name: "Lisa Rodriguez",
     role: "Frontend Developer",
-    avatar: avatar3,
+    avatar: avatarImage,
     quote: "The diverse perspectives in our discussions bring the books to life in ways I never expected.",
     stars: 5
   }
