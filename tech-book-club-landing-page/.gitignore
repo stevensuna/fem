@@ -24,4 +24,4 @@ pnpm-debug.log*
 .idea/
 
 #memory
-memory-bank/
+docs/
