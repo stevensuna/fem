@@ -11,7 +11,7 @@ const {
   as: Element = 'p',
   class: className,
   gradient = false,
-} = Astro.props;
+} = Astro.props as Props;
 
 const variants = {
   h1: 'font-mono font-bold text-heading-1 md:text-heading-1-lg',
@@ -23,7 +23,7 @@ const variants = {
 };
 ---
 
-<Element 
+<Element
   class:list={[
     variants[variant],
     gradient && 'gradient-text',
