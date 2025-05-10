@@ -6,7 +6,10 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "A tech book club landing page" } = Astro.props;
+const {
+  title,
+  description = "Join our tech book club to connect with like-minded tech enthusiasts and expand your knowledge through curated reading and community discussions."
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -15,17 +18,25 @@ const { title, description = "A tech book club landing page" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+
     <title>{title}</title>
 
-    <!-- Google Font Imports -->
+    <!-- Google Font Imports with display=swap for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body class="min-h-screen bg-neutral-0 text-neutral-700 antialiased"> {/* Set base background and text color, add antialiasing */}
+  <body class="min-h-screen bg-neutral-0 text-neutral-900 antialiased font-sans">
     <slot />
   </body>
 </html>

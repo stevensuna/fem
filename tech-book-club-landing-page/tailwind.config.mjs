@@ -11,41 +11,17 @@ export default {
     extend: {
       colors: {
         neutral: {
-          900: "#062630",
+          900: "#062630", // Dark Blue
           700: "#385159",
           200: "#E6E1DF",
           100: "#FAF5F3",
-          0: "#ffffff",
+          0: "#FFFFFF",
         },
         salmon: {
           500: "#FEA38F",
           100: "#FFE2D1",
           50: "#FFF5EF",
         },
-      },
-      spacing: {
-        // Base 8px scale for better consistency
-        1: "8px", // 8px
-        2: "16px", // 16px
-        3: "24px", // 24px
-        4: "32px", // 32px
-        5: "40px", // 40px
-        6: "48px", // 48px
-        8: "64px", // 64px
-        10: "80px", // 80px
-        // Micro adjustments
-        "micro-1": "2px",
-        "micro-2": "4px",
-        "micro-3": "6px",
-      },
-      borderRadius: {
-        sm: "4px",
-        md: "8px",
-        lg: "12px",
-        xl: "16px",
-        "2xl": "20px",
-        "3xl": "24px",
-        full: "999px",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
@@ -64,6 +40,30 @@ export default {
         "body-sm": ["16px", { lineHeight: "130%", letterSpacing: "-0.5px" }],
         caption: ["14px", { lineHeight: "120%", letterSpacing: "-0.5px" }],
       },
+      spacing: {
+        // Base 8px scale
+        1: "8px",
+        2: "16px",
+        3: "24px",
+        4: "32px",
+        5: "40px",
+        6: "48px",
+        8: "64px",
+        10: "80px",
+        // Micro adjustments
+        "micro-1": "2px",
+        "micro-2": "4px",
+        "micro-3": "6px",
+      },
+      borderRadius: {
+        sm: "4px",
+        md: "8px",
+        lg: "12px",
+        xl: "16px",
+        "2xl": "20px",
+        "3xl": "24px",
+        full: "999px",
+      },
       backgroundImage: {
         pattern: 'url("/src/assets/images/bg-pattern.svg")',
         "pattern-glow": 'url("/src/assets/images/pattern-glow.svg")',
@@ -73,7 +73,7 @@ export default {
   plugins: [
     function ({ addComponents, theme }) {
       addComponents({
-        // Reusable component classes
+        // Gradient text utility
         ".gradient-text": {
           background:
             "linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%)",
@@ -81,10 +81,11 @@ export default {
           "background-clip": "text",
           color: "transparent",
         },
+        // Gradient background utility
         ".gradient-bg": {
           background: "linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%)",
         },
-        // Mobile-first container
+        // Container base
         ".container-base": {
           width: "100%",
           marginLeft: "auto",

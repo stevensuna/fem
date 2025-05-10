@@ -1,0 +1,96 @@
+---
+import Button from '../ui/Button.astro';
+---
+
+<section id="membership" class="py-10 md:py-16 lg:py-20 bg-neutral-100 bg-pattern-glow">
+  <div class="container-base">
+    <div class="text-center mb-10 md:mb-16">
+      <h2 class="font-mono font-bold text-heading-2 md:text-heading-2-lg mb-4">
+        <span class="gradient-text">Choose your membership plan</span>
+      </h2>
+      <p class="text-neutral-700 max-w-2xl mx-auto text-body-sm md:text-body">
+        Join at the level that suits your reading goals and tech journey.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      {[
+        {
+          name: "Basic",
+          price: "$5",
+          period: "monthly",
+          description: "Perfect for casual readers who want to explore tech topics.",
+          features: [
+            "Access to monthly book discussions",
+            "Digital reading guides",
+            "Community forum access",
+          ],
+          buttonText: "Get started",
+          buttonVariant: "outline",
+          popular: false
+        },
+        {
+          name: "Pro",
+          price: "$15",
+          period: "monthly",
+          description: "For serious readers looking to deeply engage with tech content.",
+          features: [
+            "All Basic features",
+            "Expert-led discussion sessions",
+            "Exclusive author Q&As",
+            "Implementation workshops",
+            "Monthly coding challenges"
+          ],
+          buttonText: "Join Pro",
+          buttonVariant: "primary",
+          popular: true
+        },
+        {
+          name: "Team",
+          price: "$39",
+          period: "monthly",
+          description: "Perfect for teams looking to learn and grow together.",
+          features: [
+            "All Pro features",
+            "Up to 5 team members",
+            "Private team discussions",
+            "Team implementation guidance",
+            "Priority book voting"
+          ],
+          buttonText: "Join as team",
+          buttonVariant: "outline",
+          popular: false
+        }      ].map(plan => (
+        <div class={`bg-neutral-0 p-6 md:p-8 rounded-xl shadow-sm ${plan.popular ? 'ring-2 ring-salmon-500 relative' : ''}`}>
+          {plan.popular && (
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-salmon-500 text-neutral-0 px-4 py-1 rounded-full text-caption font-semibold">
+              Most Popular
+            </div>
+          )}
+
+          <h3 class="font-mono font-semibold text-heading-3 mb-2">{plan.name}</h3>
+          <div class="flex items-baseline mb-4">
+            <span class="text-heading-2 font-bold">{plan.price}</span>
+            <span class="text-neutral-700 ml-1 text-body-sm">/{plan.period}</span>
+          </div>
+          <p class="text-neutral-700 text-body-sm mb-6">{plan.description}</p>
+
+          <ul class="space-y-3 mb-8">
+            {plan.features.map(feature => (
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-salmon-500 mt-micro-2 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-body-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <Button variant={plan.buttonVariant as 'primary' | 'outline' | 'light' | 'outline-light'} size="lg" href="#" fullWidth>
+            {plan.buttonText}
+          </Button>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

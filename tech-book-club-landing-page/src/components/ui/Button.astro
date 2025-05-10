@@ -1,9 +1,10 @@
 ---
 interface Props {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'outline' | 'light' | 'outline-light';
   size?: 'sm' | 'md' | 'lg';
   class?: string;
   href?: string;
+  fullWidth?: boolean;
 }
 
 const {
@@ -11,20 +12,23 @@ const {
   size = 'md',
   class: className,
   href,
+  fullWidth = false,
   ...rest
 } = Astro.props;
 
-const baseStyles = 'inline-flex items-center justify-center font-mono font-semibold transition-colors rounded-md';
+const baseStyles = 'inline-flex items-center justify-center font-medium transition-colors rounded-xl';
 
 const variants = {
-  primary: 'bg-salmon-50 text-neutral-900 border-2 border-neutral-900 hover:bg-neutral-100',
-  secondary: 'bg-neutral-900 text-neutral-0 hover:bg-neutral-700',
+  primary: 'bg-salmon-500 hover:bg-salmon-600 text-neutral-0',
+  outline: 'bg-transparent border border-neutral-900 hover:bg-neutral-100 text-neutral-900',
+  light: 'bg-neutral-0 hover:bg-neutral-100 text-neutral-900',
+  'outline-light': 'bg-transparent border border-neutral-0 hover:bg-neutral-0 hover:bg-opacity-10 text-neutral-0'
 };
 
 const sizes = {
-  sm: 'px-3 py-2 text-body-sm',
-  md: 'px-4 py-3 text-body',
-  lg: 'px-6 py-4 text-body-lg',
+  sm: 'px-2 py-micro-3 text-body-sm',
+  md: 'px-3 py-2 text-body',
+  lg: 'px-4 py-3 text-body-lg',
 };
 
 const Element = href ? 'a' : 'button';
@@ -36,6 +40,7 @@ const Element = href ? 'a' : 'button';
     baseStyles,
     variants[variant],
     sizes[size],
+    fullWidth ? 'w-full' : '',
     className
   ]}
   {...rest}
