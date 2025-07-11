@@ -1,0 +1,278 @@
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="bg-pattern"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/icon.svg" alt="Tech Book Club" class="logo-icon">
+      <span class="logo-text">
+        <span>Tech</span>
+        <span>book</span>
+        <span>club</span>
+      </span>
+    </div>
+  </nav>
+
+  <!-- Hero Content -->
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="text-container">
+        <h1 class="hero-title">Join the ultimate tech book club</h1>
+        <p class="hero-description">
+          Turn your reading time into learning time with fellow tech enthusiasts.
+          Get curated recommendations, join vibrant discussions, and level up your
+          skills one chapter at a time.
+        </p>
+      </div>
+
+      <div class="cta-container">
+        <button class="primary-btn" (click)="scrollToMembership()">
+          <span>REVIEW MEMBERSHIP OPTIONS</span>
+          <svg class="arrow-icon" viewBox="0 0 24 24">
+            <path d="M12 16l-6-6h12l-6 6z"/>
+          </svg>
+        </button>
+        <div class="pointer"></div>
+
+        <div class="testimonial-preview">
+          <div class="testimonial-images">
+            <div class="testimonial-avatar">
+              <img src="assets/avatar-1.jpg" alt="Member">
+            </div>
+            <div class="testimonial-avatar">
+              <img src="assets/avatar-2.jpg" alt="Member">
+            </div>
+            <div class="testimonial-avatar">
+              <img src="assets/avatar-3.jpg" alt="Member">
+            </div>
+          </div>
+          <div class="rating-info">
+            <div class="stars">
+              @for (star of [1,2,3,4,5]; track star) {
+                <svg class="star" viewBox="0 0 24 24">
+                  <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                </svg>
+              }
+            </div>
+            <span class="rating-text">200+ developers joined already</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/hero-image.jpg" alt="People reading together">
+    </div>
+  </div>
+
+  <div class="glow-bg"></div>
+</div>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="features-grid">
+    <div class="feature-image">
+      <img src="assets/feature-image-1.jpg" alt="Reading together">
+    </div>
+
+    <div class="feature-content">
+      <h2 class="section-title">Read together, grow together</h2>
+
+      <div class="features-list">
+        @for (feature of features(); track feature.id) {
+          <div class="feature-item">
+            <div class="check-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12"/>
+              </svg>
+            </div>
+            <span>{{ feature.text }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-content">
+      <h2 class="section-title">Not your average book club</h2>
+      <p class="about-description">
+        Connect with a community that speaks your language - from
+        <strong>Python</strong> to <strong>TypeScript</strong> and everything in between.
+        Our discussions blend technical depth with practical applications.
+      </p>
+      <div class="decorative-path"></div>
+    </div>
+
+    <div class="about-image">
+      <img src="assets/feature-image-2.jpg" alt="Book club discussion">
+
+      <!-- Technology logos -->
+      <div class="tech-logos">
+        <div class="tech-logo typescript">
+          <div class="ts-icon">TS</div>
+        </div>
+        <div class="tech-logo python">
+          <img src="assets/python-logo.svg" alt="Python">
+        </div>
+        <div class="tech-logo react">
+          <img src="assets/react-logo.svg" alt="React">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Journey Section -->
+<section class="journey-section">
+  <div class="journey-bg-pattern"></div>
+  <div class="journey-glow"></div>
+
+  <h2 class="section-title">Your tech reading journey</h2>
+
+  <div class="steps-container">
+    @for (step of journeySteps(); track step.id) {
+      <div class="step">
+        <div class="step-number">{{ step.id }}</div>
+        <h3 class="step-title">{{ step.title }}</h3>
+      </div>
+      @if (step.id < 4) {
+        <div class="step-arrow"></div>
+      }
+    }
+  </div>
+</section>
+
+<!-- Membership Section -->
+<section class="membership-section" #membershipSection>
+  <h2 class="section-title">Membership options</h2>
+
+  <div class="membership-cards">
+    @for (plan of membershipPlans(); track plan.id) {
+      <div class="membership-card" [class.featured]="plan.featured">
+        @if (plan.featured) {
+          <div class="card-glow"></div>
+        }
+
+        <div class="card-content">
+          <div class="plan-details">
+            <h3 class="plan-name">{{ plan.name }}</h3>
+
+            @if (plan.price) {
+              <div class="price-container">
+                <span class="price">${{ plan.price }}</span>
+                <span class="period">/month</span>
+              </div>
+            } @else {
+              <div class="custom-price">Custom</div>
+            }
+
+            <div class="divider"></div>
+
+            <div class="features">
+              @for (feature of plan.features; track feature) {
+                <div class="feature">
+                  <div class="feature-check">
+                    @if (plan.featured || plan.id === 3) {
+                      <span>✓</span>
+                    } @else {
+                      <svg viewBox="0 0 24 24">
+                        <polyline points="20,6 9,17 4,12"/>
+                      </svg>
+                    }
+                  </div>
+                  <span>{{ feature }}</span>
+                </div>
+              }
+            </div>
+          </div>
+
+          <button class="plan-btn">
+            <span>{{ plan.buttonText }}</span>
+          </button>
+          <div class="plan-pointer"></div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="testimonial-section">
+  <div class="testimonial-stars">
+    @for (star of [1,2,3,4,5]; track star) {
+      <svg class="star large" viewBox="0 0 24 24">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+      </svg>
+    }
+  </div>
+
+  <div class="testimonial-content">
+    <blockquote class="testimonial-quote">
+      "This book club transformed my technical reading from a solitary activity
+      into an enriching community experience. The discussions are gold!"
+    </blockquote>
+    <cite class="testimonial-author">Sarah Chen, Software Architect</cite>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-pattern"></div>
+
+  <div class="footer-content">
+    <h2 class="footer-title">Ready to debug your reading list?</h2>
+
+    <div class="footer-cta">
+      <button class="secondary-btn" (click)="scrollToMembership()">
+        <span>REVIEW MEMBERSHIP OPTIONS</span>
+        <svg class="arrow-icon up" viewBox="0 0 24 24">
+          <path d="M12 8l6 6H6l6-6z"/>
+        </svg>
+      </button>
+      <div class="footer-pointer"></div>
+
+      <div class="footer-testimonial">
+        <div class="testimonial-images">
+          <div class="testimonial-avatar">
+            <img src="assets/avatar-1.jpg" alt="Member">
+          </div>
+          <div class="testimonial-avatar">
+            <img src="assets/avatar-2.jpg" alt="Member">
+          </div>
+          <div class="testimonial-avatar">
+            <img src="assets/avatar-3.jpg" alt="Member">
+          </div>
+        </div>
+        <div class="rating-info">
+          <div class="stars">
+            @for (star of [1,2,3,4,5]; track star) {
+              <svg class="star" viewBox="0 0 24 24">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+              </svg>
+            }
+          </div>
+          <span class="rating-text">200+ developers joined already</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="copyright">© 2024 – Tech Book Club</span>
+    <div class="social-links">
+      <a href="#" aria-label="Social Media">
+        <svg viewBox="0 0 24 24">
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+        </svg>
+      </a>
+      <span>linkedin</span>
+    </div>
+  </div>
+</footer>
+
+
