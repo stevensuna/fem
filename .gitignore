@@ -30,3 +30,12 @@ javascript-practice/
 .aider*
 
 *repomix*
+
+# Claude scratchpad files (local communication)
+.claude-scratchpad/
+.claude/
+CLAUDE.md
+
+# Setup directory (remove after customization)
+setup/
+docs/
